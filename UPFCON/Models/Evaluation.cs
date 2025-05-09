@@ -7,7 +7,7 @@ public class Evaluation
 {
     [Key] public Guid Id { get; set; }
     
-    [Required, MaxLength(255)] public string Comment { get; set; }
+    [Required, MaxLength(255)] public required string Comment { get; set; }
     
     [Required, Range(1, 5)] public int ClarityScore { get; set; }
     
@@ -18,8 +18,8 @@ public class Evaluation
     [Required] public DateTime EvaluationDate { get; set; }
     
     public Guid EvaluatorId { get; set; }
-    [ForeignKey(nameof(EvaluatorId))] public CommitteeMember Evaluator { get; set; } = null!;
+    [ForeignKey(nameof(EvaluatorId)), Required] public CommitteeMember Evaluator { get; set; } = null!;
     
     public Guid PaperId { get; set; }
-    [ForeignKey(nameof(PaperId))] public Paper Paper { get; set; } = null!;
+    [ForeignKey(nameof(PaperId)), Required] public Paper Paper { get; set; } = null!;
 }

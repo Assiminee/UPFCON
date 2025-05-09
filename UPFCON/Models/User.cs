@@ -7,28 +7,15 @@ namespace UPFCON.Models;
 
 public class User
 {
-    public User(string fname, string lname, string email, string phone, DateTime birthdate, string description, string address, string pwd, AccountStatus accountStatus)
-    {
-        Fname = fname;
-        Lname = lname;
-        Email = email;
-        Phone = phone;
-        Birthdate = birthdate;
-        Description = description;
-        Address = address;
-        Pwd = pwd;
-        AccountStatus = accountStatus;
-    }
-
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] public Guid Id { get; set; }
     
     [Required, MaxLength(50)] public string Fname { get; set; }
     
     [Required, MaxLength(50)] public string Lname { get; set; }
     
-    [Required, MaxLength(255), Index(IsUnique=true)] public string Email { get; set; }
+    [Required, MaxLength(255), Index(IsUnique=true), EmailAddress] public string Email { get; set; }
     
-    [Required, MaxLength(13), Index(IsUnique=true)] public string Phone { get; set; }
+    [Required, MaxLength(13), Index(IsUnique=true), Phone] public string Phone { get; set; }
     
     [Required] public DateTime Birthdate { get; set; }
     

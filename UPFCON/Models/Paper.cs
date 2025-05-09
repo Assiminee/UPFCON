@@ -32,5 +32,5 @@ public class Paper
     public IList<Evaluation> Evaluations { get; set; } = new List<Evaluation>();
     
     public Guid EventId { get; set; }
-    [ForeignKey(nameof(EventId))] public Event Event { get; set; } = null!;
+    [ForeignKey(nameof(EventId)), Required] public Event Event { get; set; } = null!;
 }

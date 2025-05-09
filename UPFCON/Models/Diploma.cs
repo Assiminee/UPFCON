@@ -13,18 +13,10 @@ public enum DiplomaVerificationStatus
 
 public class Diploma
 {
-    public Diploma(string title, DateTime issueDate, string path, DiplomaVerificationStatus status)
-    {
-        Title = title;
-        IssueDate = issueDate;
-        Path = path;
-        VerificationStatus = status;
-    }
-
     [Key] public Guid Id { get; set; }
     
     public Guid UserId { get; set; }
-    [ForeignKey(nameof(UserId))] public User User { get; set; }
+    [ForeignKey(nameof(UserId)), Required] public User User { get; set; }
     
     [Required] public string Title { get; set; }
     

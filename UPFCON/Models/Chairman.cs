@@ -6,7 +6,7 @@ namespace UPFCON.Models;
 public class Chairman
 {
     [Key] public Guid UserId { get; set; }
-    [ForeignKey(nameof(UserId))] public User User { get; set; } = null!;
+    [ForeignKey(nameof(UserId)), Required] public User User { get; set; } = null!;
     
     [Required] public bool IsInternal { get; set; }
     

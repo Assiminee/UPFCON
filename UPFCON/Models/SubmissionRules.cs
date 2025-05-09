@@ -6,7 +6,7 @@ namespace UPFCON.Models;
 public class SubmissionRules
 {
     [Key] public Guid EventId { get; set; }
-    [ForeignKey((nameof(EventId)))] public Event Event { get; set; } = null!;
+    [ForeignKey(nameof(EventId)), Required] public Event Event { get; set; } = null!;
     
     [Required, MaxLength(50)] public required string Font { get; set; }
     

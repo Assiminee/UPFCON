@@ -14,12 +14,10 @@ public enum ApprovalStatus
 
 public class BoardDirectorDecision
 {
-    [Key] public Guid BoardDirectorId { get; set; }
-    [Key] public Guid EventId { get; set; }
-    
-    [ForeignKey(nameof(BoardDirectorId))] public BoardDirector BoardDirector { get; set; } = null!;
-    
-    [ForeignKey(nameof(EventId))] public Event Event { get; set; } = null!;
+    public Guid BoardDirectorId { get; set; }
+    public Guid EventId { get; set; }
+    public BoardDirector BoardDirector { get; set; } = null!;
+    public Event Event { get; set; } = null!;
     
     [Required, DefaultValue(ApprovalStatus.PendingDecision)] public ApprovalStatus ApprovalStatus { get; set; }
 

@@ -20,10 +20,10 @@ public enum InvitationStatus
 
 public class CommitteeMember
 {
-    [Key] public Guid ChairmanId { get; set; }
-    [ForeignKey(nameof(ChairmanId))] public Chairman Chairman { get; set; } = null!;
-    [Key] public Guid EventId { get; set; }
-    [ForeignKey(nameof(EventId))] public Event Event {get; set;}  = null!;
+    public Guid ChairmanId { get; set; }
+    public Chairman Chairman { get; set; } = null!;
+    public Guid EventId { get; set; }
+    public Event Event {get; set;}  = null!;
     
     [Required, DefaultValue(CommitteeMemberRole.Evaluator)] public CommitteeMemberRole Role {get; set;}
     

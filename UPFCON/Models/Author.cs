@@ -6,7 +6,7 @@ namespace UPFCON.Models;
 public class Author
 {
     [Key] public Guid UserId { get; set; }
-    [ForeignKey(nameof(UserId))] public User User { get; set; } = null!;
+    [ForeignKey(nameof(UserId)), Required] public User User { get; set; } = null!;
     
     [Required, MaxLength(255)] public string Expertise { get; set; } = null!;
     
