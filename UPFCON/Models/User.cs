@@ -5,29 +5,37 @@ using System.Text;
 
 namespace UPFCON.Models;
 
+public enum AccountStatus
+{
+    Verified,
+    PendingVerification,
+    Rejected,
+    Deleted
+}
+
 public class User
 {
-    [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] public Guid Id { get; set; }
+    public Guid Id { get; set; }
     
-    [Required, MaxLength(50)] public string Fname { get; set; }
+    [Required, MaxLength(100)] public required string Fname { get; set; }
     
-    [Required, MaxLength(50)] public string Lname { get; set; }
+    [Required, MaxLength(100)] public required string Lname { get; set; }
     
-    [Required, MaxLength(255), Index(IsUnique=true), EmailAddress] public string Email { get; set; }
+    [Required, MaxLength(255), EmailAddress] public required string Email { get; set; }
     
-    [Required, MaxLength(13), Index(IsUnique=true), Phone] public string Phone { get; set; }
+    [Required, MaxLength(13), Phone] public required string Phone { get; set; }
     
     [Required] public DateTime Birthdate { get; set; }
     
-    [MaxLength(255)] public string Description { get; set; }
+    [MaxLength(255)] public required string Description { get; set; }
     
-    [Required, MaxLength(255)] public string Address { get; set; }
+    [Required, MaxLength(255)] public required string Address { get; set; }
     
-    [Required, MaxLength(255)] public string Pwd { get; set; }
+    [Required, MaxLength(255)] public required string Pwd { get; set; }
     
-    [Required, DefaultValue(AccountStatus.PendingVerification)] public AccountStatus AccountStatus { get; set; }
+    public AccountStatus AccountStatus { get; set; }
     
-    [Required] public IList<Diploma> Diplomas { get; set; }
+    public IList<Diploma> Diplomas { get; set; } = new List<Diploma>();
     
     public Author? Author { get; set; }
     public Attendee? Attendee { get; set; }
@@ -36,40 +44,5 @@ public class User
     [NotMapped] public string FullName
     {
         get => $"{Fname} {Lname}";
-    }
-
-    public override string ToString()
-    {
-        var author = Author != null ? Id.ToString() : "Not an author";
-        var attendee = Attendee != null ? Id.ToString() : "Not an attendee";
-        var chairman = Chairman != null ? Id.ToString() : "Not an chairman";
-        var diplomas = new StringBuilder();
-
-        if (Diplomas.Count > 0)
-        {
-            diplomas.AppendLine("[");
-            for (var i = 0; i < Diplomas.Count; i++)
-            {
-                diplomas.Append($"\t{Diplomas[i]}");
-                if (i < Diplomas.Count - 1)
-                    diplomas.Append(", \n");
-            }
-            diplomas.Append(']');
-        }
-
-        return $"User [ Id = {Id}\n" +
-               $"\tFname = {Fname}\n" +
-               $"\tLname = {Lname}\n" +
-               $"\tEmail = {Email}\n" +
-               $"\tPhone = {Phone}\n" +
-               $"\tBirthdate = {Birthdate} \n" +
-               $"\tDescription = {Description}\n" +
-               $"\tAddress = {Address}\n" +
-               $"\tPwd = {Pwd}\n" +
-               $"\tAccountStatus = {AccountStatus.ToString()}\n" +
-               $"\tAuthorId = {author} \n" +
-               $"\tAttendeeId = {attendee} \n" +
-               $"\tChairmanId = {chairman} \n" +
-               $"\tDiplomas = {diplomas} ]";
     }
 }

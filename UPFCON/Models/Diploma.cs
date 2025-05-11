@@ -13,36 +13,18 @@ public enum DiplomaVerificationStatus
 
 public class Diploma
 {
-    [Key] public Guid Id { get; set; }
-    
+    public Guid Id { get; set; }
     public Guid UserId { get; set; }
-    [ForeignKey(nameof(UserId)), Required] public User User { get; set; }
+    public User User { get; set; } = null!;
     
-    [Required] public string Title { get; set; }
+    [Required, MaxLength(255)] public required string Title { get; set; }
     
     [Required] public DateTime IssueDate { get; set; }
     
-    [Required] public string Path { get; set; }
-    
-    [Required, DefaultValue(DiplomaVerificationStatus.PendingVerification)] public DiplomaVerificationStatus VerificationStatus { get; set; }
-    
+    [Required, MaxLength(255)] public required string Path { get; set; }
+    public DiplomaVerificationStatus VerificationStatus { get; set; }
     public Guid? AdminId { get; set; }
-    [ForeignKey(nameof(AdminId))] public Admin? VerifiedBy { get; set; }
+    public Admin? VerifiedBy { get; set; }
     
     public DateTime? VerifiedAt { get; set; }
-
-    public override string ToString()
-    {
-        var verifiedBy = VerifiedBy != null ? $"{{Id: {VerifiedBy.Id}, FullName: {VerifiedBy.FullName}}}" : "Null";
-        var verifiedAt = VerifiedAt != null ? VerifiedAt.ToString() : "Null";
-        
-        return $"Diploma [ Id = {Id}\n" +
-               $"\tTitle = {Title}\n" +
-               $"\tIssueDate = {IssueDate}\n" +
-               $"\tLocationOnDisk = {Path}\n" +
-               $"\tVerificationStatus = {VerificationStatus.ToString()}\n" +
-               $"\tVerifiedBy = {verifiedBy}\n" +
-               $"\tVerifiedAt = {verifiedAt} ]";
-
-    }
 }

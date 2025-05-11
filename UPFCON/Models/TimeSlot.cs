@@ -15,13 +15,13 @@ public enum TimeSlotType
 
 public class TimeSlot
 {
-    [Key] public Guid EventId { get; set; }
-    [ForeignKey(nameof(EventId)), Required] public Event Event { get; set; } = null!;
+    public Guid EventId { get; set; }
+    public Event Event { get; set; } = null!;
     
-    [Key] public Guid PaperId { get; set; }
-    [ForeignKey(nameof(PaperId)), Required] public Paper Paper { get; set; } = null!;
+    public Guid PaperId { get; set; }
+    public Paper Paper { get; set; } = null!;
     
-    [Required] public DateTime Stat { get; set; }
+    [Required] public DateTime Start { get; set; }
     
     [Required] public DateTime End { get; set; }
     

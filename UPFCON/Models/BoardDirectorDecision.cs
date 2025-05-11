@@ -19,7 +19,7 @@ public class BoardDirectorDecision
     public BoardDirector BoardDirector { get; set; } = null!;
     public Event Event { get; set; } = null!;
     
-    [Required, DefaultValue(ApprovalStatus.PendingDecision)] public ApprovalStatus ApprovalStatus { get; set; }
+    public ApprovalStatus ApprovalStatus { get; set; }
 
     [Required, MaxLength(255)] public string Comment { get; set; } = null!;
 }

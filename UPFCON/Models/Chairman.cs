@@ -5,10 +5,8 @@ namespace UPFCON.Models;
 
 public class Chairman
 {
-    [Key] public Guid UserId { get; set; }
-    [ForeignKey(nameof(UserId)), Required] public User User { get; set; } = null!;
-    
-    [Required] public bool IsInternal { get; set; }
-    
+    public Guid UserId { get; set; }
+    public User User { get; set; } = null!;
+    public required bool IsInternal { get; set; }
     public IList<CommitteeMember> Memberships { get; set; } = new List<CommitteeMember>();
 }

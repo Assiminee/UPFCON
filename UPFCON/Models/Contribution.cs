@@ -15,6 +15,5 @@ public class Contribution
     public Author Author { get; set; } = null!;
     public Guid PaperId { get; set; }
     public Paper Paper { get; set; } = null!;
-    
-    [Required, DefaultValue(ContributorRole.Contributor)] public ContributorRole Role { get; set; }
+    public required ContributorRole Role { get; set; }
 }

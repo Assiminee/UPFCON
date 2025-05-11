@@ -1,6 +1,6 @@
 ﻿namespace UPFCON.Models;
 
-public enum BoardMemberRole
+public enum BoardDirectorRole
 {
     President,
     VicePresident,
@@ -9,6 +9,6 @@ public enum BoardMemberRole
 
 public class BoardDirector : User
 {
-    public BoardMemberRole Role { get; set; }
-    public IList<BoardDirectorDecision> Decisions { get; set; }
+    public required BoardDirectorRole Role { get; set; }
+    public IList<BoardDirectorDecision> Decisions { get; set; } = new List<BoardDirectorDecision>();
 }

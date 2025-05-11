@@ -5,7 +5,7 @@ namespace UPFCON.Models;
 
 public class Evaluation
 {
-    [Key] public Guid Id { get; set; }
+    public Guid Id { get; set; }
     
     [Required, MaxLength(255)] public required string Comment { get; set; }
     
@@ -17,9 +17,10 @@ public class Evaluation
     
     [Required] public DateTime EvaluationDate { get; set; }
     
+    // For composite key
+    public Guid EventId { get; set; }
     public Guid EvaluatorId { get; set; }
-    [ForeignKey(nameof(EvaluatorId)), Required] public CommitteeMember Evaluator { get; set; } = null!;
-    
+    public CommitteeMember Evaluator { get; set; } = null!;
     public Guid PaperId { get; set; }
-    [ForeignKey(nameof(PaperId)), Required] public Paper Paper { get; set; } = null!;
+    public Paper Paper { get; set; } = null!;
 }
