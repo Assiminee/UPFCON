@@ -100,7 +100,7 @@ public class UpfconContext : DbContext
 
             d.ToTable(dp => dp.HasCheckConstraint(
                 "CK_AllowedValuesDiplomaVerificationStatus",
-                $"[DiplomaVerificationStatus] IN ('{allowedStatuses}')"
+                $"[VerificationStatus] IN ('{allowedStatuses}')"
             ));
         });
     }
@@ -153,7 +153,7 @@ public class UpfconContext : DbContext
 
             bd.ToTable(b => b.HasCheckConstraint(
                 "CK_AllowedBoardDirectorRole",
-                $"[BoardDirectorRole] IN ('{allowedRoles}')"
+                "[Role] IN ('{allowedRoles}')"
             ));
         });
     }
@@ -223,7 +223,7 @@ public class UpfconContext : DbContext
             
             cm.ToTable(c => c.HasCheckConstraint(
                 "CK_AllowedCommitteeMemberRoles",
-                $"[CommitteeMemberRole] IN ('{allowedRoles}')"
+                $"[Role] IN ('{allowedRoles}')"
             ));
 
             cm.Property(c => c.InvitationStatus)
@@ -272,7 +272,7 @@ public class UpfconContext : DbContext
             
             p.ToTable(pr => pr.HasCheckConstraint(
                 "CK_AllowedPaperStatuses",
-                $"[PaperStatus] IN ('{allowedStatuses}')"
+                "[Status] IN ('{allowedStatuses}')"
                 ));
 
             p.HasMany(pr => pr.Evaluations)
@@ -364,7 +364,7 @@ public class UpfconContext : DbContext
 
         modelBuilder.Entity<TimeSlot>()
             .HasOne(ts => ts.Event)
-            .WithMany(e => e.Planning)
+            .WithMany(e => e.TimeSlots)
             .HasForeignKey(ts => ts.EventId)
             .OnDelete(DeleteBehavior.Restrict);
     }

@@ -4,6 +4,9 @@ namespace UPFCON;
 
 public class Program
 {
-    public static void Main() { }
+    public static void Main()
+    {
+        Console.WriteLine("UPFCON");
+    }
     
 }
