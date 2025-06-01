@@ -1,0 +1,6 @@
+@UPFCON_HostAddress = http://localhost:5280
+
+GET {{UPFCON_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
