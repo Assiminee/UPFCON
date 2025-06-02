@@ -22,7 +22,7 @@ public class Diploma
     [Required] public DateTime IssueDate { get; set; }
     
     [Required, MaxLength(255)] public required string Path { get; set; }
-    public DiplomaVerificationStatus VerificationStatus { get; set; }
+    public DiplomaVerificationStatus? VerificationStatus { get; set; }
     public Guid? AdminId { get; set; }
     public Admin? VerifiedBy { get; set; }
     

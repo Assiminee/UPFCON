@@ -1,14 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace UPFCON.Models.Context;
 
-public class UpfconContext : DbContext
+public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 {
     public UpfconContext() { }
     public UpfconContext(DbContextOptions<UpfconContext> options)
         : base(options) { }
-    
-    public required DbSet<User> Users { get; set; }
+
     public required DbSet<Admin> Admins { get; set; }
     public required DbSet<Attendee> Attendees { get; set; }
     public required DbSet<Author> Authors { get; set; }
@@ -52,12 +53,7 @@ public class UpfconContext : DbContext
         
         modelBuilder.Entity<User>(u =>
         {
-            u.HasKey(us => us.Id);
-            
-            u.Property(us => us.Id)
-                .HasDefaultValueSql("NEWID()");
-            
-            u.HasIndex(us => us.Email)
+            u.HasIndex(us => us.NormalizedEmail)
                 .IsUnique();
             
             u.HasIndex(us => us.Phone)
@@ -66,13 +62,23 @@ public class UpfconContext : DbContext
             u.Property(us => us.AccountStatus)
                 .HasConversion<string>()
                 .HasMaxLength(50)
+                .IsRequired(false)
                 .HasDefaultValue(AccountStatus.PendingVerification);
 
             u.ToTable(us => us.HasCheckConstraint(
                 "CK_AllowedValuesAccountStatus",
                 $"[AccountStatus] IN ('{allowedStatuses}')"
             ));
+
+            u.ToTable("Users");
         });
+
+        modelBuilder.Entity<IdentityRole<Guid>>().ToTable("Roles");
+        modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles");
+        modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("UserClaims");
+        modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("UserLogins");
+        modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("UserTokens");
+        modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("RoleClaims");
     }
 
     private static void DiplomaSetup(ModelBuilder modelBuilder)
@@ -132,6 +138,7 @@ public class UpfconContext : DbContext
             bdd.Property(bd => bd.ApprovalStatus)
                 .HasConversion<string>()
                 .HasMaxLength(50)
+                .IsRequired(false)
                 .HasDefaultValue(ApprovalStatus.PendingDecision);
 
             bdd.ToTable(bd => bd.HasCheckConstraint(
@@ -220,6 +227,7 @@ public class UpfconContext : DbContext
             cm.Property(c => c.Role)
                 .HasConversion<string>()
                 .HasMaxLength(50)
+                .IsRequired(false)
                 .HasDefaultValue(CommitteeMemberRole.Evaluator);
             
             cm.ToTable(c => c.HasCheckConstraint(
@@ -230,6 +238,7 @@ public class UpfconContext : DbContext
             cm.Property(c => c.InvitationStatus)
                 .HasConversion<string>()
                 .HasMaxLength(50)
+                .IsRequired(false)
                 .HasDefaultValue(InvitationStatus.PendingResponse);
 
             cm.ToTable(c => c.HasCheckConstraint(
@@ -269,11 +278,12 @@ public class UpfconContext : DbContext
             p.Property(pr => pr.Status)
                 .HasConversion<string>()
                 .HasMaxLength(50)
+                .IsRequired(false)
                 .HasDefaultValue(PaperStatus.PendingEvaluation);
             
             p.ToTable(pr => pr.HasCheckConstraint(
                 "CK_AllowedPaperStatuses",
-                "[Status] IN ('{allowedStatuses}')"
+                $"[Status] IN ('{allowedStatuses}')"
                 ));
 
             p.HasMany(pr => pr.Evaluations)
@@ -316,6 +326,7 @@ public class UpfconContext : DbContext
             c.Property(cn => cn.Role)
                 .HasConversion<string>()
                 .HasMaxLength(50)
+                .IsRequired(false)
                 .HasDefaultValue(ContributorRole.Contributor);
 
             c.ToTable(cn => cn.HasCheckConstraint(
@@ -382,6 +393,7 @@ public class UpfconContext : DbContext
             );
         }
     }
-
+    // Use this to connect to data source:
+    // Server=(localdb)\MSSQLLocalDB;Database=UPFCON;Integrated Security=True;TrustServerCertificate=True;
     
 }

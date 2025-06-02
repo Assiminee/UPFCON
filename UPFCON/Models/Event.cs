@@ -5,16 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UPFCON.Models;
 
-public enum Location
-{
-    Idrak,
-    CampusAuditorium,
-    CampusLibrary,
-    CampusQuad,
-    CampusSportsField,
-    Online
-}
-
 public class Event
 {
     public Guid Id { get; set; }

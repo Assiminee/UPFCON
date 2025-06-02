@@ -24,11 +24,11 @@ public class CommitteeMember
     public Chairman Chairman { get; set; } = null!;
     public Guid EventId { get; set; }
     public Event Event {get; set;}  = null!;
-    public CommitteeMemberRole Role {get; set;}
+    public CommitteeMemberRole? Role {get; set;}
     
     [Required] public DateTime InvitedAt { get; set; }
     
     public DateTime? RespondedAt { get; set; }
-    public InvitationStatus InvitationStatus { get; set; }
+    public InvitationStatus? InvitationStatus { get; set; }
     public IList<Evaluation>? Evaluations { get; set; }
 }

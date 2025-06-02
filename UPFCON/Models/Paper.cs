@@ -26,7 +26,7 @@ public class Paper
     
     [Required, MaxLength(255)] public required string Keywords {get; set;}
     
-    public required PaperStatus Status { get; set; }
+    public PaperStatus? Status { get; set; }
     public IList<Contribution> Contributors { get; set; } = new List<Contribution>();
     public IList<Evaluation> Evaluations { get; set; } = new List<Evaluation>();
     
