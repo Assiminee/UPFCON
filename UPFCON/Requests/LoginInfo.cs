@@ -1,4 +1,4 @@
-﻿namespace UPFCON.Models.DTOs;
+﻿namespace UPFCON.Requests;
 
 public class LoginInfo
 {

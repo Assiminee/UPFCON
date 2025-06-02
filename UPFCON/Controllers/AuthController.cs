@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using UPFCON.Models;
 using UPFCON.Models.Context;
-using UPFCON.Models.DTOs;
 
 namespace UPFCON.Controllers;
 
