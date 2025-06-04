@@ -2,8 +2,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using UPFCON.Interfaces;
 using UPFCON.Models;
 using UPFCON.Models.Context;
+using UPFCON.Services;
+using UPFCON.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,31 +15,48 @@ builder.Services.AddDbContext<UpfconContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
+
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.AddDebug();
 
-// Define password requirements
 builder.Services.AddIdentity<User, IdentityRole<Guid>>(options =>
     {
+        // Defining password requirements
         options.Password.RequireDigit = true;
         options.Password.RequiredLength = 10;
         options.Password.RequireLowercase = true;
         options.Password.RequireUppercase = true;
         options.Password.RequireNonAlphanumeric = true;
+        
+        // Setting max failed attempts and timespan until next possible attempt
+        options.Lockout.MaxFailedAccessAttempts = 3;
+        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+        
+        // Requiring a unique email
+        options.User.RequireUniqueEmail = true;
+        
+        // Requiring email confirmation
+        options.SignIn.RequireConfirmedAccount = true;
     })
-    .AddEntityFrameworkStores<UpfconContext>();
+    .AddRoles<IdentityRole<Guid>>()
+    .AddEntityFrameworkStores<UpfconContext>()
+    .AddDefaultTokenProviders();
 
-builder.Services.AddAuthorization();
 
 // Explicitly forcing “every authentication action” to go through the JWT‐Bearer handler
 builder.Services.AddAuthentication(options =>
     {
-        // Means: "When the framework needs to validate a user’s identity on incoming requests, use the JWT‐Bearer handler."
+        // Means: "When the framework needs to validate a user’s identity on incoming requests,
+        // use the JWT‐Bearer handler."
         options.DefaultAuthenticateScheme =
-            // Means: “If an unauthenticated request hits an [Authorize] endpoint, challenge by asking for a Bearer token.”
+            // Means: “If an unauthenticated request hits an [Authorize] endpoint,
+            // challenge by asking for a Bearer token.”
             options.DefaultChallengeScheme =
-                // Means: “If an authenticated user lacks sufficient rights (e.g. wrong role) and we call Forbid(), use the Bearer handler to produce a 403 response.”
+                // Means: “If an authenticated user lacks sufficient rights (e.g. wrong role) and we call Forbid(),
+                // use the Bearer handler to produce a 403 response.”
                 options.DefaultForbidScheme =
                     options.DefaultScheme =
                         options.DefaultSignInScheme =
@@ -77,6 +97,14 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
+builder.Services.AddControllers();
+
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SMTP"));
+builder.Services.AddScoped<IDiplomaService, DiplomaService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IEmailSender, EmailSenderService>();
+builder.Services.AddScoped<IUtils, Utils>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -95,9 +123,9 @@ using var scope = app.Services.CreateScope();
 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
 
-string[] roles = new[] { "Admin", "Chairman", "Attendee", "Author", "BoardDirector" };
+var roles = Enum.GetNames<Roles>();
 
-foreach (string roleName in roles)
+foreach (var roleName in roles)
 {
     if (!await roleManager.RoleExistsAsync(roleName))
     {

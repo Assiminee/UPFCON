@@ -6,9 +6,14 @@ namespace UPFCON.Models.Context;
 
 public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 {
-    public UpfconContext() { }
+    public UpfconContext()
+    {
+    }
+
     public UpfconContext(DbContextOptions<UpfconContext> options)
-        : base(options) { }
+        : base(options)
+    {
+    }
 
     public required DbSet<Admin> Admins { get; set; }
     public required DbSet<Attendee> Attendees { get; set; }
@@ -29,7 +34,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        
+
         // Defines relationships between entities:
         UserSetUp(modelBuilder);
         DiplomaSetup(modelBuilder);
@@ -46,28 +51,24 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
         TimeSlotSetup(modelBuilder);
         EventSetup(modelBuilder);
     }
-    
+
     private static void UserSetUp(ModelBuilder modelBuilder)
     {
         var allowedStatuses = string.Join(",", Enum.GetNames<AccountStatus>());
-        
+
         modelBuilder.Entity<User>(u =>
         {
             u.HasIndex(us => us.NormalizedEmail)
                 .IsUnique();
-            
-            u.HasIndex(us => us.Phone)
-                .IsUnique();
 
             u.Property(us => us.AccountStatus)
-                .HasConversion<string>()
                 .HasMaxLength(50)
-                .IsRequired(false)
-                .HasDefaultValue(AccountStatus.PendingVerification);
+                .HasDefaultValue(AccountStatus.PendingVerification)
+                .IsRequired();
 
             u.ToTable(us => us.HasCheckConstraint(
                 "CK_AllowedValuesAccountStatus",
-                $"[AccountStatus] IN ('{allowedStatuses}')"
+                "AccountStatus IN ('Verified','PendingVerification','Rejected','Deleted')"
             ));
 
             u.ToTable("Users");
@@ -84,14 +85,14 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     private static void DiplomaSetup(ModelBuilder modelBuilder)
     {
         var allowedStatuses = string.Join(",", Enum.GetNames<DiplomaVerificationStatus>());
-        
+
         modelBuilder.Entity<Diploma>(d =>
         {
             d.HasKey(dp => dp.Id);
-            
+
             d.Property(dp => dp.Id)
                 .HasDefaultValueSql("NEWID()");
-            
+
             d.HasOne(dp => dp.User)
                 .WithMany(u => u.Diplomas)
                 .HasForeignKey(dp => dp.UserId);
@@ -99,15 +100,15 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             d.HasOne(dp => dp.VerifiedBy)
                 .WithMany(a => a.VerifiedDiplomas)
                 .HasForeignKey(dp => dp.AdminId);
-            
+
             d.Property(dp => dp.VerificationStatus)
-                .HasConversion<string>()
                 .HasMaxLength(50)
-                .HasDefaultValue(DiplomaVerificationStatus.PendingVerification);
+                .HasDefaultValue(DiplomaVerificationStatus.PendingVerification)
+                .IsRequired();
 
             d.ToTable(dp => dp.HasCheckConstraint(
                 "CK_AllowedValuesDiplomaVerificationStatus",
-                $"[VerificationStatus] IN ('{allowedStatuses}')"
+                "VerificationStatus IN ('Verified','PendingVerification','Rejected')"
             ));
         });
     }
@@ -130,11 +131,11 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             bdd.HasOne(b => b.BoardDirector)
                 .WithMany(bd => bd.Decisions)
                 .HasForeignKey(b => b.BoardDirectorId);
-            
+
             bdd.HasOne(b => b.Event)
                 .WithMany(e => e.BoardDecisions)
                 .HasForeignKey(b => b.EventId);
-            
+
             bdd.Property(bd => bd.ApprovalStatus)
                 .HasConversion<string>()
                 .HasMaxLength(50)
@@ -175,14 +176,14 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             a.HasOne(att => att.User)
                 .WithOne(u => u.Attendee)
                 .HasForeignKey<Attendee>(att => att.UserId);
-            
+
             a.HasMany(att => att.EventsAttended)
                 .WithOne(attendance => attendance.Attendee)
                 .HasForeignKey(attendance => attendance.AttendeeId)
                 .OnDelete(DeleteBehavior.ClientCascade);
         });
     }
-    
+
     private static void AttendanceSetup(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Attendance>(a =>
@@ -203,33 +204,33 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             c.HasOne(ch => ch.User)
                 .WithOne(u => u.Chairman)
                 .HasForeignKey<Chairman>(ch => ch.UserId);
-            
+
             c.Property(ch => ch.IsInternal)
                 .HasDefaultValue(true);
-            
+
             c.HasMany(ch => ch.Memberships)
                 .WithOne(cm => cm.Chairman)
                 .HasForeignKey(cm => cm.ChairmanId)
                 .OnDelete(DeleteBehavior.Cascade);
         });
     }
-    
-    
+
+
     private static void CommitteeMemberSetup(ModelBuilder modelBuilder)
     {
         var allowedRoles = string.Join(",", Enum.GetNames<CommitteeMemberRole>());
         var allowedInvitationStatuses = string.Join(",", Enum.GetNames<InvitationStatus>());
-        
+
         modelBuilder.Entity<CommitteeMember>(cm =>
         {
             cm.HasKey(c => new { c.ChairmanId, c.EventId });
-            
+
             cm.Property(c => c.Role)
                 .HasConversion<string>()
                 .HasMaxLength(50)
                 .IsRequired(false)
                 .HasDefaultValue(CommitteeMemberRole.Evaluator);
-            
+
             cm.ToTable(c => c.HasCheckConstraint(
                 "CK_AllowedCommitteeMemberRoles",
                 $"[Role] IN ('{allowedRoles}')"
@@ -245,14 +246,14 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
                 "CK_AllowedInvitationStatuses",
                 $"[InvitationStatus] IN ('{allowedInvitationStatuses}')"
             ));
-            
+
             cm.HasMany(c => c.Evaluations)
                 .WithOne(e => e.Evaluator)
                 .HasForeignKey(e => new { e.EvaluatorId, e.EventId })
                 .OnDelete(DeleteBehavior.ClientCascade);
         });
     }
-    
+
     private static void EvaluationSetup(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Evaluation>(e =>
@@ -267,7 +268,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     private static void PaperSetup(ModelBuilder modelBuilder)
     {
         var allowedStatuses = string.Join(",", Enum.GetNames<PaperStatus>());
-        
+
         modelBuilder.Entity<Paper>(p =>
         {
             p.HasKey(pr => pr.Id);
@@ -280,17 +281,17 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
                 .HasMaxLength(50)
                 .IsRequired(false)
                 .HasDefaultValue(PaperStatus.PendingEvaluation);
-            
+
             p.ToTable(pr => pr.HasCheckConstraint(
                 "CK_AllowedPaperStatuses",
                 $"[Status] IN ('{allowedStatuses}')"
-                ));
+            ));
 
             p.HasMany(pr => pr.Evaluations)
                 .WithOne(e => e.Paper)
                 .HasForeignKey(e => e.PaperId)
                 .OnDelete(DeleteBehavior.Cascade);
-            
+
             p.HasMany(pr => pr.Contributors)
                 .WithOne(c => c.Paper)
                 .HasForeignKey(c => c.PaperId)
@@ -318,7 +319,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     private static void ContributionSetup(ModelBuilder modelBuilder)
     {
         var allowedRoles = string.Join(",", Enum.GetNames<ContributorRole>());
-        
+
         modelBuilder.Entity<Contribution>(c =>
         {
             c.HasKey(cn => new { cn.AuthorId, cn.PaperId });
@@ -332,7 +333,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             c.ToTable(cn => cn.HasCheckConstraint(
                 "CK_AllowedContributorRoles",
                 $"[Role] IN ('{allowedRoles}')"
-                ));
+            ));
         });
     }
 
@@ -341,27 +342,27 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
         modelBuilder.Entity<Event>(e =>
         {
             e.HasKey(ev => ev.Id);
-            
+
             e.Property(ev => ev.Id)
                 .HasDefaultValueSql("NEWID()");
-            
+
             e.HasMany(ev => ev.Attendees)
                 .WithOne(att => att.Event)
                 .HasForeignKey(att => att.EventId)
                 .OnDelete(DeleteBehavior.Cascade);
-            
+
             e.HasMany(ev => ev.SubmittedPapers)
                 .WithOne(p => p.Event)
                 .HasForeignKey(p => p.EventId)
                 .OnDelete(DeleteBehavior.Cascade);
-            
+
             e.HasMany(ev => ev.TimeSlots)
                 .WithOne(ts => ts.Event)
                 .HasForeignKey(ts => ts.EventId)
                 .OnDelete(DeleteBehavior.Cascade);
         });
     }
-    
+
 
     private static void TimeSlotSetup(ModelBuilder modelBuilder)
     {
@@ -380,20 +381,6 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             .HasForeignKey(ts => ts.EventId)
             .OnDelete(DeleteBehavior.Restrict);
     }
-    
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (!optionsBuilder.IsConfigured)
-        {
-            optionsBuilder.UseSqlServer(
-                "Data Source=(localdb)\\MSSQLLocalDB;" + 
-                "Initial Catalog=UPFCON;" + 
-                "Integrated Security=True;" +
-                "TrustServerCertificate=True;"
-            );
-        }
-    }
     // Use this to connect to data source:
     // Server=(localdb)\MSSQLLocalDB;Database=UPFCON;Integrated Security=True;TrustServerCertificate=True;
-    
 }

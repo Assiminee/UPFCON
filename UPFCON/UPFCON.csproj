@@ -29,8 +29,12 @@
     </ItemGroup>
 
     <ItemGroup>
+<<<<<<< Updated upstream
       <Folder Include="Migrations\" />
       <Folder Include="Models\DTOs\" />
+=======
+      <Folder Include="wwwroot\uploads\diplomas\" />
+>>>>>>> Stashed changes
     </ItemGroup>
 
 </Project>

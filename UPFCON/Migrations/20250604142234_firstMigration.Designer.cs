@@ -12,8 +12,8 @@ using UPFCON.Models.Context;
 namespace UPFCON.Migrations
 {
     [DbContext(typeof(UpfconContext))]
-    [Migration("20250601164624_AddedBuiltinAuthentication")]
-    partial class AddedBuiltinAuthentication
+    [Migration("20250604142234_firstMigration")]
+    partial class firstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -334,6 +334,7 @@ namespace UPFCON.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("VerificationStatus")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
@@ -350,7 +351,7 @@ namespace UPFCON.Migrations
 
                     b.ToTable("Diplomas", t =>
                         {
-                            t.HasCheckConstraint("CK_AllowedValuesDiplomaVerificationStatus", "[VerificationStatus] IN ('Verified,PendingVerification,Rejected')");
+                            t.HasCheckConstraint("CK_AllowedValuesDiplomaVerificationStatus", "VerificationStatus IN ('Verified','PendingVerification','Rejected')");
                         });
                 });
 
@@ -601,6 +602,7 @@ namespace UPFCON.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("AccountStatus")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
@@ -619,7 +621,6 @@ namespace UPFCON.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
@@ -635,12 +636,12 @@ namespace UPFCON.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Fname")
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Lname")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -661,11 +662,6 @@ namespace UPFCON.Migrations
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasMaxLength(13)
-                        .HasColumnType("nvarchar(13)");
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
@@ -695,12 +691,9 @@ namespace UPFCON.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.HasIndex("Phone")
-                        .IsUnique();
-
                     b.ToTable("Users", null, t =>
                         {
-                            t.HasCheckConstraint("CK_AllowedValuesAccountStatus", "[AccountStatus] IN ('Verified,PendingVerification,Rejected,Deleted')");
+                            t.HasCheckConstraint("CK_AllowedValuesAccountStatus", "AccountStatus IN ('Verified','PendingVerification','Rejected','Deleted')");
                         });
 
                     b.HasDiscriminator().HasValue("User");
@@ -714,7 +707,7 @@ namespace UPFCON.Migrations
 
                     b.ToTable(t =>
                         {
-                            t.HasCheckConstraint("CK_AllowedValuesAccountStatus", "[AccountStatus] IN ('Verified,PendingVerification,Rejected,Deleted')");
+                            t.HasCheckConstraint("CK_AllowedValuesAccountStatus", "AccountStatus IN ('Verified','PendingVerification','Rejected','Deleted')");
                         });
 
                     b.HasDiscriminator().HasValue("Admin");
@@ -731,7 +724,7 @@ namespace UPFCON.Migrations
 
                     b.ToTable(t =>
                         {
-                            t.HasCheckConstraint("CK_AllowedValuesAccountStatus", "[AccountStatus] IN ('Verified,PendingVerification,Rejected,Deleted')");
+                            t.HasCheckConstraint("CK_AllowedValuesAccountStatus", "AccountStatus IN ('Verified','PendingVerification','Rejected','Deleted')");
 
                             t.HasCheckConstraint("CK_AllowedBoardDirectorRole", "[Role] IN ('President,VicePresident,Dean')");
                         });

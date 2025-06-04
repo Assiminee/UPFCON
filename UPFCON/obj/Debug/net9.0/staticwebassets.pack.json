@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png"
+    },
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png"
+    },
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png"
+    },
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png"
+    },
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png"
+    },
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png"
+    },
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png"
+    },
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png"
+    },
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png"
+    },
+    {
+      "Id": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.UPFCON.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.UPFCON.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.UPFCON.props",
+      "PackagePath": "build\\UPFCON.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.UPFCON.props",
+      "PackagePath": "buildMultiTargeting\\UPFCON.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.UPFCON.props",
+      "PackagePath": "buildTransitive\\UPFCON.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

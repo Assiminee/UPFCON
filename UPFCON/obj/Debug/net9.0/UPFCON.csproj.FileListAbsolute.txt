@@ -354,3 +354,4 @@ C:\Users\znatn\OneDrive\Documents\GitHub\UPFCON\UPFCON\bin\Debug\net9.0\Microsof
 C:\Users\znatn\OneDrive\Documents\GitHub\UPFCON\UPFCON\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\znatn\OneDrive\Documents\GitHub\UPFCON\UPFCON\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\znatn\OneDrive\Documents\GitHub\UPFCON\UPFCON\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\znatn\OneDrive\Documents\GitHub\UPFCON\UPFCON\bin\Debug\net9.0\UPFCON.staticwebassets.runtime.json

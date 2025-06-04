@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UPFCON.Migrations
 {
     /// <inheritdoc />
-    public partial class AddedBuiltinAuthentication : Migration
+    public partial class firstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -52,13 +52,12 @@ namespace UPFCON.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Fname = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Lname = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Birthdate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Address = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    AccountStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true, defaultValue: "PendingVerification"),
+                    AccountStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingVerification"),
                     Discriminator = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
                     Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -80,7 +79,7 @@ namespace UPFCON.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                     table.CheckConstraint("CK_AllowedBoardDirectorRole", "[Role] IN ('President,VicePresident,Dean')");
-                    table.CheckConstraint("CK_AllowedValuesAccountStatus", "[AccountStatus] IN ('Verified,PendingVerification,Rejected,Deleted')");
+                    table.CheckConstraint("CK_AllowedValuesAccountStatus", "AccountStatus IN ('Verified','PendingVerification','Rejected','Deleted')");
                 });
 
             migrationBuilder.CreateTable(
@@ -245,14 +244,14 @@ namespace UPFCON.Migrations
                     Title = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     IssueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Path = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    VerificationStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true, defaultValue: "PendingVerification"),
+                    VerificationStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingVerification"),
                     AdminId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     VerifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Diplomas", x => x.Id);
-                    table.CheckConstraint("CK_AllowedValuesDiplomaVerificationStatus", "[VerificationStatus] IN ('Verified,PendingVerification,Rejected')");
+                    table.CheckConstraint("CK_AllowedValuesDiplomaVerificationStatus", "VerificationStatus IN ('Verified','PendingVerification','Rejected')");
                     table.ForeignKey(
                         name: "FK_Diplomas_Users_AdminId",
                         column: x => x.AdminId,
@@ -573,12 +572,6 @@ namespace UPFCON.Migrations
                 column: "NormalizedEmail",
                 unique: true,
                 filter: "[NormalizedEmail] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Users_Phone",
-                table: "Users",
-                column: "Phone",
-                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",

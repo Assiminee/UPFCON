@@ -14,6 +14,15 @@ public enum AccountStatus
     Deleted
 }
 
+public enum Roles
+{
+    Admin,
+    Author,
+    Chairman,
+    Attendee,
+    BoardDirector
+}
+
 public class User : IdentityUser<Guid>
 {
     // ─── Removed the following parameters ───────────────────────────────────────────────────
@@ -23,19 +32,17 @@ public class User : IdentityUser<Guid>
     // Since IdentityUser already has these parameters defined
     // ────────────────────────────────────────────────────────────────────────────────────────
 
-    [Required, MaxLength(100)] public required string Fname { get; set; }
+    [Required, MaxLength(100)] public string FirstName { get; set; } = string.Empty;
     
-    [Required, MaxLength(100)] public required string Lname { get; set; }
-    
-    [Required, MaxLength(13), Phone] public required string Phone { get; set; }
+    [Required, MaxLength(100)] public string LastName { get; set; } = string.Empty;
     
     [Required] public DateTime Birthdate { get; set; }
     
-    [MaxLength(255)] public required string Description { get; set; }
+    [MaxLength(255)] public string? Description { get; set; }
     
-    [Required, MaxLength(255)] public required string Address { get; set; }
-    
-    public AccountStatus? AccountStatus { get; set; }
+    [Required, MaxLength(255)] public string? Address { get; set; }
+
+    public string AccountStatus { get; set; } = Enum.GetName(Models.AccountStatus.PendingVerification) ?? string.Empty;
     
     public IList<Diploma> Diplomas { get; set; } = new List<Diploma>();
     
@@ -45,6 +52,6 @@ public class User : IdentityUser<Guid>
 
     [NotMapped] public string FullName
     {
-        get => $"{Fname} {Lname}";
+        get => $"{FirstName} {LastName}";
     }
 }
