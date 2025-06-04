@@ -1,19 +1,25 @@
-﻿using System.Security.Policy;
+﻿using System.Security.Claims;
+using System.Security.Policy;
 using Microsoft.AspNetCore.Identity;
+using UPFCON.Authorization;
 using UPFCON.Exceptions;
 using UPFCON.Interfaces;
 using UPFCON.Models;
 using UPFCON.Models.DTOs;
+using UPFCON.Requests;
 
 namespace UPFCON.Services;
 
-public class UserService(UserManager<User> userManager, IDiplomaService diplomaService, IUtils utils, IEmailSender emailSender)
+public class UserService(
+    UserManager<User> userManager, IDiplomaService diplomaService,
+    IUtils utils, IEmailSender emailSender, IAuth authService)
     : IUserService
 {
     private UserManager<User> UserManager { get; } = userManager;
     private IDiplomaService DiplomaService { get; } = diplomaService;
     private IUtils Utils { get; } = utils;
-    public IEmailSender EmailSender { get; } = emailSender;
+    private IEmailSender EmailSender { get; } = emailSender;
+    private IAuth AuthService { get; } = authService;
 
     public async Task<(IdentityResult res, User user, IEnumerable<string> roles)> CreateUserAsync(
         RegistrationDto registrationDto)
@@ -50,7 +56,6 @@ public class UserService(UserManager<User> userManager, IDiplomaService diplomaS
     }
     
     
-
     public async Task<IdentityResult> AddRolesAsync(User user, IEnumerable<string> roles)
     {
         var res = await UserManager.AddToRolesAsync(user, roles);
@@ -86,6 +91,52 @@ public class UserService(UserManager<User> userManager, IDiplomaService diplomaS
     public async Task<User?> FindUserById(string id)
     {
         return await UserManager.FindByIdAsync(id);
+    }
+
+    public async Task<IEnumerable<Claim>> GenerateUserClaimsAsync(User user)
+    {
+        var roles = await UserManager.GetRolesAsync(user);
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, user.FullName),
+            new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
+        };
+        
+        foreach (var role in roles)
+            claims.Add(new Claim(ClaimTypes.Role, role));
+
+        foreach (var claim in claims)
+            Utils.LogInformation($"Claim: {claim.Type} - {claim.Value}");
+
+        return claims;
+    }
+    
+    public async Task<JwtToken> AuthenticateUser(LoginDto loginDto)
+    {
+        var user = await UserManager.FindByEmailAsync(loginDto.Email);
+        
+        if (user == null)
+            throw new InvalidLoginCredentialsException();
+        
+        var validPassword = await UserManager.CheckPasswordAsync(user, loginDto.Password);
+        
+        if (!validPassword)
+            throw new InvalidLoginCredentialsException();
+
+        var emailConfirmed = await UserManager.IsEmailConfirmedAsync(user);
+        if (!emailConfirmed)
+            throw new EmailNotConfirmedException();
+
+        var claims = await GenerateUserClaimsAsync(user);
+        var expiresAt = DateTime.UtcNow.AddHours(8);
+        
+        var token = AuthService.GenerateJwtToken(claims, expiresAt);
+        
+        return new JwtToken()
+        {
+            AccessToken = token,
+            ExpiresAt = expiresAt,
+        };
     }
 
     public async Task<IdentityResult> ConfirmUserAsync(User user, string token)

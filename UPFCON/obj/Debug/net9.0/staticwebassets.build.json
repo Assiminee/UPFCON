@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2tQqq5R9GNobn7rjgOJxepxFLjxIFoiyRv1SfeZoojw=",
+  "Hash": "3EuiilKZXrbhAy6wFpSdo64kCiuwFk9AIB2v2sFs3GI=",
   "Source": "UPFCON",
   "BasePath": "_content/UPFCON",
   "Mode": "Default",
@@ -120,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png"
+    },
+    {
+      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
+      "SourceId": "UPFCON",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "BasePath": "_content/UPFCON",
+      "RelativePath": "uploads/diplomas/1c0c5f5f-7571-4f44-99e2-354265dfcac8#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x5l31i7fh2",
+      "Integrity": "Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png"
     },
     {
       "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png",
@@ -820,6 +841,88 @@
         {
           "Name": "label",
           "Value": "uploads/diplomas/1908cc4d-1f29-46ff-988b-5282840d5378.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3318042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 16:09:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/1c0c5f5f-7571-4f44-99e2-354265dfcac8.x5l31i7fh2.png",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3318042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 16:09:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x5l31i7fh2"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/1c0c5f5f-7571-4f44-99e2-354265dfcac8.png"
         },
         {
           "Name": "integrity",

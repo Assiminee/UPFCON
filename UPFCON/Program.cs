@@ -15,9 +15,6 @@ builder.Services.AddDbContext<UpfconContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-builder.Services.AddAuthentication();
-builder.Services.AddAuthorization();
-
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.AddDebug();
@@ -92,18 +89,21 @@ builder.Services.AddAuthentication(options =>
             // If the JWT was signed with the same key (or the matching private key, in an asymmetric scenario),
             // the signature check passes. Otherwise, the token is rejected.
             IssuerSigningKey = new SymmetricSecurityKey(
-                System.Text.Encoding.UTF8.GetBytes(builder.Configuration["JWT:SigningKey"]
-                ))
+                System.Text.Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecretKey"] ?? string.Empty
+            )),
+            ClockSkew = TimeSpan.Zero
         };
     });
 
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
 builder.Services.AddControllers();
-
 builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SMTP"));
 builder.Services.AddScoped<IDiplomaService, DiplomaService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IEmailSender, EmailSenderService>();
 builder.Services.AddScoped<IUtils, Utils>();
+builder.Services.AddScoped<IAuth, AuthService>();
 
 var app = builder.Build();
 

@@ -5,6 +5,7 @@ using UPFCON.Exceptions;
 using UPFCON.Interfaces;
 using UPFCON.Models;
 using UPFCON.Models.DTOs;
+using UPFCON.Requests;
 
 namespace UPFCON.Controllers;
 
@@ -65,5 +66,23 @@ public class AuthController(UserManager<User> userManager, IUserService userServ
             return BadRequest(res.Errors);
         
         return Ok();
+    }
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
+    {
+        try
+        {
+            var token = await UserService.AuthenticateUser(loginDto);
+            return Ok(token);
+        }
+        catch (InvalidLoginCredentialsException)
+        {
+            return BadRequest("Invalid login credentials");
+        }
+        catch (EmailNotConfirmedException)
+        {
+            return BadRequest("Email not confirmed");
+        }
     }
 }
