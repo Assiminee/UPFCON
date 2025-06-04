@@ -90,6 +90,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\1908cc4d-1f29-46ff-988b-5282840d5378.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>UPFCON</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/UPFCON</BasePath>
+      <RelativePath>uploads/diplomas/1c0c5f5f-7571-4f44-99e2-354265dfcac8.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>x5l31i7fh2</Fingerprint>
+      <Integrity>Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png'))">
       <SourceType>Package</SourceType>
       <SourceId>UPFCON</SourceId>

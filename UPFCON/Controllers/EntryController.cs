@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace UPFCON.Controllers;
 
 [Route("/Entry")]
+[Authorize]
 public class EntryController : Controller
 {
     // GET
