@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AxXT0wnpRGujIZQv1qSc9vBu09T4bUFN2GMKJf8iIIA=",
+  "Hash": "vBw56qiAiBbkQ1cPu/f4xe+JDkOIEtEy7S53EN5TPQM=",
   "Source": "UPFCON",
   "BasePath": "_content/UPFCON",
   "Mode": "Default",
@@ -120,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png"
+    },
+    {
+      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png",
+      "SourceId": "UPFCON",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "BasePath": "_content/UPFCON",
+      "RelativePath": "uploads/diplomas/98baab7c-c291-4aab-a3a6-d1859f74756d#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x5l31i7fh2",
+      "Integrity": "Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png"
     },
     {
       "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
@@ -251,7 +272,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:46:02 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -288,7 +309,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:46:02 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -333,7 +354,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:18:18 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -370,7 +391,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:18:18 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -415,7 +436,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:26:59 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -452,7 +473,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:26:59 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -497,7 +518,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 02:08:21 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -534,7 +555,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 02:08:21 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -579,7 +600,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:44:39 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -616,7 +637,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:44:39 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -631,6 +652,88 @@
         {
           "Name": "label",
           "Value": "uploads/diplomas/79e7aac1-690a-4178-99b4-612797494bb8.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/98baab7c-c291-4aab-a3a6-d1859f74756d.png",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3318042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/98baab7c-c291-4aab-a3a6-d1859f74756d.x5l31i7fh2.png",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3318042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x5l31i7fh2"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/98baab7c-c291-4aab-a3a6-d1859f74756d.png"
         },
         {
           "Name": "integrity",
@@ -661,7 +764,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:25:50 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -698,7 +801,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:25:50 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -743,7 +846,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:28:15 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -780,7 +883,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:28:15 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -825,7 +928,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:30:59 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -862,7 +965,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:30:59 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -907,7 +1010,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:59:02 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -944,7 +1047,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 01:59:02 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -989,7 +1092,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 02:02:45 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1026,7 +1129,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 02:02:45 GMT"
+          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
         },
         {
           "Name": "Cache-Control",
