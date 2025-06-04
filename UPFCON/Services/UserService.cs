@@ -48,6 +48,8 @@ public class UserService(UserManager<User> userManager, IDiplomaService diplomaS
 
         return (res, user, roles);
     }
+    
+    
 
     public async Task<IdentityResult> AddRolesAsync(User user, IEnumerable<string> roles)
     {
@@ -56,13 +58,6 @@ public class UserService(UserManager<User> userManager, IDiplomaService diplomaS
         Utils.LogErrors(res, "Encountered errors when adding user roles");
 
         return res;
-    }
-
-    public async Task<string> GenerateEmailConfirmationLinkAsync(User user)
-    {
-        var token = await UserManager.GenerateEmailConfirmationTokenAsync(user);
-        
-        return $"/auth/confirm-email?userId={user.Id}&token={token}";
     }
 
     public async Task<IdentityResult> SendConfirmationEmailAsync(User user, string confirmationLink)
@@ -96,11 +91,19 @@ public class UserService(UserManager<User> userManager, IDiplomaService diplomaS
     public async Task<IdentityResult> ConfirmUserAsync(User user, string token)
     {
         var res = await UserManager.ConfirmEmailAsync(user, token);
+
+        Utils.LogErrors(res, "Failed to confirm email");
+
+        return res;
+    }
+
+    public async Task<string> GenerateEmailConfirmationLinkAsync(User user)
+    {
+        var link = await EmailSender.GenerateEmailConfirmationLinkAsync(user, UserManager);
+
+        Utils.LogInformation(link);
         
-        if (!res.Succeeded)
-            return IdentityResult.Failed();
-        
-        return IdentityResult.Success;
+        return link;
     }
 
     private static void CreateAuthorAttendeeChairman(RegistrationDto registrationDto, User user)

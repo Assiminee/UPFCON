@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using UPFCON.Exceptions;
 using UPFCON.Interfaces;
 using UPFCON.Models;
-using UPFCON.Models.Context;
 using UPFCON.Models.DTOs;
 
 namespace UPFCON.Controllers;
