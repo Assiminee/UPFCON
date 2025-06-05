@@ -1,6 +1,6 @@
 ﻿namespace UPFCON.Exceptions;
 
-public class EmailNotConfirmedException : Exception
+public class EmailNotConfirmedException(string message) : Exception(message)
 {
     
 }

@@ -12,45 +12,21 @@ namespace UPFCON.Controllers;
 [ApiController]
 [Route("/api/v1/auth")]
 [AllowAnonymous]
-public class AuthController(UserManager<User> userManager, IUserService userService) : Controller
+public class AuthController(IUserService userService) : Controller
 {
     private IUserService UserService { get; } = userService;
 
     [HttpPost("register")]
     [Consumes("multipart/form-data")]
     public async Task<IActionResult> RegisterAsync([FromForm] RegistrationDto registrationDto) {
-        try
-        {
-            var (createUserRes, user, roles) = await UserService.CreateUserAsync(registrationDto);
+        var (user, roles) = await UserService.CreateUserAsync(registrationDto);
 
-            if (!createUserRes.Succeeded)
-                return BadRequest(createUserRes.Errors);
+        await UserService.AddRolesAsync(user, roles);
 
-            var addRolesRes = await UserService.AddRolesAsync(user, roles);
+        var confirmationLink = await UserService.GenerateEmailConfirmationLinkAsync(user);
+        await UserService.SendConfirmationEmailAsync(user, confirmationLink);
 
-            if (!addRolesRes.Succeeded)
-                return BadRequest(addRolesRes.Errors);
-
-            var confirmationLink = await UserService.GenerateEmailConfirmationLinkAsync(user);
-            var confirmationEmailRes = await UserService.SendConfirmationEmailAsync(user, confirmationLink);
-
-            if (!confirmationEmailRes.Succeeded)
-                return BadRequest(confirmationEmailRes.Errors);
-
-            return Created();
-        }
-        catch (InvalidFileException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-        catch (InvalidUserRoleException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-        catch (ArgumentNullException)
-        {
-            return BadRequest("Missing user email");
-        }
+        return Created();
     }
 
     [HttpGet("confirm-email")]
@@ -58,12 +34,7 @@ public class AuthController(UserManager<User> userManager, IUserService userServ
     {
         var user = await UserService.FindUserById(userId);
         
-        if (user == null)
-            return NotFound();
-        
-        var res = await UserService.ConfirmUserAsync(user, token);
-        if (!res.Succeeded)
-            return BadRequest(res.Errors);
+        await UserService.ConfirmUserAsync(user, token);
         
         return Ok();
     }
@@ -71,18 +42,8 @@ public class AuthController(UserManager<User> userManager, IUserService userServ
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
     {
-        try
-        {
-            var token = await UserService.AuthenticateUser(loginDto);
-            return Ok(token);
-        }
-        catch (InvalidLoginCredentialsException)
-        {
-            return BadRequest("Invalid login credentials");
-        }
-        catch (EmailNotConfirmedException)
-        {
-            return BadRequest("Email not confirmed");
-        }
+        var token = await UserService.AuthenticateUser(loginDto);
+        
+        return Ok(token);
     }
 }

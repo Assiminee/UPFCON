@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace UPFCON.Controllers;
 
 [Route("/Entry")]
-[Authorize]
+[Authorize(Roles = "Author")]
 public class EntryController : Controller
 {
     // GET

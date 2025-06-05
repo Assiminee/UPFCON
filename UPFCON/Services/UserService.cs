@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.Globalization;
+using System.Security.Claims;
 using System.Security.Policy;
 using Microsoft.AspNetCore.Identity;
 using UPFCON.Authorization;
@@ -21,7 +22,7 @@ public class UserService(
     private IEmailSender EmailSender { get; } = emailSender;
     private IAuth AuthService { get; } = authService;
 
-    public async Task<(IdentityResult res, User user, IEnumerable<string> roles)> CreateUserAsync(
+    public async Task<(User user, IEnumerable<string> roles)> CreateUserAsync(
         RegistrationDto registrationDto)
     {
         IList<Diploma> diplomas = await DiplomaService.CreateDiplomaListAsync(registrationDto.Diplomas);
@@ -45,27 +46,35 @@ public class UserService(
             Diplomas = diplomas
         };
 
-        Utils.LogInformation($"AccountStatus {user.AccountStatus}");
+        // Utils.LogInformation($"AccountStatus {user.AccountStatus}");
 
         CreateAuthorAttendeeChairman(registrationDto, user);
         var res = await UserManager.CreateAsync(user, registrationDto.Password);
         
         Utils.LogErrors(res, "Encountered errors when creating a user");
 
-        return (res, user, roles);
+        if (!res.Succeeded)
+        {
+            var exception = res.Errors.Any(e => 
+                e.Code.Equals("DuplicateUserName") || e.Code.Equals("DuplicateEmail")
+            );
+
+            if (exception)
+                throw new DuplicateEmailException($"The email {registrationDto.Email} already exists.");
+        }
+        
+        return (user, roles);
     }
     
     
-    public async Task<IdentityResult> AddRolesAsync(User user, IEnumerable<string> roles)
+    public async Task AddRolesAsync(User user, IEnumerable<string> roles)
     {
         var res = await UserManager.AddToRolesAsync(user, roles);
 
         Utils.LogErrors(res, "Encountered errors when adding user roles");
-
-        return res;
     }
 
-    public async Task<IdentityResult> SendConfirmationEmailAsync(User user, string confirmationLink)
+    public async Task SendConfirmationEmailAsync(User user, string confirmationLink)
     {
         if (string.IsNullOrWhiteSpace(user.Email))
             throw new ArgumentNullException(nameof(user.Email));
@@ -77,7 +86,7 @@ public class UserService(
                       $"<p>Please follow this <a href={confirmationLink}>link</a></p>" +
                       "<p>Once your account is confirmed, a validation process will commence " +
                       "where one of our admins will confirm your identity as well as the documents " +
-                      "you've provided (diplomas)</p>" +
+                      "you've provided (diplomas.)</p>" +
                       "<p>If you've only registered as an attendee, the confirmation process does not" +
                       " concern you.</p>" +
                       "<p>Thank you again for choosing UPFCON!</p>" +
@@ -85,12 +94,16 @@ public class UserService(
                       "<p>UPFCON team</p>";
         
         await EmailSender.SendEmailAsync(user.Email, subject, body);
-        return IdentityResult.Success;
     }
 
-    public async Task<User?> FindUserById(string id)
+    public async Task<User> FindUserById(string id)
     {
-        return await UserManager.FindByIdAsync(id);
+        var user = await UserManager.FindByIdAsync(id);
+
+        if (user == null)
+            throw new NotFoundException("User not found");
+
+        return user;
     }
 
     public async Task<IEnumerable<Claim>> GenerateUserClaimsAsync(User user)
@@ -105,9 +118,6 @@ public class UserService(
         foreach (var role in roles)
             claims.Add(new Claim(ClaimTypes.Role, role));
 
-        foreach (var claim in claims)
-            Utils.LogInformation($"Claim: {claim.Type} - {claim.Value}");
-
         return claims;
     }
     
@@ -116,16 +126,16 @@ public class UserService(
         var user = await UserManager.FindByEmailAsync(loginDto.Email);
         
         if (user == null)
-            throw new InvalidLoginCredentialsException();
+            throw new InvalidLoginCredentialsException("Invalid login credentials");
         
         var validPassword = await UserManager.CheckPasswordAsync(user, loginDto.Password);
         
         if (!validPassword)
-            throw new InvalidLoginCredentialsException();
+            throw new InvalidLoginCredentialsException("Invalid login credentials");
 
         var emailConfirmed = await UserManager.IsEmailConfirmedAsync(user);
         if (!emailConfirmed)
-            throw new EmailNotConfirmedException();
+            throw new EmailNotConfirmedException("Email not confirmed");
 
         var claims = await GenerateUserClaimsAsync(user);
         var expiresAt = DateTime.UtcNow.AddHours(8);
@@ -139,22 +149,19 @@ public class UserService(
         };
     }
 
-    public async Task<IdentityResult> ConfirmUserAsync(User user, string token)
+    public async Task ConfirmUserAsync(User user, string token)
     {
         var res = await UserManager.ConfirmEmailAsync(user, token);
 
         Utils.LogErrors(res, "Failed to confirm email");
 
-        return res;
+        if (!res.Succeeded)
+            throw new Exception("Failed to confirm email");
     }
 
     public async Task<string> GenerateEmailConfirmationLinkAsync(User user)
     {
-        var link = await EmailSender.GenerateEmailConfirmationLinkAsync(user, UserManager);
-
-        Utils.LogInformation(link);
-        
-        return link;
+        return await EmailSender.GenerateEmailConfirmationLinkAsync(user, UserManager);
     }
 
     private static void CreateAuthorAttendeeChairman(RegistrationDto registrationDto, User user)

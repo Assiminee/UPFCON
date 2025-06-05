@@ -1,3 +1,3 @@
 ﻿namespace UPFCON.Exceptions;
 
-public class InvalidLoginCredentialsException : Exception {}
+public class InvalidLoginCredentialsException(string message) : Exception(message) {}
