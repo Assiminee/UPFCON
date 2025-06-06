@@ -2,18 +2,22 @@
 using System.Security.Claims;
 using System.Security.Policy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 using UPFCON.Authorization;
 using UPFCON.Exceptions;
 using UPFCON.Interfaces;
 using UPFCON.Models;
 using UPFCON.Models.DTOs;
 using UPFCON.Requests;
+using UPFCON.Settings;
 
 namespace UPFCON.Services;
 
 public class UserService(
     UserManager<User> userManager, IDiplomaService diplomaService,
-    IUtils utils, IEmailSender emailSender, IAuth authService)
+    IUtils utils, IEmailSender emailSender, IAuth authService,
+    IOptions<EmailChangeSettings> emailChangeSettings,
+    IOptions<RegistrationEmailSettings> registrationEmailSettings)
     : IUserService
 {
     private UserManager<User> UserManager { get; } = userManager;
@@ -21,6 +25,8 @@ public class UserService(
     private IUtils Utils { get; } = utils;
     private IEmailSender EmailSender { get; } = emailSender;
     private IAuth AuthService { get; } = authService;
+    public IOptions<EmailChangeSettings> EmailChangeSettings { get; } = emailChangeSettings;
+    public IOptions<RegistrationEmailSettings> RegistrationEmailSettings { get; } = registrationEmailSettings;
 
     public async Task<(User user, IEnumerable<string> roles)> CreateUserAsync(
         RegistrationDto registrationDto)
@@ -45,8 +51,6 @@ public class UserService(
             PhoneNumber = registrationDto.PhoneNumber,
             Diplomas = diplomas
         };
-
-        // Utils.LogInformation($"AccountStatus {user.AccountStatus}");
 
         CreateAuthorAttendeeChairman(registrationDto, user);
         var res = await UserManager.CreateAsync(user, registrationDto.Password);
@@ -79,21 +83,27 @@ public class UserService(
         if (string.IsNullOrWhiteSpace(user.Email))
             throw new ArgumentNullException(nameof(user.Email));
         
-        string subject = "UPFCON Confirmation Email";
-        string body = "<h1>Thank you for choosing UPFCON</h1><br/>" +
-                      "<p>We are delight to welcome you to UPFCON!</p>" +
-                      "<p>In order to access your profile, you must confirm your email<p>" +
-                      $"<p>Please follow this <a href={confirmationLink}>link</a></p>" +
-                      "<p>Once your account is confirmed, a validation process will commence " +
-                      "where one of our admins will confirm your identity as well as the documents " +
-                      "you've provided (diplomas.)</p>" +
-                      "<p>If you've only registered as an attendee, the confirmation process does not" +
-                      " concern you.</p>" +
-                      "<p>Thank you again for choosing UPFCON!</p>" +
-                      "<p>Enjoy this journey</p>" +
-                      "<p>UPFCON team</p>";
+        string body = RegistrationEmailSettings.Value.Body
+            .Replace("{{User}}", user.FullName)
+            .Replace("{{ConfirmationLink}}", confirmationLink);
+        
+        string subject = RegistrationEmailSettings.Value.Subject;
         
         await EmailSender.SendEmailAsync(user.Email, subject, body);
+    }
+    
+    public async Task SendEmailChangeConfirmationAsync(User user, string confirmationLink)
+    {
+        if (string.IsNullOrWhiteSpace(user.Email))
+            throw new ArgumentNullException(nameof(user.Email));
+        
+        string body = RegistrationEmailSettings.Value.Subject
+            .Replace("{{User}}", user.FullName)
+            .Replace("{{ConfirmationLink}}", confirmationLink);
+        
+        await EmailSender.SendEmailAsync(
+            user.Email, RegistrationEmailSettings.Value.Subject, body
+        );
     }
 
     public async Task<User> FindUserById(string id)
@@ -106,7 +116,57 @@ public class UserService(
         return user;
     }
 
-    public async Task<IEnumerable<Claim>> GenerateUserClaimsAsync(User user)
+    public async Task<User> GetFromJwtEmailClaim(HttpContext httpContext)
+    {
+        var email = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+        
+        if (email == null)
+            throw new NotFoundException("Email not found");
+        
+        return await FindUserByEmail(email);
+    }
+
+    // public async Task<IdentityResult> EditUserAsync(User user, UserProfileDto userProfileDto)
+    // {
+    //     bool emailChanged = user.Email != null && !user.Email.ToLower().Equals(userProfileDto.Email.ToLower());
+    //     
+    //     user.Description = userProfileDto.Description;
+    //     user.FirstName = userProfileDto.FirstName;
+    //     user.LastName = userProfileDto.LastName;
+    //     user.Birthdate = userProfileDto.Birthdate;
+    //     user.Address = userProfileDto.Address;
+    //     user.Email = userProfileDto.Email;
+    //     user.PhoneNumber = userProfileDto.PhoneNumber;
+    //     
+    //     if (user.Author != null)
+    //         user.Author.Expertise = userProfileDto.Expertise ?? "";
+    //     
+    //     var updated = await UserManager.UpdateAsync(user);
+    //
+    //     if (emailChanged)
+    //     {
+    //         var emailChangeToken = await UserManager.GenerateChangeEmailTokenAsync(user, userProfileDto.Email);
+    //         var res = await UserManager.ChangeEmailAsync(user, userProfileDto.Email, emailChangeToken);
+    //         if (res.Succeeded)
+    //         {
+    //             
+    //         }
+    //     }
+    //
+    //     return updated;
+    // }
+
+    public async Task<User> FindUserByEmail(string email)
+    {
+        var user = await UserManager.FindByEmailAsync(email);
+
+        if (user == null)
+            throw new NotFoundException("User not found");
+
+        return user;
+    }
+
+    private async Task<IEnumerable<Claim>> GenerateUserClaimsAsync(User user)
     {
         var roles = await UserManager.GetRolesAsync(user);
         var claims = new List<Claim>
@@ -149,7 +209,7 @@ public class UserService(
         };
     }
 
-    public async Task ConfirmUserAsync(User user, string token)
+    public async Task ConfirmEmailAsync(User user, string token)
     {
         var res = await UserManager.ConfirmEmailAsync(user, token);
 

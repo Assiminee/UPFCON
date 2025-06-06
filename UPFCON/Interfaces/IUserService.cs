@@ -12,7 +12,11 @@ public interface IUserService
     Task AddRolesAsync(User user, IEnumerable<string> roles);
     Task SendConfirmationEmailAsync(User user, string confirmationLink);
     Task<User> FindUserById(string id);
-    Task ConfirmUserAsync(User user, string token);
+    Task ConfirmEmailAsync(User user, string token);
     Task<string> GenerateEmailConfirmationLinkAsync(User user);
     Task<JwtToken> AuthenticateUser(LoginDto loginDto);
+    Task<User> FindUserByEmail(string email);
+    Task<User> GetFromJwtEmailClaim(HttpContext httpContext);
+    
+    // Task<User> EditUserAsync(User user, UserProfileDto userProfileDto);
 }

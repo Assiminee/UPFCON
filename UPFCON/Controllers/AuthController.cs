@@ -34,7 +34,7 @@ public class AuthController(IUserService userService) : Controller
     {
         var user = await UserService.FindUserById(userId);
         
-        await UserService.ConfirmUserAsync(user, token);
+        await UserService.ConfirmEmailAsync(user, token);
         
         return Ok();
     }
