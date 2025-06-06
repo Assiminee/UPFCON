@@ -10,7 +10,7 @@ public interface IUserService
 {
     Task<(User user, IEnumerable<string> roles)> CreateUserAsync(RegistrationDto registrationDto);
     Task AddRolesAsync(User user, IEnumerable<string> roles);
-    Task SendConfirmationEmailAsync(User user, string confirmationLink);
+    Task SendConfirmationEmailAsync(User user, string confirmationLink, bool isEmailChange);
     Task<User> FindUserById(string id);
     Task ConfirmEmailAsync(User user, string token);
     Task<string> GenerateEmailConfirmationLinkAsync(User user);
@@ -18,5 +18,5 @@ public interface IUserService
     Task<User> FindUserByEmail(string email);
     Task<User> GetFromJwtEmailClaim(HttpContext httpContext);
     
-    // Task<User> EditUserAsync(User user, UserProfileDto userProfileDto);
+    Task<IdentityResult> EditUserAsync(User user, UserProfileDto userProfileDto);
 }

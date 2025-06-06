@@ -15,12 +15,6 @@ public class UserController(IUtils utils, IUserService userService) : Controller
     private IUtils Utils { get; } = utils;
     private IUserService UserService { get; } = userService;
 
-    // GET
-    public IActionResult Index()
-    {
-        return View();
-    }
-
     [HttpGet]
     [Route("profile")]
     public async Task<IActionResult> GetProfileAsync()
@@ -30,10 +24,12 @@ public class UserController(IUtils utils, IUserService userService) : Controller
         return Ok(UserProfileDto.FromUser(user));
     }
 
-    // [HttpPost]
-    // public async Task<IActionResult> EditProfileAsync([FromBody] UserProfileDto userProfileDto)
-    // {
-    //     var user = await UserService.GetFromJwtEmailClaim(HttpContext);
-    //     
-    // }
+    [HttpPost]
+    public async Task<IActionResult> EditProfileAsync([FromBody] UserProfileDto userProfileDto)
+    {
+        var user = await UserService.GetFromJwtEmailClaim(HttpContext);
+        await UserService.EditUserAsync(user, userProfileDto);
+        
+        return Ok();
+    }
 }

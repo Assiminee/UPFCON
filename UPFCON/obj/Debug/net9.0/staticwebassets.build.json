@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WYbA8UaQe245k7XuLjWYAKmNhfeZ5ONvDw0u+EihyM8=",
+  "Hash": "uEQFcnCThUplYBG2XQmC80Z7wWGsP4ikglKHS6DkNLg=",
   "Source": "UPFCON",
   "BasePath": "_content/UPFCON",
   "Mode": "Default",
@@ -542,6 +542,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png"
     },
     {
+      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
+      "SourceId": "UPFCON",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "BasePath": "_content/UPFCON",
+      "RelativePath": "uploads/diplomas/8c9ac249-a3a0-4cc5-86fe-730bd39917be#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7trgj40743",
+      "Integrity": "NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg"
+    },
+    {
       "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
@@ -689,6 +710,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png"
     },
     {
+      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
+      "SourceId": "UPFCON",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "BasePath": "_content/UPFCON",
+      "RelativePath": "uploads/diplomas/b534b5ef-508d-492e-bec4-06d3e29fe1c6#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7trgj40743",
+      "Integrity": "NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg"
+    },
+    {
       "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
@@ -813,6 +855,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png"
+    },
+    {
+      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
+      "SourceId": "UPFCON",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "BasePath": "_content/UPFCON",
+      "RelativePath": "uploads/diplomas/d0729b2b-6ef9-448e-a5d1-018033ddad75#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7trgj40743",
+      "Integrity": "NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg"
     },
     {
       "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg",
@@ -3035,6 +3098,88 @@
       ]
     },
     {
+      "Route": "uploads/diplomas/8c9ac249-a3a0-4cc5-86fe-730bd39917be.7trgj40743.jpg",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 13:05:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7trgj40743"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 13:05:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        }
+      ]
+    },
+    {
       "Route": "uploads/diplomas/928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
       "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
       "Selectors": [],
@@ -3609,6 +3754,88 @@
       ]
     },
     {
+      "Route": "uploads/diplomas/b534b5ef-508d-492e-bec4-06d3e29fe1c6.7trgj40743.jpg",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 13:08:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7trgj40743"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 13:08:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        }
+      ]
+    },
+    {
       "Route": "uploads/diplomas/bc0dbc05-7107-4e0a-8268-83d521118d38.png",
       "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png",
       "Selectors": [],
@@ -4097,6 +4324,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/d0729b2b-6ef9-448e-a5d1-018033ddad75.7trgj40743.jpg",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 13:10:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7trgj40743"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Jun 2025 13:10:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
         }
       ]
     },

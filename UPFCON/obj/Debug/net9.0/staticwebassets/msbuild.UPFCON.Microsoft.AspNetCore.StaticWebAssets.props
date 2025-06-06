@@ -450,6 +450,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>UPFCON</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/UPFCON</BasePath>
+      <RelativePath>uploads/diplomas/8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7trgj40743</Fingerprint>
+      <Integrity>NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png'))">
       <SourceType>Package</SourceType>
       <SourceId>UPFCON</SourceId>
@@ -576,6 +594,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>UPFCON</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/UPFCON</BasePath>
+      <RelativePath>uploads/diplomas/b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7trgj40743</Fingerprint>
+      <Integrity>NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\bc0dbc05-7107-4e0a-8268-83d521118d38.png'))">
       <SourceType>Package</SourceType>
       <SourceId>UPFCON</SourceId>
@@ -683,6 +719,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>UPFCON</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/UPFCON</BasePath>
+      <RelativePath>uploads/diplomas/d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7trgj40743</Fingerprint>
+      <Integrity>NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\diplomas\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg'))">
       <SourceType>Package</SourceType>

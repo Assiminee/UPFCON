@@ -24,7 +24,7 @@ public class AuthController(IUserService userService) : Controller
         await UserService.AddRolesAsync(user, roles);
 
         var confirmationLink = await UserService.GenerateEmailConfirmationLinkAsync(user);
-        await UserService.SendConfirmationEmailAsync(user, confirmationLink);
+        await UserService.SendConfirmationEmailAsync(user, confirmationLink, false);
 
         return Created();
     }

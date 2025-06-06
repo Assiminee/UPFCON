@@ -78,32 +78,18 @@ public class UserService(
         Utils.LogErrors(res, "Encountered errors when adding user roles");
     }
 
-    public async Task SendConfirmationEmailAsync(User user, string confirmationLink)
+    public async Task SendConfirmationEmailAsync(User user, string confirmationLink, bool isEmailChange)
     {
         if (string.IsNullOrWhiteSpace(user.Email))
             throw new ArgumentNullException(nameof(user.Email));
+
+        string body = isEmailChange ? EmailChangeSettings.Value.Body : RegistrationEmailSettings.Value.Body;
+        string subject = isEmailChange ? EmailChangeSettings.Value.Subject : RegistrationEmailSettings.Value.Subject;
         
-        string body = RegistrationEmailSettings.Value.Subject
-            .Replace("{{user}}", user.FullName)
+        body = body.Replace("{{user}}", user.FullName)
             .Replace("{{confirmationLink}}", confirmationLink);
-        
-        string subject = RegistrationEmailSettings.Value.Subject;
         
         await EmailSender.SendEmailAsync(user.Email, subject, body);
-    }
-    
-    public async Task SendEmailChangeConfirmationAsync(User user, string confirmationLink)
-    {
-        if (string.IsNullOrWhiteSpace(user.Email))
-            throw new ArgumentNullException(nameof(user.Email));
-        
-        string body = RegistrationEmailSettings.Value.Subject
-            .Replace("{{user}}", user.FullName)
-            .Replace("{{confirmationLink}}", confirmationLink);
-        
-        await EmailSender.SendEmailAsync(
-            user.Email, RegistrationEmailSettings.Value.Subject, body
-        );
     }
 
     public async Task<User> FindUserById(string id)
@@ -126,35 +112,27 @@ public class UserService(
         return await FindUserByEmail(email);
     }
 
-    // public async Task<IdentityResult> EditUserAsync(User user, UserProfileDto userProfileDto)
-    // {
-    //     bool emailChanged = user.Email != null && !user.Email.ToLower().Equals(userProfileDto.Email.ToLower());
-    //     
-    //     user.Description = userProfileDto.Description;
-    //     user.FirstName = userProfileDto.FirstName;
-    //     user.LastName = userProfileDto.LastName;
-    //     user.Birthdate = userProfileDto.Birthdate;
-    //     user.Address = userProfileDto.Address;
-    //     user.Email = userProfileDto.Email;
-    //     user.PhoneNumber = userProfileDto.PhoneNumber;
-    //     
-    //     if (user.Author != null)
-    //         user.Author.Expertise = userProfileDto.Expertise ?? "";
-    //     
-    //     var updated = await UserManager.UpdateAsync(user);
-    //
-    //     if (emailChanged)
-    //     {
-    //         var emailChangeToken = await UserManager.GenerateChangeEmailTokenAsync(user, userProfileDto.Email);
-    //         var res = await UserManager.ChangeEmailAsync(user, userProfileDto.Email, emailChangeToken);
-    //         if (res.Succeeded)
-    //         {
-    //             
-    //         }
-    //     }
-    //
-    //     return updated;
-    // }
+    public async Task<IdentityResult> EditUserAsync(User user, UserProfileDto userProfileDto)
+    {
+        user.Description = userProfileDto.Description;
+        user.FirstName = userProfileDto.FirstName;
+        user.LastName = userProfileDto.LastName;
+        user.Birthdate = userProfileDto.Birthdate;
+        user.Address = userProfileDto.Address;
+        user.PhoneNumber = userProfileDto.PhoneNumber;
+        
+        if (user.Author != null)
+            user.Author.Expertise = userProfileDto.Expertise ?? "";
+        
+        var res = await UserManager.UpdateAsync(user);
+        
+        Utils.LogErrors(res, "Failed to update user profile information");
+        
+        if (!res.Succeeded)
+            throw new Exception("Failed to update user profile information");
+
+        return res;
+    }
 
     public async Task<User> FindUserByEmail(string email)
     {
