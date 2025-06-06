@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UPFCON")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f77a9b70643d8b2748d93cc050895240ba778017")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c26398aff475e8a9f576a3cc2b542a383653e35e")]
 [assembly: System.Reflection.AssemblyProductAttribute("UPFCON")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UPFCON")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

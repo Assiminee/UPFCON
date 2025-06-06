@@ -83,9 +83,9 @@ public class UserService(
         if (string.IsNullOrWhiteSpace(user.Email))
             throw new ArgumentNullException(nameof(user.Email));
         
-        string body = RegistrationEmailSettings.Value.Body
-            .Replace("{{User}}", user.FullName)
-            .Replace("{{ConfirmationLink}}", confirmationLink);
+        string body = RegistrationEmailSettings.Value.Subject
+            .Replace("{{user}}", user.FullName)
+            .Replace("{{confirmationLink}}", confirmationLink);
         
         string subject = RegistrationEmailSettings.Value.Subject;
         
@@ -98,8 +98,8 @@ public class UserService(
             throw new ArgumentNullException(nameof(user.Email));
         
         string body = RegistrationEmailSettings.Value.Subject
-            .Replace("{{User}}", user.FullName)
-            .Replace("{{ConfirmationLink}}", confirmationLink);
+            .Replace("{{user}}", user.FullName)
+            .Replace("{{confirmationLink}}", confirmationLink);
         
         await EmailSender.SendEmailAsync(
             user.Email, RegistrationEmailSettings.Value.Subject, body
