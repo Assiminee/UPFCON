@@ -33,4 +33,14 @@ public class UserController(IUtils utils, IUserService userService) : Controller
         
         return Ok();
     }
+    
+    [HttpPut]
+    [Route("profile/password")]
+    public async Task<IActionResult> EditPasswordAsync([FromBody] ChangePasswordDto passwords)
+    {
+        var user = await UserService.GetFromJwtEmailClaim(HttpContext);
+        await UserService.EditUserPasswordAsync(user, passwords);
+        
+        return Ok();
+    }
 }
