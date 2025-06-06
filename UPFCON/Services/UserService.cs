@@ -120,6 +120,19 @@ public class UserService(
         return user;
     }
 
+    public async Task EditUserPasswordAsync(User user, ChangePasswordDto passwords)
+    {
+        var res = await UserManager.ChangePasswordAsync(
+            user, passwords.OldPassword, passwords.NewPassword
+        );
+        
+        Utils.LogInformation($"Old password {passwords.OldPassword}");
+        Utils.LogInformation($"New password {passwords.NewPassword}");
+        
+        if (!res.Succeeded)
+            throw new InvalidLoginCredentialsException("Incorrect password");
+    }
+    
     public async Task<IdentityResult> EditUserAsync(User user, UserProfileDto userProfileDto)
     {
         user.Description = userProfileDto.Description;

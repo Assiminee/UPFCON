@@ -19,4 +19,5 @@ public interface IUserService
     Task<User> GetFromJwtEmailClaim(HttpContext httpContext);
     
     Task<IdentityResult> EditUserAsync(User user, UserProfileDto userProfileDto);
+    Task EditUserPasswordAsync(User user, ChangePasswordDto passwords);
 }
