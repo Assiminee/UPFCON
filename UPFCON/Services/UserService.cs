@@ -7,6 +7,7 @@ using UPFCON.Authorization;
 using UPFCON.Exceptions;
 using UPFCON.Interfaces;
 using UPFCON.Models;
+using UPFCON.Models.Context;
 using UPFCON.Models.DTOs;
 using UPFCON.Requests;
 using UPFCON.Settings;
@@ -17,7 +18,8 @@ public class UserService(
     UserManager<User> userManager, IDiplomaService diplomaService,
     IUtils utils, IEmailSender emailSender, IAuth authService,
     IOptions<EmailChangeSettings> emailChangeSettings,
-    IOptions<RegistrationEmailSettings> registrationEmailSettings)
+    IOptions<RegistrationEmailSettings> registrationEmailSettings,
+    UpfconContext context)
     : IUserService
 {
     private UserManager<User> UserManager { get; } = userManager;
@@ -25,8 +27,9 @@ public class UserService(
     private IUtils Utils { get; } = utils;
     private IEmailSender EmailSender { get; } = emailSender;
     private IAuth AuthService { get; } = authService;
-    public IOptions<EmailChangeSettings> EmailChangeSettings { get; } = emailChangeSettings;
-    public IOptions<RegistrationEmailSettings> RegistrationEmailSettings { get; } = registrationEmailSettings;
+    private IOptions<EmailChangeSettings> EmailChangeSettings { get; } = emailChangeSettings;
+    private IOptions<RegistrationEmailSettings> RegistrationEmailSettings { get; } = registrationEmailSettings;
+    private UpfconContext Context { get; } = context;
 
     public async Task<(User user, IEnumerable<string> roles)> CreateUserAsync(
         RegistrationDto registrationDto)
@@ -109,7 +112,12 @@ public class UserService(
         if (email == null)
             throw new NotFoundException("Email not found");
         
-        return await FindUserByEmail(email);
+        var user = await FindUserByEmail(email);
+        await Context.Entry(user).Reference(u => u.Author).LoadAsync();
+        await Context.Entry(user).Reference(u => u.Chairman).LoadAsync();
+        await Context.Entry(user).Reference(u => u.Attendee).LoadAsync();
+        
+        return user;
     }
 
     public async Task<IdentityResult> EditUserAsync(User user, UserProfileDto userProfileDto)
@@ -120,6 +128,8 @@ public class UserService(
         user.Birthdate = userProfileDto.Birthdate;
         user.Address = userProfileDto.Address;
         user.PhoneNumber = userProfileDto.PhoneNumber;
+        
+        Utils.LogInformation($"Author expertise: {user.Author?.Expertise}");
         
         if (user.Author != null)
             user.Author.Expertise = userProfileDto.Expertise ?? "";

@@ -13,6 +13,10 @@ public class UserProfileDto
     
     [Required]
     public string LastName { get; set; } = string.Empty;
+        
+    [Required]
+    [EmailAddress(ErrorMessage = "Invalid Email Address")]
+    public string Email { get; set; } = string.Empty;
     
     [Required]
     [Phone(ErrorMessage = "Invalid Phone Number")]
@@ -33,6 +37,7 @@ public class UserProfileDto
             Description = user.Description ?? string.Empty,
             FirstName = user.FirstName,
             LastName = user.LastName,
+            Email = user.Email ?? string.Empty,
             PhoneNumber = user.PhoneNumber ?? string.Empty,
             Birthdate = user.Birthdate,
             Address = user.Address ?? string.Empty,

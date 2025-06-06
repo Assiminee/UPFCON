@@ -24,7 +24,8 @@ public class UserController(IUtils utils, IUserService userService) : Controller
         return Ok(UserProfileDto.FromUser(user));
     }
 
-    [HttpPost]
+    [HttpPut]
+    [Route("profile")]
     public async Task<IActionResult> EditProfileAsync([FromBody] UserProfileDto userProfileDto)
     {
         var user = await UserService.GetFromJwtEmailClaim(HttpContext);
