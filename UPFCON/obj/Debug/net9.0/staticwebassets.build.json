@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uEQFcnCThUplYBG2XQmC80Z7wWGsP4ikglKHS6DkNLg=",
+  "Hash": "2qLi9eu8QjDVi0hdQ0eZ3T2dIXjxAThoOXf7U2Q3oY8=",
   "Source": "UPFCON",
   "BasePath": "_content/UPFCON",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "UPFCON\\wwwroot",
       "Source": "UPFCON",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\01787af6-95f2-4ed1-a5d2-8caa0df9cc10.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\01787af6-95f2-4ed1-a5d2-8caa0df9cc10.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/01787af6-95f2-4ed1-a5d2-8caa0df9cc10#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\01787af6-95f2-4ed1-a5d2-8caa0df9cc10.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/0ae487df-6b8e-4233-a946-77dc0ffe86eb#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0d1b611c-fba4-46d2-8b37-18d174d8b61a.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0d1b611c-fba4-46d2-8b37-18d174d8b61a.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/0d1b611c-fba4-46d2-8b37-18d174d8b61a#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\0d1b611c-fba4-46d2-8b37-18d174d8b61a.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf.jpg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf.jpg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf.jpg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0e562762-330f-494a-ae93-64b593b5541e.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0e562762-330f-494a-ae93-64b593b5541e.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/0e562762-330f-494a-ae93-64b593b5541e#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\0e562762-330f-494a-ae93-64b593b5541e.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1096dc40-2810-4df5-a5a9-76e99c6b9c23.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\1096dc40-2810-4df5-a5a9-76e99c6b9c23.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/1096dc40-2810-4df5-a5a9-76e99c6b9c23#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\1096dc40-2810-4df5-a5a9-76e99c6b9c23.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/1908cc4d-1f29-46ff-988b-5282840d5378#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/1c0c5f5f-7571-4f44-99e2-354265dfcac8#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/208d391c-b2ef-4a3d-95f3-d38c07a1a9bc#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\20d9aafb-0834-4ce4-b852-7e6eaa13804b.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\20d9aafb-0834-4ce4-b852-7e6eaa13804b.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/20d9aafb-0834-4ce4-b852-7e6eaa13804b#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\20d9aafb-0834-4ce4-b852-7e6eaa13804b.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\27733bcf-c689-419f-95f5-91f3839bc521.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\27733bcf-c689-419f-95f5-91f3839bc521.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/27733bcf-c689-419f-95f5-91f3839bc521#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\27733bcf-c689-419f-95f5-91f3839bc521.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\3d344273-18fc-4a97-987e-236d47b72b25.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\3d344273-18fc-4a97-987e-236d47b72b25.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/3d344273-18fc-4a97-987e-236d47b72b25#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -290,10 +290,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\3d344273-18fc-4a97-987e-236d47b72b25.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\42e48f2e-5e5b-485a-a325-d628186fdbb7.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\42e48f2e-5e5b-485a-a325-d628186fdbb7.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/42e48f2e-5e5b-485a-a325-d628186fdbb7#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -311,10 +311,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\42e48f2e-5e5b-485a-a325-d628186fdbb7.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\4bb8187e-a91a-4e41-a5ce-89382fe775b0.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\4bb8187e-a91a-4e41-a5ce-89382fe775b0.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/4bb8187e-a91a-4e41-a5ce-89382fe775b0#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -332,10 +332,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\4bb8187e-a91a-4e41-a5ce-89382fe775b0.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\56cc7d86-5ded-44e1-8eae-6c1652bd1286.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\56cc7d86-5ded-44e1-8eae-6c1652bd1286.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/56cc7d86-5ded-44e1-8eae-6c1652bd1286#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -353,10 +353,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\56cc7d86-5ded-44e1-8eae-6c1652bd1286.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\61f01663-afd3-413e-a1e9-589a030d7634.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\61f01663-afd3-413e-a1e9-589a030d7634.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/61f01663-afd3-413e-a1e9-589a030d7634#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\61f01663-afd3-413e-a1e9-589a030d7634.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\64247e09-2583-474a-b49f-383d2befe682.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\64247e09-2583-474a-b49f-383d2befe682.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/64247e09-2583-474a-b49f-383d2befe682#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -395,10 +395,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\64247e09-2583-474a-b49f-383d2befe682.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\72561a23-55d8-4060-bf3f-5db936bde913.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\72561a23-55d8-4060-bf3f-5db936bde913.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/72561a23-55d8-4060-bf3f-5db936bde913#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\72561a23-55d8-4060-bf3f-5db936bde913.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/79e7aac1-690a-4178-99b4-612797494bb8#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -437,10 +437,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\7c7baba5-37bb-4ab4-8147-081b3606fe2c.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\7c7baba5-37bb-4ab4-8147-081b3606fe2c.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/7c7baba5-37bb-4ab4-8147-081b3606fe2c#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -458,10 +458,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\7c7baba5-37bb-4ab4-8147-081b3606fe2c.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\7f0ee646-9553-4f61-a1a2-dd0473506b01.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\7f0ee646-9553-4f61-a1a2-dd0473506b01.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/7f0ee646-9553-4f61-a1a2-dd0473506b01#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -479,10 +479,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\7f0ee646-9553-4f61-a1a2-dd0473506b01.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8984f4dd-b3c4-474c-970b-9748c63cfafe.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8984f4dd-b3c4-474c-970b-9748c63cfafe.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/8984f4dd-b3c4-474c-970b-9748c63cfafe#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -500,10 +500,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\8984f4dd-b3c4-474c-970b-9748c63cfafe.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8a8c2eef-4c3d-4537-a4bc-46b399a94210.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8a8c2eef-4c3d-4537-a4bc-46b399a94210.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/8a8c2eef-4c3d-4537-a4bc-46b399a94210#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -521,10 +521,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\8a8c2eef-4c3d-4537-a4bc-46b399a94210.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/8b80c147-dac6-4f4c-a9d7-f1f779f469b6#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -542,10 +542,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/8c9ac249-a3a0-4cc5-86fe-730bd39917be#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -563,10 +563,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/928b15a5-48f3-4d10-9b22-1e2faf4cd71b#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -584,10 +584,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\92dc7d3c-4fbd-4713-b030-070bfbc7f50f.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\92dc7d3c-4fbd-4713-b030-070bfbc7f50f.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/92dc7d3c-4fbd-4713-b030-070bfbc7f50f#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -605,10 +605,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\92dc7d3c-4fbd-4713-b030-070bfbc7f50f.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\93be726b-69ca-4a4b-b377-cd1ff48b7e9e.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\93be726b-69ca-4a4b-b377-cd1ff48b7e9e.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/93be726b-69ca-4a4b-b377-cd1ff48b7e9e#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -626,10 +626,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\93be726b-69ca-4a4b-b377-cd1ff48b7e9e.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/98baab7c-c291-4aab-a3a6-d1859f74756d#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -647,10 +647,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/a54eb0f0-9dc7-49b6-8476-ce946ac431a6#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -668,10 +668,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\ad4054ae-238e-4875-8e58-b60fe5006f67.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\ad4054ae-238e-4875-8e58-b60fe5006f67.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/ad4054ae-238e-4875-8e58-b60fe5006f67#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -689,10 +689,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\ad4054ae-238e-4875-8e58-b60fe5006f67.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/b033b70a-8521-48cb-a1f0-1bfbaea3c6fb#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -710,10 +710,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/b534b5ef-508d-492e-bec4-06d3e29fe1c6#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/bc0dbc05-7107-4e0a-8268-83d521118d38#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -752,10 +752,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/bd6275f7-f6da-4522-bad2-bfe17b2c8d45#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -773,10 +773,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bd99da96-ba02-492d-8c81-63caa041a935.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bd99da96-ba02-492d-8c81-63caa041a935.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/bd99da96-ba02-492d-8c81-63caa041a935#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -794,10 +794,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\bd99da96-ba02-492d-8c81-63caa041a935.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\c01466f1-2447-4238-8201-5889b98f9af9.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\c01466f1-2447-4238-8201-5889b98f9af9.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/c01466f1-2447-4238-8201-5889b98f9af9#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\c01466f1-2447-4238-8201-5889b98f9af9.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\c0a4ea8d-1429-478a-b6c4-19b33b95e3c5.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\c0a4ea8d-1429-478a-b6c4-19b33b95e3c5.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/c0a4ea8d-1429-478a-b6c4-19b33b95e3c5#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -836,10 +836,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\c0a4ea8d-1429-478a-b6c4-19b33b95e3c5.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/cf3a534e-4bf3-4e75-af59-e24033bdfcbc#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -857,10 +857,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/d0729b2b-6ef9-448e-a5d1-018033ddad75#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -878,10 +878,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/dd6facf4-6e15-411e-bcce-de137fee977e#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -899,10 +899,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/e7c493fe-ab34-497b-932e-e2a0afe626a9#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -920,10 +920,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\ed65858e-58b3-4cca-a8c8-b8b81b44b76b.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\ed65858e-58b3-4cca-a8c8-b8b81b44b76b.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/ed65858e-58b3-4cca-a8c8-b8b81b44b76b#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -941,10 +941,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\ed65858e-58b3-4cca-a8c8-b8b81b44b76b.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/f1e64b01-d2fc-4af7-af9f-da6e69d4f77d#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -962,10 +962,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f2d488e7-789d-4809-8e80-1499290a9cc5.png",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\f2d488e7-789d-4809-8e80-1499290a9cc5.png",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/f2d488e7-789d-4809-8e80-1499290a9cc5#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -983,10 +983,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\f2d488e7-789d-4809-8e80-1499290a9cc5.png"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f5408046-e681-4535-920c-56be8860b5eb.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\f5408046-e681-4535-920c-56be8860b5eb.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/f5408046-e681-4535-920c-56be8860b5eb#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -1004,10 +1004,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\f5408046-e681-4535-920c-56be8860b5eb.jpeg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\fb6c3480-8927-4f11-9bd4-e10cb02fe812.jpg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\fb6c3480-8927-4f11-9bd4-e10cb02fe812.jpg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/fb6c3480-8927-4f11-9bd4-e10cb02fe812#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -1025,10 +1025,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\fb6c3480-8927-4f11-9bd4-e10cb02fe812.jpg"
     },
     {
-      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\fcabb375-fef7-4899-8c4d-bb83f910397a.jpeg",
+      "Identity": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\fcabb375-fef7-4899-8c4d-bb83f910397a.jpeg",
       "SourceId": "UPFCON",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "ContentRoot": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\",
       "BasePath": "_content/UPFCON",
       "RelativePath": "uploads/diplomas/fcabb375-fef7-4899-8c4d-bb83f910397a#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -1049,7 +1049,7 @@
   "Endpoints": [
     {
       "Route": "uploads/diplomas/01787af6-95f2-4ed1-a5d2-8caa0df9cc10.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\01787af6-95f2-4ed1-a5d2-8caa0df9cc10.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\01787af6-95f2-4ed1-a5d2-8caa0df9cc10.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1070,7 +1070,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:56:12 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1086,7 +1086,7 @@
     },
     {
       "Route": "uploads/diplomas/01787af6-95f2-4ed1-a5d2-8caa0df9cc10.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\01787af6-95f2-4ed1-a5d2-8caa0df9cc10.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\01787af6-95f2-4ed1-a5d2-8caa0df9cc10.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1107,7 +1107,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:56:12 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1131,7 +1131,7 @@
     },
     {
       "Route": "uploads/diplomas/0ae487df-6b8e-4233-a946-77dc0ffe86eb.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1152,7 +1152,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1168,7 +1168,7 @@
     },
     {
       "Route": "uploads/diplomas/0ae487df-6b8e-4233-a946-77dc0ffe86eb.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1189,7 +1189,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1213,7 +1213,7 @@
     },
     {
       "Route": "uploads/diplomas/0d1b611c-fba4-46d2-8b37-18d174d8b61a.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0d1b611c-fba4-46d2-8b37-18d174d8b61a.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0d1b611c-fba4-46d2-8b37-18d174d8b61a.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1234,7 +1234,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:51:11 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1250,7 +1250,7 @@
     },
     {
       "Route": "uploads/diplomas/0d1b611c-fba4-46d2-8b37-18d174d8b61a.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0d1b611c-fba4-46d2-8b37-18d174d8b61a.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0d1b611c-fba4-46d2-8b37-18d174d8b61a.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1271,7 +1271,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:51:11 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1295,7 +1295,7 @@
     },
     {
       "Route": "uploads/diplomas/0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf.7trgj40743.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1316,7 +1316,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:03:44 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1340,7 +1340,7 @@
     },
     {
       "Route": "uploads/diplomas/0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0d2789b0-d0e0-4ff2-a3d3-ba6bd4df89bf.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1361,7 +1361,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:03:44 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1377,7 +1377,7 @@
     },
     {
       "Route": "uploads/diplomas/0e562762-330f-494a-ae93-64b593b5541e.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0e562762-330f-494a-ae93-64b593b5541e.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0e562762-330f-494a-ae93-64b593b5541e.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1398,7 +1398,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 21:03:33 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1422,7 +1422,7 @@
     },
     {
       "Route": "uploads/diplomas/0e562762-330f-494a-ae93-64b593b5541e.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\0e562762-330f-494a-ae93-64b593b5541e.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0e562762-330f-494a-ae93-64b593b5541e.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1443,7 +1443,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 21:03:33 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1459,7 +1459,7 @@
     },
     {
       "Route": "uploads/diplomas/1096dc40-2810-4df5-a5a9-76e99c6b9c23.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1096dc40-2810-4df5-a5a9-76e99c6b9c23.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\1096dc40-2810-4df5-a5a9-76e99c6b9c23.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1480,7 +1480,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:46:06 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1496,7 +1496,7 @@
     },
     {
       "Route": "uploads/diplomas/1096dc40-2810-4df5-a5a9-76e99c6b9c23.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1096dc40-2810-4df5-a5a9-76e99c6b9c23.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\1096dc40-2810-4df5-a5a9-76e99c6b9c23.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1517,7 +1517,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:46:06 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1541,7 +1541,7 @@
     },
     {
       "Route": "uploads/diplomas/1908cc4d-1f29-46ff-988b-5282840d5378.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1562,7 +1562,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1578,7 +1578,7 @@
     },
     {
       "Route": "uploads/diplomas/1908cc4d-1f29-46ff-988b-5282840d5378.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\1908cc4d-1f29-46ff-988b-5282840d5378.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1599,7 +1599,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1623,7 +1623,7 @@
     },
     {
       "Route": "uploads/diplomas/1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1644,7 +1644,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 16:09:04 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1660,7 +1660,7 @@
     },
     {
       "Route": "uploads/diplomas/1c0c5f5f-7571-4f44-99e2-354265dfcac8.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\1c0c5f5f-7571-4f44-99e2-354265dfcac8.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1681,7 +1681,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 16:09:04 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1705,7 +1705,7 @@
     },
     {
       "Route": "uploads/diplomas/208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1726,7 +1726,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1742,7 +1742,7 @@
     },
     {
       "Route": "uploads/diplomas/208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\208d391c-b2ef-4a3d-95f3-d38c07a1a9bc.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1763,7 +1763,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1787,7 +1787,7 @@
     },
     {
       "Route": "uploads/diplomas/20d9aafb-0834-4ce4-b852-7e6eaa13804b.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\20d9aafb-0834-4ce4-b852-7e6eaa13804b.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\20d9aafb-0834-4ce4-b852-7e6eaa13804b.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1808,7 +1808,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 23:10:57 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1832,7 +1832,7 @@
     },
     {
       "Route": "uploads/diplomas/20d9aafb-0834-4ce4-b852-7e6eaa13804b.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\20d9aafb-0834-4ce4-b852-7e6eaa13804b.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\20d9aafb-0834-4ce4-b852-7e6eaa13804b.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1853,7 +1853,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 23:10:57 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1869,7 +1869,7 @@
     },
     {
       "Route": "uploads/diplomas/27733bcf-c689-419f-95f5-91f3839bc521.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\27733bcf-c689-419f-95f5-91f3839bc521.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\27733bcf-c689-419f-95f5-91f3839bc521.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1890,7 +1890,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:25:08 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1914,7 +1914,7 @@
     },
     {
       "Route": "uploads/diplomas/27733bcf-c689-419f-95f5-91f3839bc521.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\27733bcf-c689-419f-95f5-91f3839bc521.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\27733bcf-c689-419f-95f5-91f3839bc521.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1935,7 +1935,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:25:08 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1951,7 +1951,7 @@
     },
     {
       "Route": "uploads/diplomas/3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1972,7 +1972,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1988,7 +1988,7 @@
     },
     {
       "Route": "uploads/diplomas/3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\3b2b0a79-d9f6-4c8b-8f27-56f9f472adc2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2009,7 +2009,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2033,7 +2033,7 @@
     },
     {
       "Route": "uploads/diplomas/3d344273-18fc-4a97-987e-236d47b72b25.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\3d344273-18fc-4a97-987e-236d47b72b25.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\3d344273-18fc-4a97-987e-236d47b72b25.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2054,7 +2054,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:30:13 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2078,7 +2078,7 @@
     },
     {
       "Route": "uploads/diplomas/3d344273-18fc-4a97-987e-236d47b72b25.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\3d344273-18fc-4a97-987e-236d47b72b25.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\3d344273-18fc-4a97-987e-236d47b72b25.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2099,7 +2099,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:30:13 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2115,7 +2115,7 @@
     },
     {
       "Route": "uploads/diplomas/42e48f2e-5e5b-485a-a325-d628186fdbb7.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\42e48f2e-5e5b-485a-a325-d628186fdbb7.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\42e48f2e-5e5b-485a-a325-d628186fdbb7.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2136,7 +2136,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:36:38 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2160,7 +2160,7 @@
     },
     {
       "Route": "uploads/diplomas/42e48f2e-5e5b-485a-a325-d628186fdbb7.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\42e48f2e-5e5b-485a-a325-d628186fdbb7.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\42e48f2e-5e5b-485a-a325-d628186fdbb7.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2181,7 +2181,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:36:38 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2197,7 +2197,7 @@
     },
     {
       "Route": "uploads/diplomas/4bb8187e-a91a-4e41-a5ce-89382fe775b0.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\4bb8187e-a91a-4e41-a5ce-89382fe775b0.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\4bb8187e-a91a-4e41-a5ce-89382fe775b0.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2218,7 +2218,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 20:42:38 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2242,7 +2242,7 @@
     },
     {
       "Route": "uploads/diplomas/4bb8187e-a91a-4e41-a5ce-89382fe775b0.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\4bb8187e-a91a-4e41-a5ce-89382fe775b0.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\4bb8187e-a91a-4e41-a5ce-89382fe775b0.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2263,7 +2263,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 20:42:38 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2279,7 +2279,7 @@
     },
     {
       "Route": "uploads/diplomas/56cc7d86-5ded-44e1-8eae-6c1652bd1286.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\56cc7d86-5ded-44e1-8eae-6c1652bd1286.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\56cc7d86-5ded-44e1-8eae-6c1652bd1286.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2300,7 +2300,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:07:54 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2324,7 +2324,7 @@
     },
     {
       "Route": "uploads/diplomas/56cc7d86-5ded-44e1-8eae-6c1652bd1286.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\56cc7d86-5ded-44e1-8eae-6c1652bd1286.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\56cc7d86-5ded-44e1-8eae-6c1652bd1286.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2345,7 +2345,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:07:54 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2361,7 +2361,7 @@
     },
     {
       "Route": "uploads/diplomas/61f01663-afd3-413e-a1e9-589a030d7634.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\61f01663-afd3-413e-a1e9-589a030d7634.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\61f01663-afd3-413e-a1e9-589a030d7634.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2382,7 +2382,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:35:39 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2398,7 +2398,7 @@
     },
     {
       "Route": "uploads/diplomas/61f01663-afd3-413e-a1e9-589a030d7634.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\61f01663-afd3-413e-a1e9-589a030d7634.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\61f01663-afd3-413e-a1e9-589a030d7634.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2419,7 +2419,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:35:39 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2443,7 +2443,7 @@
     },
     {
       "Route": "uploads/diplomas/64247e09-2583-474a-b49f-383d2befe682.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\64247e09-2583-474a-b49f-383d2befe682.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\64247e09-2583-474a-b49f-383d2befe682.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2464,7 +2464,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 23:12:27 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2488,7 +2488,7 @@
     },
     {
       "Route": "uploads/diplomas/64247e09-2583-474a-b49f-383d2befe682.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\64247e09-2583-474a-b49f-383d2befe682.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\64247e09-2583-474a-b49f-383d2befe682.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2509,7 +2509,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 23:12:27 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2525,7 +2525,7 @@
     },
     {
       "Route": "uploads/diplomas/72561a23-55d8-4060-bf3f-5db936bde913.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\72561a23-55d8-4060-bf3f-5db936bde913.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\72561a23-55d8-4060-bf3f-5db936bde913.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2546,7 +2546,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:23:11 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2570,7 +2570,7 @@
     },
     {
       "Route": "uploads/diplomas/72561a23-55d8-4060-bf3f-5db936bde913.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\72561a23-55d8-4060-bf3f-5db936bde913.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\72561a23-55d8-4060-bf3f-5db936bde913.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2591,7 +2591,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:23:11 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2607,7 +2607,7 @@
     },
     {
       "Route": "uploads/diplomas/79e7aac1-690a-4178-99b4-612797494bb8.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2628,7 +2628,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2644,7 +2644,7 @@
     },
     {
       "Route": "uploads/diplomas/79e7aac1-690a-4178-99b4-612797494bb8.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\79e7aac1-690a-4178-99b4-612797494bb8.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2665,7 +2665,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2689,7 +2689,7 @@
     },
     {
       "Route": "uploads/diplomas/7c7baba5-37bb-4ab4-8147-081b3606fe2c.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\7c7baba5-37bb-4ab4-8147-081b3606fe2c.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\7c7baba5-37bb-4ab4-8147-081b3606fe2c.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2710,7 +2710,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 21:00:16 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2734,7 +2734,7 @@
     },
     {
       "Route": "uploads/diplomas/7c7baba5-37bb-4ab4-8147-081b3606fe2c.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\7c7baba5-37bb-4ab4-8147-081b3606fe2c.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\7c7baba5-37bb-4ab4-8147-081b3606fe2c.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2755,7 +2755,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 21:00:16 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2771,7 +2771,7 @@
     },
     {
       "Route": "uploads/diplomas/7f0ee646-9553-4f61-a1a2-dd0473506b01.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\7f0ee646-9553-4f61-a1a2-dd0473506b01.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\7f0ee646-9553-4f61-a1a2-dd0473506b01.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2792,7 +2792,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:07:20 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2816,7 +2816,7 @@
     },
     {
       "Route": "uploads/diplomas/7f0ee646-9553-4f61-a1a2-dd0473506b01.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\7f0ee646-9553-4f61-a1a2-dd0473506b01.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\7f0ee646-9553-4f61-a1a2-dd0473506b01.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2837,7 +2837,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:07:20 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2853,7 +2853,7 @@
     },
     {
       "Route": "uploads/diplomas/8984f4dd-b3c4-474c-970b-9748c63cfafe.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8984f4dd-b3c4-474c-970b-9748c63cfafe.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8984f4dd-b3c4-474c-970b-9748c63cfafe.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2874,7 +2874,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 20:39:04 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2898,7 +2898,7 @@
     },
     {
       "Route": "uploads/diplomas/8984f4dd-b3c4-474c-970b-9748c63cfafe.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8984f4dd-b3c4-474c-970b-9748c63cfafe.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8984f4dd-b3c4-474c-970b-9748c63cfafe.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2919,7 +2919,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 20:39:04 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2935,7 +2935,7 @@
     },
     {
       "Route": "uploads/diplomas/8a8c2eef-4c3d-4537-a4bc-46b399a94210.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8a8c2eef-4c3d-4537-a4bc-46b399a94210.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8a8c2eef-4c3d-4537-a4bc-46b399a94210.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2956,7 +2956,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:23:01 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2980,7 +2980,7 @@
     },
     {
       "Route": "uploads/diplomas/8a8c2eef-4c3d-4537-a4bc-46b399a94210.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8a8c2eef-4c3d-4537-a4bc-46b399a94210.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8a8c2eef-4c3d-4537-a4bc-46b399a94210.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3001,7 +3001,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:23:01 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3017,7 +3017,7 @@
     },
     {
       "Route": "uploads/diplomas/8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3038,7 +3038,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:52:35 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3054,7 +3054,7 @@
     },
     {
       "Route": "uploads/diplomas/8b80c147-dac6-4f4c-a9d7-f1f779f469b6.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8b80c147-dac6-4f4c-a9d7-f1f779f469b6.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3075,7 +3075,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:52:35 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3099,7 +3099,7 @@
     },
     {
       "Route": "uploads/diplomas/8c9ac249-a3a0-4cc5-86fe-730bd39917be.7trgj40743.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3120,7 +3120,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:05:51 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3144,7 +3144,7 @@
     },
     {
       "Route": "uploads/diplomas/8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\8c9ac249-a3a0-4cc5-86fe-730bd39917be.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3165,7 +3165,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:05:51 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3181,7 +3181,7 @@
     },
     {
       "Route": "uploads/diplomas/928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3202,7 +3202,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 16:01:16 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3218,7 +3218,7 @@
     },
     {
       "Route": "uploads/diplomas/928b15a5-48f3-4d10-9b22-1e2faf4cd71b.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\928b15a5-48f3-4d10-9b22-1e2faf4cd71b.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3239,7 +3239,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 16:01:16 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3263,7 +3263,7 @@
     },
     {
       "Route": "uploads/diplomas/92dc7d3c-4fbd-4713-b030-070bfbc7f50f.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\92dc7d3c-4fbd-4713-b030-070bfbc7f50f.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\92dc7d3c-4fbd-4713-b030-070bfbc7f50f.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3284,7 +3284,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:17:29 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3308,7 +3308,7 @@
     },
     {
       "Route": "uploads/diplomas/92dc7d3c-4fbd-4713-b030-070bfbc7f50f.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\92dc7d3c-4fbd-4713-b030-070bfbc7f50f.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\92dc7d3c-4fbd-4713-b030-070bfbc7f50f.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3329,7 +3329,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:17:29 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3345,7 +3345,7 @@
     },
     {
       "Route": "uploads/diplomas/93be726b-69ca-4a4b-b377-cd1ff48b7e9e.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\93be726b-69ca-4a4b-b377-cd1ff48b7e9e.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\93be726b-69ca-4a4b-b377-cd1ff48b7e9e.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3366,7 +3366,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:37:52 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3390,7 +3390,7 @@
     },
     {
       "Route": "uploads/diplomas/93be726b-69ca-4a4b-b377-cd1ff48b7e9e.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\93be726b-69ca-4a4b-b377-cd1ff48b7e9e.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\93be726b-69ca-4a4b-b377-cd1ff48b7e9e.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3411,7 +3411,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:37:52 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3427,7 +3427,7 @@
     },
     {
       "Route": "uploads/diplomas/98baab7c-c291-4aab-a3a6-d1859f74756d.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3448,7 +3448,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3464,7 +3464,7 @@
     },
     {
       "Route": "uploads/diplomas/98baab7c-c291-4aab-a3a6-d1859f74756d.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3485,7 +3485,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3509,7 +3509,7 @@
     },
     {
       "Route": "uploads/diplomas/a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3530,7 +3530,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3546,7 +3546,7 @@
     },
     {
       "Route": "uploads/diplomas/a54eb0f0-9dc7-49b6-8476-ce946ac431a6.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3567,7 +3567,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3591,7 +3591,7 @@
     },
     {
       "Route": "uploads/diplomas/ad4054ae-238e-4875-8e58-b60fe5006f67.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\ad4054ae-238e-4875-8e58-b60fe5006f67.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\ad4054ae-238e-4875-8e58-b60fe5006f67.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3612,7 +3612,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:23:23 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3636,7 +3636,7 @@
     },
     {
       "Route": "uploads/diplomas/ad4054ae-238e-4875-8e58-b60fe5006f67.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\ad4054ae-238e-4875-8e58-b60fe5006f67.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\ad4054ae-238e-4875-8e58-b60fe5006f67.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3657,7 +3657,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:23:23 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3673,7 +3673,7 @@
     },
     {
       "Route": "uploads/diplomas/b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3694,7 +3694,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3710,7 +3710,7 @@
     },
     {
       "Route": "uploads/diplomas/b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\b033b70a-8521-48cb-a1f0-1bfbaea3c6fb.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3731,7 +3731,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3755,7 +3755,7 @@
     },
     {
       "Route": "uploads/diplomas/b534b5ef-508d-492e-bec4-06d3e29fe1c6.7trgj40743.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3776,7 +3776,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:08:39 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3800,7 +3800,7 @@
     },
     {
       "Route": "uploads/diplomas/b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3821,7 +3821,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:08:39 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3837,7 +3837,7 @@
     },
     {
       "Route": "uploads/diplomas/bc0dbc05-7107-4e0a-8268-83d521118d38.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3858,7 +3858,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:36:09 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3874,7 +3874,7 @@
     },
     {
       "Route": "uploads/diplomas/bc0dbc05-7107-4e0a-8268-83d521118d38.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3895,7 +3895,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:36:09 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3919,7 +3919,7 @@
     },
     {
       "Route": "uploads/diplomas/bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3940,7 +3940,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3956,7 +3956,7 @@
     },
     {
       "Route": "uploads/diplomas/bd6275f7-f6da-4522-bad2-bfe17b2c8d45.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bd6275f7-f6da-4522-bad2-bfe17b2c8d45.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3977,7 +3977,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4001,7 +4001,7 @@
     },
     {
       "Route": "uploads/diplomas/bd99da96-ba02-492d-8c81-63caa041a935.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bd99da96-ba02-492d-8c81-63caa041a935.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bd99da96-ba02-492d-8c81-63caa041a935.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4022,7 +4022,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:47:12 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4038,7 +4038,7 @@
     },
     {
       "Route": "uploads/diplomas/bd99da96-ba02-492d-8c81-63caa041a935.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\bd99da96-ba02-492d-8c81-63caa041a935.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bd99da96-ba02-492d-8c81-63caa041a935.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4059,7 +4059,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:47:12 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4083,7 +4083,7 @@
     },
     {
       "Route": "uploads/diplomas/c01466f1-2447-4238-8201-5889b98f9af9.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\c01466f1-2447-4238-8201-5889b98f9af9.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\c01466f1-2447-4238-8201-5889b98f9af9.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4104,7 +4104,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 20:58:50 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4128,7 +4128,7 @@
     },
     {
       "Route": "uploads/diplomas/c01466f1-2447-4238-8201-5889b98f9af9.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\c01466f1-2447-4238-8201-5889b98f9af9.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\c01466f1-2447-4238-8201-5889b98f9af9.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4149,7 +4149,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 20:58:50 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4165,7 +4165,7 @@
     },
     {
       "Route": "uploads/diplomas/c0a4ea8d-1429-478a-b6c4-19b33b95e3c5.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\c0a4ea8d-1429-478a-b6c4-19b33b95e3c5.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\c0a4ea8d-1429-478a-b6c4-19b33b95e3c5.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4186,7 +4186,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:45:22 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4202,7 +4202,7 @@
     },
     {
       "Route": "uploads/diplomas/c0a4ea8d-1429-478a-b6c4-19b33b95e3c5.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\c0a4ea8d-1429-478a-b6c4-19b33b95e3c5.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\c0a4ea8d-1429-478a-b6c4-19b33b95e3c5.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4223,7 +4223,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 15:45:22 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4247,7 +4247,7 @@
     },
     {
       "Route": "uploads/diplomas/cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4268,7 +4268,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4284,7 +4284,7 @@
     },
     {
       "Route": "uploads/diplomas/cf3a534e-4bf3-4e75-af59-e24033bdfcbc.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\cf3a534e-4bf3-4e75-af59-e24033bdfcbc.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4305,7 +4305,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4329,7 +4329,7 @@
     },
     {
       "Route": "uploads/diplomas/d0729b2b-6ef9-448e-a5d1-018033ddad75.7trgj40743.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4350,7 +4350,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:10:41 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4374,7 +4374,7 @@
     },
     {
       "Route": "uploads/diplomas/d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\d0729b2b-6ef9-448e-a5d1-018033ddad75.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4395,7 +4395,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:10:41 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4411,7 +4411,7 @@
     },
     {
       "Route": "uploads/diplomas/dd6facf4-6e15-411e-bcce-de137fee977e.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4432,7 +4432,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 20:40:37 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4456,7 +4456,7 @@
     },
     {
       "Route": "uploads/diplomas/dd6facf4-6e15-411e-bcce-de137fee977e.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4477,7 +4477,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Jun 2025 20:40:37 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4493,7 +4493,7 @@
     },
     {
       "Route": "uploads/diplomas/e7c493fe-ab34-497b-932e-e2a0afe626a9.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4514,7 +4514,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 23:11:11 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4538,7 +4538,7 @@
     },
     {
       "Route": "uploads/diplomas/e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4559,7 +4559,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 23:11:11 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4575,7 +4575,7 @@
     },
     {
       "Route": "uploads/diplomas/ed65858e-58b3-4cca-a8c8-b8b81b44b76b.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\ed65858e-58b3-4cca-a8c8-b8b81b44b76b.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\ed65858e-58b3-4cca-a8c8-b8b81b44b76b.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4596,7 +4596,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:47:03 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4612,7 +4612,7 @@
     },
     {
       "Route": "uploads/diplomas/ed65858e-58b3-4cca-a8c8-b8b81b44b76b.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\ed65858e-58b3-4cca-a8c8-b8b81b44b76b.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\ed65858e-58b3-4cca-a8c8-b8b81b44b76b.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4633,7 +4633,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:47:03 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4657,7 +4657,7 @@
     },
     {
       "Route": "uploads/diplomas/f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4678,7 +4678,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4694,7 +4694,7 @@
     },
     {
       "Route": "uploads/diplomas/f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\f1e64b01-d2fc-4af7-af9f-da6e69d4f77d.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4715,7 +4715,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 14:28:26 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4739,7 +4739,7 @@
     },
     {
       "Route": "uploads/diplomas/f2d488e7-789d-4809-8e80-1499290a9cc5.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f2d488e7-789d-4809-8e80-1499290a9cc5.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\f2d488e7-789d-4809-8e80-1499290a9cc5.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4760,7 +4760,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:03:20 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4776,7 +4776,7 @@
     },
     {
       "Route": "uploads/diplomas/f2d488e7-789d-4809-8e80-1499290a9cc5.x5l31i7fh2.png",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f2d488e7-789d-4809-8e80-1499290a9cc5.png",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\f2d488e7-789d-4809-8e80-1499290a9cc5.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4797,7 +4797,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:03:20 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4821,7 +4821,7 @@
     },
     {
       "Route": "uploads/diplomas/f5408046-e681-4535-920c-56be8860b5eb.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f5408046-e681-4535-920c-56be8860b5eb.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\f5408046-e681-4535-920c-56be8860b5eb.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4842,7 +4842,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:17:44 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4866,7 +4866,7 @@
     },
     {
       "Route": "uploads/diplomas/f5408046-e681-4535-920c-56be8860b5eb.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\f5408046-e681-4535-920c-56be8860b5eb.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\f5408046-e681-4535-920c-56be8860b5eb.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4887,7 +4887,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:17:44 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4903,7 +4903,7 @@
     },
     {
       "Route": "uploads/diplomas/fb6c3480-8927-4f11-9bd4-e10cb02fe812.7trgj40743.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\fb6c3480-8927-4f11-9bd4-e10cb02fe812.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\fb6c3480-8927-4f11-9bd4-e10cb02fe812.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4924,7 +4924,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:03:30 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4948,7 +4948,7 @@
     },
     {
       "Route": "uploads/diplomas/fb6c3480-8927-4f11-9bd4-e10cb02fe812.jpg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\fb6c3480-8927-4f11-9bd4-e10cb02fe812.jpg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\fb6c3480-8927-4f11-9bd4-e10cb02fe812.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4969,7 +4969,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Jun 2025 13:03:30 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4985,7 +4985,7 @@
     },
     {
       "Route": "uploads/diplomas/fcabb375-fef7-4899-8c4d-bb83f910397a.3nsrb4mpci.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\fcabb375-fef7-4899-8c4d-bb83f910397a.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\fcabb375-fef7-4899-8c4d-bb83f910397a.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5006,7 +5006,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:22:47 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5030,7 +5030,7 @@
     },
     {
       "Route": "uploads/diplomas/fcabb375-fef7-4899-8c4d-bb83f910397a.jpeg",
-      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\fcabb375-fef7-4899-8c4d-bb83f910397a.jpeg",
+      "AssetFile": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\fcabb375-fef7-4899-8c4d-bb83f910397a.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5051,7 +5051,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 22:22:47 GMT"
+          "Value": "Fri, 06 Jun 2025 17:05:47 GMT"
         },
         {
           "Name": "Cache-Control",

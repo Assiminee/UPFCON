@@ -1,27 +1,35 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using UPFCON.Exceptions;
 using UPFCON.Interfaces;
+using UPFCON.Models;
 using UPFCON.Requests;
 
 namespace UPFCON.Controllers;
 
 [Authorize]
 [Route("/api/v1/users")]
-public class UserController(IUtils utils, IUserService userService) : Controller
+public class UserController(IUtils utils, IUserService userService, UserManager<User> userManager) : Controller
 {
     private IUtils Utils { get; } = utils;
     private IUserService UserService { get; } = userService;
+    public UserManager<User> UserManager { get; } = userManager;
 
     [HttpGet]
     [Route("profile")]
     public async Task<IActionResult> GetProfileAsync()
     {
         var user = await UserService.GetFromJwtEmailClaim(HttpContext);
+        user.Author.User = null;
+        user.Chairman.User = null;
+        user.Attendee.User = null;
         
-        return Ok(UserProfileDto.FromUser(user));
+      //  var usersInAuthorRole = await UserManager.GetUsersInRoleAsync("Author");
+        
+        return Ok(user);
     }
 
     [HttpPut]
@@ -42,5 +50,16 @@ public class UserController(IUtils utils, IUserService userService) : Controller
         await UserService.EditUserPasswordAsync(user, passwords);
         
         return Ok();
+    }
+    
+    // For testing
+    [HttpDelete]
+    [Route("profile")]
+    public async Task<IActionResult> DeleteProfileAsync()
+    {
+        var user = await UserService.GetFromJwtEmailClaim(HttpContext);
+        await UserManager.DeleteAsync(user);
+        
+        return NoContent();
     }
 }
