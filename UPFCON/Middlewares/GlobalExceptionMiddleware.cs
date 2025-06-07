@@ -34,6 +34,8 @@ public class GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExcep
             {
                 context.Response.ContentType = "application/json";
                 context.Response.StatusCode = statusCode;
+                
+                Console.WriteLine("Status : " +statusCode + " || Error : " + ex.Message);
 
                 var res = new
                 {

@@ -12,24 +12,18 @@ namespace UPFCON.Controllers;
 
 [Authorize]
 [Route("/api/v1/users")]
-public class UserController(IUtils utils, IUserService userService, UserManager<User> userManager) : Controller
+public class UserController(IUtils utils, IUserService userService) : Controller
 {
     private IUtils Utils { get; } = utils;
     private IUserService UserService { get; } = userService;
-    public UserManager<User> UserManager { get; } = userManager;
 
     [HttpGet]
     [Route("profile")]
     public async Task<IActionResult> GetProfileAsync()
     {
         var user = await UserService.GetFromJwtEmailClaim(HttpContext);
-        user.Author.User = null;
-        user.Chairman.User = null;
-        user.Attendee.User = null;
         
-      //  var usersInAuthorRole = await UserManager.GetUsersInRoleAsync("Author");
-        
-        return Ok(user);
+        return Ok(UserProfileDto.FromUser(user));
     }
 
     [HttpPut]
@@ -50,16 +44,5 @@ public class UserController(IUtils utils, IUserService userService, UserManager<
         await UserService.EditUserPasswordAsync(user, passwords);
         
         return Ok();
-    }
-    
-    // For testing
-    [HttpDelete]
-    [Route("profile")]
-    public async Task<IActionResult> DeleteProfileAsync()
-    {
-        var user = await UserService.GetFromJwtEmailClaim(HttpContext);
-        await UserManager.DeleteAsync(user);
-        
-        return NoContent();
     }
 }

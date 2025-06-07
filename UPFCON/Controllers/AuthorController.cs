@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using UPFCON.Interfaces;
 
 namespace UPFCON.Controllers;
@@ -7,13 +8,13 @@ namespace UPFCON.Controllers;
 
 [ApiController]
 [Route("api/v1/authors")]
+[Authorize]
 public class AuthorController(IAuthorService authorService) : Controller
 {
-    public IAuthorService AuthorService { get; } = authorService;
+    private IAuthorService AuthorService { get; } = authorService;
 
 
     [HttpGet]
-    [Route("available")]
     public async Task<IActionResult> GetAvailableAuthors()
     {
         var authors = await AuthorService.GetAuthors(HttpContext);
