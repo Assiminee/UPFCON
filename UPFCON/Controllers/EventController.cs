@@ -23,10 +23,9 @@ public class EventController(IPaperService paperService, IContributorService con
     {
         
         var newPaper = await PaperService.CreatePaperAsync(HttpContext, paper, eventId);
-        Console.WriteLine("paper created");
+        
         var contributions = await ContributorService.CreateContributorsAsync(HttpContext,
                  newPaper, paper.Contributors );
-        Console.WriteLine("contributions created");
         
         return Created();
     }
