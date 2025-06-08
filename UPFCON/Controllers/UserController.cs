@@ -12,10 +12,12 @@ namespace UPFCON.Controllers;
 
 [Authorize]
 [Route("/api/v1/users")]
-public class UserController(IUtils utils, IUserService userService) : Controller
+public class UserController(IUtils utils, IUserService userService, UserManager<User> userManager) : Controller
 {
     private IUtils Utils { get; } = utils;
     private IUserService UserService { get; } = userService;
+    
+    public UserManager<User> UserManager { get; } = userManager;
 
     [HttpGet]
     [Route("profile")]
@@ -45,12 +47,14 @@ public class UserController(IUtils utils, IUserService userService) : Controller
         
         return Ok();
     }
-
-    // [HttpDelete]
-    // [Route("profile")]
-    // public async Task<IActionResult> DeleteProfileAsync()
-    // {
-    //     var user = await UserService.GetFromJwtEmailClaim(HttpContext);
-    //     
-    // }
+    
+    [HttpDelete]
+    [Route("profile")]
+    public async Task<IActionResult> DeleteProfileAsync()
+    {
+        var user = await UserService.GetFromJwtEmailClaim(HttpContext);
+        await UserManager.DeleteAsync(user);
+        
+        return NoContent();
+    }
 }

@@ -121,6 +121,10 @@ builder.Services.AddScoped<IEmailSender, EmailSenderService>();
 builder.Services.AddScoped<IUtils, Utils>();
 builder.Services.AddScoped<IAuth, AuthService>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
+builder.Services.AddScoped<IPaperService, PaperService>();
+builder.Services.AddScoped<IContributorService, ContributorService>();
+
+
 
 // Overrides ASP.NET's default validation (validation annotations of class properties)
 builder.Services.Configure<ApiBehaviorOptions>(options =>

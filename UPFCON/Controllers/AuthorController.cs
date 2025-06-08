@@ -26,7 +26,10 @@ public class AuthorController(IAuthorService authorService, IUserService userSer
         {
             await UserService.AddRolesAsync(user, roles);
             
-            var confirmationLink = await UserService.GenerateEmailConfirmationLinkAsync(user);
+            var confirmationLink = await UserService.GenerateEmailConfirmationLinkAsync(
+                user, "http://localhost",
+                5280, "api/v1/auth/confirm-email"
+            );
             
             await UserService.SendConfirmationEmailAsync(user, confirmationLink, false);
         }

@@ -262,7 +262,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             p.Property(pr => pr.Id)
                 .HasDefaultValueSql("NEWID()");
 
-            p.Property(pr => pr.Status)
+          /*  p.Property(pr => pr.Status)
                 .HasMaxLength(50)
                 .IsRequired()
                 .HasDefaultValue(PaperStatus.PendingEvaluation);
@@ -270,7 +270,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             p.ToTable(pr => pr.HasCheckConstraint(
                 "CK_AllowedPaperStatuses",
                 "Status IN ('RequiresEdits','Reject','Accepted','PendingEvaluation')"
-            ));
+            ));*/
 
             p.HasMany(pr => pr.Evaluations)
                 .WithOne(e => e.Paper)

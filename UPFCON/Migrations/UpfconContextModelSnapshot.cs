@@ -490,10 +490,7 @@ namespace UPFCON.Migrations
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasDefaultValue("PendingEvaluation");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("SubmittedAt")
                         .HasColumnType("datetime2");
@@ -507,10 +504,7 @@ namespace UPFCON.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("Papers", t =>
-                        {
-                            t.HasCheckConstraint("CK_AllowedPaperStatuses", "Status IN ('RequiresEdits','Reject','Accepted','PendingEvaluation')");
-                        });
+                    b.ToTable("Papers");
                 });
 
             modelBuilder.Entity("UPFCON.Models.SubmissionRules", b =>

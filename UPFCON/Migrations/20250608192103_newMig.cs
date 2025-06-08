@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UPFCON.Migrations
 {
     /// <inheritdoc />
-    public partial class TPT : Migration
+    public partial class newMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -90,13 +90,12 @@ namespace UPFCON.Migrations
                     SubmittedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Path = table.Column<string>(type: "nvarchar(2048)", maxLength: 2048, nullable: false),
                     Keywords = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingEvaluation"),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EventId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Papers", x => x.Id);
-                    table.CheckConstraint("CK_AllowedPaperStatuses", "Status IN ('RequiresEdits','Reject','Accepted','PendingEvaluation')");
                     table.ForeignKey(
                         name: "FK_Papers_Events_EventId",
                         column: x => x.EventId,
@@ -156,7 +155,8 @@ namespace UPFCON.Migrations
                 name: "Admins",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PasswordChanged = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -209,7 +209,8 @@ namespace UPFCON.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    PasswordChanged = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
