@@ -40,7 +40,7 @@ public class User : IdentityUser<Guid>
     
     [MaxLength(255)] public string? Description { get; set; }
     
-    [Required, MaxLength(255)] public string? Address { get; set; }
+    [Required, MaxLength(255)] public string Address { get; set; } = string.Empty;
 
     public string AccountStatus { get; set; } = Enum.GetName(Models.AccountStatus.PendingVerification) ?? string.Empty;
     

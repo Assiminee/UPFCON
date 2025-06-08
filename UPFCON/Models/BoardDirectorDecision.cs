@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UPFCON.Models;
 
-public enum ApprovalStatus
+public enum ApprovalStatusEnum
 {
     Approved,
     Rejected,
@@ -18,8 +18,8 @@ public class BoardDirectorDecision
     public Guid EventId { get; set; }
     public BoardDirector BoardDirector { get; set; } = null!;
     public Event Event { get; set; } = null!;
-    
-    public ApprovalStatus? ApprovalStatus { get; set; }
+
+    public string ApprovalStatus { get; set; } = Enum.GetName(ApprovalStatusEnum.PendingDecision) ?? string.Empty;
 
     [Required, MaxLength(255)] public string Comment { get; set; } = null!;
 }

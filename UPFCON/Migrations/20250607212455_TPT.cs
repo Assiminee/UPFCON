@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UPFCON.Migrations
 {
     /// <inheritdoc />
-    public partial class firstMigration : Migration
+    public partial class TPT : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -58,8 +58,6 @@ namespace UPFCON.Migrations
                     Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Address = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     AccountStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingVerification"),
-                    Discriminator = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -78,7 +76,6 @@ namespace UPFCON.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
-                    table.CheckConstraint("CK_AllowedBoardDirectorRole", "[Role] IN ('President,VicePresident,Dean')");
                     table.CheckConstraint("CK_AllowedValuesAccountStatus", "AccountStatus IN ('Verified','PendingVerification','Rejected','Deleted')");
                 });
 
@@ -93,13 +90,13 @@ namespace UPFCON.Migrations
                     SubmittedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Path = table.Column<string>(type: "nvarchar(2048)", maxLength: 2048, nullable: false),
                     Keywords = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true, defaultValue: "PendingEvaluation"),
+                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingEvaluation"),
                     EventId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Papers", x => x.Id);
-                    table.CheckConstraint("CK_AllowedPaperStatuses", "[Status] IN ('PendingEvaluation,Accepted,Reject,RequiresEdits')");
+                    table.CheckConstraint("CK_AllowedPaperStatuses", "Status IN ('RequiresEdits','Reject','Accepted','PendingEvaluation')");
                     table.ForeignKey(
                         name: "FK_Papers_Events_EventId",
                         column: x => x.EventId,
@@ -156,6 +153,23 @@ namespace UPFCON.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Admins",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Admins", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Admins_Users_Id",
+                        column: x => x.Id,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Attendees",
                 columns: table => new
                 {
@@ -191,27 +205,19 @@ namespace UPFCON.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BoardDirectorDecisions",
+                name: "BoardDirectors",
                 columns: table => new
                 {
-                    BoardDirectorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    EventId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ApprovalStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true, defaultValue: "PendingDecision"),
-                    Comment = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BoardDirectorDecisions", x => new { x.BoardDirectorId, x.EventId });
-                    table.CheckConstraint("CK_ApprovalStatusAllowedValues", "[ApprovalStatus] IN ('Approved,Rejected,ToBeRevised,PendingDecision')");
+                    table.PrimaryKey("PK_BoardDirectors", x => x.Id);
+                    table.CheckConstraint("CK_AllowedBoardDirectorRole", "Role IN ('President','VicePresident','Dean')");
                     table.ForeignKey(
-                        name: "FK_BoardDirectorDecisions_Events_EventId",
-                        column: x => x.EventId,
-                        principalTable: "Events",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BoardDirectorDecisions_Users_BoardDirectorId",
-                        column: x => x.BoardDirectorId,
+                        name: "FK_BoardDirectors_Users_Id",
+                        column: x => x.Id,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -229,36 +235,6 @@ namespace UPFCON.Migrations
                     table.PrimaryKey("PK_Chairmans", x => x.UserId);
                     table.ForeignKey(
                         name: "FK_Chairmans_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Diplomas",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWID()"),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    IssueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Path = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    VerificationStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingVerification"),
-                    AdminId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    VerifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Diplomas", x => x.Id);
-                    table.CheckConstraint("CK_AllowedValuesDiplomaVerificationStatus", "VerificationStatus IN ('Verified','PendingVerification','Rejected')");
-                    table.ForeignKey(
-                        name: "FK_Diplomas_Users_AdminId",
-                        column: x => x.AdminId,
-                        principalTable: "Users",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Diplomas_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -380,6 +356,36 @@ namespace UPFCON.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Diplomas",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWID()"),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    IssueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Path = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    VerificationStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingVerification"),
+                    AdminId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VerifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Diplomas", x => x.Id);
+                    table.CheckConstraint("CK_AllowedValuesDiplomaVerificationStatus", "VerificationStatus IN ('Verified','PendingVerification','Rejected')");
+                    table.ForeignKey(
+                        name: "FK_Diplomas_Admins_AdminId",
+                        column: x => x.AdminId,
+                        principalTable: "Admins",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Diplomas_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Attendances",
                 columns: table => new
                 {
@@ -409,12 +415,12 @@ namespace UPFCON.Migrations
                 {
                     AuthorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     PaperId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true, defaultValue: "Contributor")
+                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "Contributor")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Contributions", x => new { x.AuthorId, x.PaperId });
-                    table.CheckConstraint("CK_AllowedContributorRoles", "[Role] IN ('HeadAuthor,Contributor')");
+                    table.CheckConstraint("CK_AllowedContributorRoles", "Role IN ('Contributor','HeadAuthor')");
                     table.ForeignKey(
                         name: "FK_Contributions_Authors_AuthorId",
                         column: x => x.AuthorId,
@@ -429,21 +435,48 @@ namespace UPFCON.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "BoardDirectorDecisions",
+                columns: table => new
+                {
+                    BoardDirectorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    EventId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ApprovalStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingDecision"),
+                    Comment = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BoardDirectorDecisions", x => new { x.BoardDirectorId, x.EventId });
+                    table.CheckConstraint("CK_ApprovalStatusAllowedValues", "ApprovalStatus IN ('PendingDecision','ToBeRevised','Rejected','Approved')");
+                    table.ForeignKey(
+                        name: "FK_BoardDirectorDecisions_BoardDirectors_BoardDirectorId",
+                        column: x => x.BoardDirectorId,
+                        principalTable: "BoardDirectors",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BoardDirectorDecisions_Events_EventId",
+                        column: x => x.EventId,
+                        principalTable: "Events",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "CommitteeMembers",
                 columns: table => new
                 {
                     ChairmanId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     EventId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true, defaultValue: "Evaluator"),
+                    Role = table.Column<int>(type: "int", maxLength: 50, nullable: false, defaultValue: 1),
                     InvitedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     RespondedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    InvitationStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true, defaultValue: "PendingResponse")
+                    InvitationStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingResponse")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CommitteeMembers", x => new { x.ChairmanId, x.EventId });
-                    table.CheckConstraint("CK_AllowedCommitteeMemberRoles", "[Role] IN ('HeadChairman,Evaluator,ExternalOrganizerChairman')");
-                    table.CheckConstraint("CK_AllowedInvitationStatuses", "[InvitationStatus] IN ('Accepted,PendingResponse,Rejected')");
+                    table.CheckConstraint("CK_AllowedCommitteeMemberRoles", "Role IN ('ExternalOrganizerChairman','Evaluator','HeadChairman')");
+                    table.CheckConstraint("CK_AllowedInvitationStatuses", "InvitationStatus IN ('Rejected','PendingResponse','Accepted')");
                     table.ForeignKey(
                         name: "FK_CommitteeMembers_Chairmans_ChairmanId",
                         column: x => x.ChairmanId,
@@ -624,7 +657,13 @@ namespace UPFCON.Migrations
                 name: "Attendees");
 
             migrationBuilder.DropTable(
+                name: "BoardDirectors");
+
+            migrationBuilder.DropTable(
                 name: "Authors");
+
+            migrationBuilder.DropTable(
+                name: "Admins");
 
             migrationBuilder.DropTable(
                 name: "CommitteeMembers");

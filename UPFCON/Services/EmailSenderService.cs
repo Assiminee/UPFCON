@@ -29,14 +29,4 @@ public class EmailSenderService(IOptions<SmtpSettings> settings) : IEmailSender
             await client.SendMailAsync(message);
         }
     }
-    
-    
-    public async Task<string> GenerateEmailConfirmationLinkAsync(User user, UserManager<User> userManager)
-    {
-        var rawToken = await userManager.GenerateEmailConfirmationTokenAsync(user);
-        var urlEncodedToken = WebUtility.UrlEncode(rawToken);
-        
-        return $"http://localhost:5280" +
-               $"/api/v1/auth/confirm-email?userId={user.Id}&token={urlEncodedToken}";
-    }
 }

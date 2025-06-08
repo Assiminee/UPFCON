@@ -1,4 +1,6 @@
-﻿namespace UPFCON.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace UPFCON.Models;
 
 public enum BoardDirectorRole
 {
@@ -9,8 +11,8 @@ public enum BoardDirectorRole
 
 public class BoardDirector : User
 {
-   
-  //  [CheckConstraint("CK_AllowedBoardDirectorRole", "[Role] IN ('President', 'VicePresident', 'Dean')")]
-    public BoardDirectorRole Role { get; set; }
+    [Required] public required string Role { get; set; }
+    
+    public bool PasswordChanged { get; set; } = false;
     public IList<BoardDirectorDecision> Decisions { get; set; } = new List<BoardDirectorDecision>();
 }

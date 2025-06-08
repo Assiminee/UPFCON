@@ -11,7 +11,7 @@ public enum CommitteeMemberRole
     ExternalOrganizerChairman
 }
 
-public enum InvitationStatus
+public enum InvitationStatusEnum
 {
     Accepted,
     PendingResponse,
@@ -29,6 +29,6 @@ public class CommitteeMember
     [Required] public DateTime InvitedAt { get; set; }
     
     public DateTime? RespondedAt { get; set; }
-    public InvitationStatus? InvitationStatus { get; set; }
+    public string InvitationStatus { get; set; } = Enum.GetName(InvitationStatusEnum.PendingResponse) ?? string.Empty;
     public IList<Evaluation>? Evaluations { get; set; }
 }

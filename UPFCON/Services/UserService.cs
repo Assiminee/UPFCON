@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Net;
 using System.Security.Claims;
 using System.Security.Policy;
 using Microsoft.AspNetCore.Identity;
@@ -17,7 +18,7 @@ namespace UPFCON.Services;
 public class UserService(
     UserManager<User> userManager, IDiplomaService diplomaService,
     IUtils utils, IEmailSender emailSender, IAuth authService,
-    IOptions<EmailChangeSettings> emailChangeSettings,
+    IOptions<ActivateAccountSettings> activationAccountSettings,
     IOptions<RegistrationEmailSettings> registrationEmailSettings,
     UpfconContext context)
     : IUserService
@@ -27,7 +28,7 @@ public class UserService(
     private IUtils Utils { get; } = utils;
     private IEmailSender EmailSender { get; } = emailSender;
     private IAuth AuthService { get; } = authService;
-    private IOptions<EmailChangeSettings> EmailChangeSettings { get; } = emailChangeSettings;
+    private IOptions<ActivateAccountSettings> ActivateAccountSettings { get; } = activationAccountSettings;
     private IOptions<RegistrationEmailSettings> RegistrationEmailSettings { get; } = registrationEmailSettings;
     private UpfconContext Context { get; } = context;
 
@@ -81,13 +82,13 @@ public class UserService(
         Utils.LogErrors(res, "Encountered errors when adding user roles");
     }
 
-    public async Task SendConfirmationEmailAsync(User user, string confirmationLink, bool isEmailChange)
+    public async Task SendConfirmationEmailAsync(User user, string confirmationLink, bool isAccountActivation)
     {
         if (string.IsNullOrWhiteSpace(user.Email))
             throw new ArgumentNullException(nameof(user.Email));
 
-        string body = isEmailChange ? EmailChangeSettings.Value.Body : RegistrationEmailSettings.Value.Body;
-        string subject = isEmailChange ? EmailChangeSettings.Value.Subject : RegistrationEmailSettings.Value.Subject;
+        string body = isAccountActivation ? ActivateAccountSettings.Value.Body : RegistrationEmailSettings.Value.Body;
+        string subject = isAccountActivation ? ActivateAccountSettings.Value.Subject : RegistrationEmailSettings.Value.Subject;
         
         body = body.Replace("{{user}}", user.FullName)
             .Replace("{{confirmationLink}}", confirmationLink);
@@ -167,6 +168,13 @@ public class UserService(
         return user;
     }
 
+    public async Task<bool> HasRole(User user, string role)
+    {
+        var roles = await UserManager.GetRolesAsync(user);
+        
+        return roles.Contains(role);
+    }
+
     private async Task<IEnumerable<Claim>> GenerateUserClaimsAsync(User user)
     {
         var roles = await UserManager.GetRolesAsync(user);
@@ -220,9 +228,79 @@ public class UserService(
             throw new Exception("Failed to confirm email");
     }
 
-    public async Task<string> GenerateEmailConfirmationLinkAsync(User user)
+    public async Task SetPasswordAsync(User user, string password)
     {
-        return await EmailSender.GenerateEmailConfirmationLinkAsync(user, UserManager);
+        var res = await UserManager.RemovePasswordAsync(user);
+        Utils.LogErrors(res, "Failed to remove password");
+        
+        if (!res.Succeeded)
+            throw new Exception("Failed to remove password");
+        
+        var addRes = await UserManager.AddPasswordAsync(user, password);
+        Utils.LogErrors(addRes, "Failed to add password");
+        
+        if (!addRes.Succeeded)
+            throw new Exception("Failed to add password");
+        
+        var updateRes = await UserManager.UpdateSecurityStampAsync(user);
+        Utils.LogErrors(updateRes, "Failed to update security stamp");
+        
+        if (!updateRes.Succeeded)
+            throw new Exception("Failed to update security stamp");
+
+        await UpdatePasswordFlagAsync(user);
+    }
+
+    private async Task UpdatePasswordFlagAsync(User user)
+    {
+        var isAdmin = await HasRole(user, "Admin");
+        var isBoardDirector = await HasRole(user, "BoardDirector");
+        
+        if (!isAdmin && !isBoardDirector)
+            return;
+        
+        if (isBoardDirector)
+        {
+            var specUser = Context.BoardDirectors.FirstOrDefault(b => b.Id == user.Id);
+            if (specUser == null)
+                throw new NotFoundException("Board director not found");
+
+            specUser.PasswordChanged = true;
+            var passwordFlagUpdate = await UserManager.UpdateAsync(specUser);
+            if (passwordFlagUpdate.Succeeded)
+                return;
+            
+            Utils.LogErrors(passwordFlagUpdate, "Failed to update password flag");
+            throw new Exception("Failed to update password flag");
+            
+        }
+        
+        if (isAdmin)
+        {
+            var specUser = Context.Admins.FirstOrDefault(b => b.Id == user.Id);
+            if (specUser == null)
+                throw new NotFoundException("Admin not found");
+
+            specUser.PasswordChanged = true;
+            var passwordFlagUpdate = await UserManager.UpdateAsync(specUser);
+            if (passwordFlagUpdate.Succeeded)
+                return;
+            
+            Utils.LogErrors(passwordFlagUpdate, "Failed to update password flag");
+            throw new Exception("Failed to update password flag");
+            
+        }
+    }
+
+    public async Task<string> GenerateEmailConfirmationLinkAsync(User user, string host, int port, string uri)
+    {
+        var rawToken = await userManager.GenerateEmailConfirmationTokenAsync(user);
+        var urlEncodedToken = WebUtility.UrlEncode(rawToken);
+        
+        Utils.LogInformation($"Generated toke: {urlEncodedToken}");
+        
+        return $"{host}:{port}" +
+               $"/{uri}?userId={user.Id}&token={urlEncodedToken}";
     }
 
     private static void CreateAuthorAttendeeChairman(RegistrationDto registrationDto, User user)

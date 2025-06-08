@@ -54,8 +54,6 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 
     private static void UserSetUp(ModelBuilder modelBuilder)
     {
-        var allowedStatuses = string.Join(",", Enum.GetNames<AccountStatus>());
-
         modelBuilder.Entity<User>(u =>
         {
             u.HasIndex(us => us.NormalizedEmail)
@@ -74,6 +72,8 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             u.ToTable("Users");
         });
 
+        modelBuilder.Entity<Admin>().ToTable("Admins");
+        modelBuilder.Entity<BoardDirector>().ToTable("BoardDirectors");
         modelBuilder.Entity<IdentityRole<Guid>>().ToTable("Roles");
         modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles");
         modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("UserClaims");
@@ -84,8 +84,6 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 
     private static void DiplomaSetup(ModelBuilder modelBuilder)
     {
-        var allowedStatuses = string.Join(",", Enum.GetNames<DiplomaVerificationStatus>());
-
         modelBuilder.Entity<Diploma>(d =>
         {
             d.HasKey(dp => dp.Id);
@@ -115,7 +113,6 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 
     private static void BoardDirectorDecisionSetup(ModelBuilder modelBuilder)
     {
-        var allowedStatuses = string.Join(",", Enum.GetNames<ApprovalStatus>());
         /*
          * Defining a composite key:
          * BoardDirectorDecision's primary key is made up
@@ -137,32 +134,28 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
                 .HasForeignKey(b => b.EventId);
 
             bdd.Property(bd => bd.ApprovalStatus)
-                .HasConversion<string>()
                 .HasMaxLength(50)
-                .IsRequired(false)
-                .HasDefaultValue(ApprovalStatus.PendingDecision);
+                .HasDefaultValue(ApprovalStatusEnum.PendingDecision)
+                .IsRequired();
 
             bdd.ToTable(bd => bd.HasCheckConstraint(
                 "CK_ApprovalStatusAllowedValues",
-                $"[ApprovalStatus] IN ('{allowedStatuses}')"
+                "ApprovalStatus IN ('PendingDecision','ToBeRevised','Rejected','Approved')"
             ));
         });
     }
 
     private static void BoardDirectorSetup(ModelBuilder modelBuilder)
     {
-        var allowedRoles = string.Join(",", Enum.GetNames<BoardDirectorRole>());
-
         modelBuilder.Entity<BoardDirector>(bd =>
         {
             bd.Property(b => b.Role)
-                .HasConversion<string>()
                 .HasMaxLength(50)
                 .IsRequired();
 
             bd.ToTable(b => b.HasCheckConstraint(
                 "CK_AllowedBoardDirectorRole",
-                $"[Role] IN ('{allowedRoles}')"
+                "Role IN ('President','VicePresident','Dean')"
             ));
         });
     }
@@ -218,33 +211,28 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 
     private static void CommitteeMemberSetup(ModelBuilder modelBuilder)
     {
-        var allowedRoles = string.Join(",", Enum.GetNames<CommitteeMemberRole>());
-        var allowedInvitationStatuses = string.Join(",", Enum.GetNames<InvitationStatus>());
-
         modelBuilder.Entity<CommitteeMember>(cm =>
         {
             cm.HasKey(c => new { c.ChairmanId, c.EventId });
 
             cm.Property(c => c.Role)
-                .HasConversion<string>()
                 .HasMaxLength(50)
-                .IsRequired(false)
+                .IsRequired()
                 .HasDefaultValue(CommitteeMemberRole.Evaluator);
 
             cm.ToTable(c => c.HasCheckConstraint(
                 "CK_AllowedCommitteeMemberRoles",
-                $"[Role] IN ('{allowedRoles}')"
+                "Role IN ('ExternalOrganizerChairman','Evaluator','HeadChairman')"
             ));
 
             cm.Property(c => c.InvitationStatus)
-                .HasConversion<string>()
                 .HasMaxLength(50)
-                .IsRequired(false)
-                .HasDefaultValue(InvitationStatus.PendingResponse);
+                .IsRequired()
+                .HasDefaultValue(InvitationStatusEnum.PendingResponse);
 
             cm.ToTable(c => c.HasCheckConstraint(
                 "CK_AllowedInvitationStatuses",
-                $"[InvitationStatus] IN ('{allowedInvitationStatuses}')"
+                "InvitationStatus IN ('Rejected','PendingResponse','Accepted')"
             ));
 
             cm.HasMany(c => c.Evaluations)
@@ -267,8 +255,6 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 
     private static void PaperSetup(ModelBuilder modelBuilder)
     {
-        var allowedStatuses = string.Join(",", Enum.GetNames<PaperStatus>());
-
         modelBuilder.Entity<Paper>(p =>
         {
             p.HasKey(pr => pr.Id);
@@ -277,14 +263,13 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
                 .HasDefaultValueSql("NEWID()");
 
             p.Property(pr => pr.Status)
-                .HasConversion<string>()
                 .HasMaxLength(50)
-                .IsRequired(false)
+                .IsRequired()
                 .HasDefaultValue(PaperStatus.PendingEvaluation);
 
             p.ToTable(pr => pr.HasCheckConstraint(
                 "CK_AllowedPaperStatuses",
-                $"[Status] IN ('{allowedStatuses}')"
+                "Status IN ('RequiresEdits','Reject','Accepted','PendingEvaluation')"
             ));
 
             p.HasMany(pr => pr.Evaluations)
@@ -318,21 +303,18 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 
     private static void ContributionSetup(ModelBuilder modelBuilder)
     {
-        var allowedRoles = string.Join(",", Enum.GetNames<ContributorRole>());
-
         modelBuilder.Entity<Contribution>(c =>
         {
             c.HasKey(cn => new { cn.AuthorId, cn.PaperId });
 
             c.Property(cn => cn.Role)
-                .HasConversion<string>()
                 .HasMaxLength(50)
-                .IsRequired(false)
+                .IsRequired()
                 .HasDefaultValue(ContributorRole.Contributor);
 
             c.ToTable(cn => cn.HasCheckConstraint(
                 "CK_AllowedContributorRoles",
-                $"[Role] IN ('{allowedRoles}')"
+                "Role IN ('Contributor','HeadAuthor')"
             ));
         });
     }
