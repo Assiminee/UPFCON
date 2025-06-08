@@ -15,5 +15,5 @@ public class Contribution
     public Author Author { get; set; } = null!;
     public Guid PaperId { get; set; }
     public Paper Paper { get; set; } = null!;
-    public ContributorRole? Role { get; set; }
+    public string Role { get; set; } = Enum.GetName(ContributorRole.Contributor) ?? string.Empty;
 }

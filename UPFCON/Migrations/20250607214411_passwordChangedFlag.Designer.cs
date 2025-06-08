@@ -12,8 +12,8 @@ using UPFCON.Models.Context;
 namespace UPFCON.Migrations
 {
     [DbContext(typeof(UpfconContext))]
-    [Migration("20250604142234_firstMigration")]
-    partial class firstMigration
+    [Migration("20250607214411_passwordChangedFlag")]
+    partial class passwordChangedFlag
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -210,6 +210,7 @@ namespace UPFCON.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ApprovalStatus")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
@@ -226,7 +227,7 @@ namespace UPFCON.Migrations
 
                     b.ToTable("BoardDirectorDecisions", t =>
                         {
-                            t.HasCheckConstraint("CK_ApprovalStatusAllowedValues", "[ApprovalStatus] IN ('Approved,Rejected,ToBeRevised,PendingDecision')");
+                            t.HasCheckConstraint("CK_ApprovalStatusAllowedValues", "ApprovalStatus IN ('PendingDecision','ToBeRevised','Rejected','Approved')");
                         });
                 });
 
@@ -254,6 +255,7 @@ namespace UPFCON.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("InvitationStatus")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
@@ -265,11 +267,11 @@ namespace UPFCON.Migrations
                     b.Property<DateTime?>("RespondedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Role")
+                    b.Property<int>("Role")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasDefaultValue("Evaluator");
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
 
                     b.HasKey("ChairmanId", "EventId");
 
@@ -277,9 +279,9 @@ namespace UPFCON.Migrations
 
                     b.ToTable("CommitteeMembers", t =>
                         {
-                            t.HasCheckConstraint("CK_AllowedCommitteeMemberRoles", "[Role] IN ('HeadChairman,Evaluator,ExternalOrganizerChairman')");
+                            t.HasCheckConstraint("CK_AllowedCommitteeMemberRoles", "Role IN ('ExternalOrganizerChairman','Evaluator','HeadChairman')");
 
-                            t.HasCheckConstraint("CK_AllowedInvitationStatuses", "[InvitationStatus] IN ('Accepted,PendingResponse,Rejected')");
+                            t.HasCheckConstraint("CK_AllowedInvitationStatuses", "InvitationStatus IN ('Rejected','PendingResponse','Accepted')");
                         });
                 });
 
@@ -292,6 +294,7 @@ namespace UPFCON.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Role")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
@@ -303,7 +306,7 @@ namespace UPFCON.Migrations
 
                     b.ToTable("Contributions", t =>
                         {
-                            t.HasCheckConstraint("CK_AllowedContributorRoles", "[Role] IN ('HeadAuthor,Contributor')");
+                            t.HasCheckConstraint("CK_AllowedContributorRoles", "Role IN ('Contributor','HeadAuthor')");
                         });
                 });
 
@@ -489,6 +492,7 @@ namespace UPFCON.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Status")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
@@ -508,7 +512,7 @@ namespace UPFCON.Migrations
 
                     b.ToTable("Papers", t =>
                         {
-                            t.HasCheckConstraint("CK_AllowedPaperStatuses", "[Status] IN ('PendingEvaluation,Accepted,Reject,RequiresEdits')");
+                            t.HasCheckConstraint("CK_AllowedPaperStatuses", "Status IN ('RequiresEdits','Reject','Accepted','PendingEvaluation')");
                         });
                 });
 
@@ -624,11 +628,6 @@ namespace UPFCON.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(13)
-                        .HasColumnType("nvarchar(13)");
-
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -696,40 +695,40 @@ namespace UPFCON.Migrations
                             t.HasCheckConstraint("CK_AllowedValuesAccountStatus", "AccountStatus IN ('Verified','PendingVerification','Rejected','Deleted')");
                         });
 
-                    b.HasDiscriminator().HasValue("User");
-
-                    b.UseTphMappingStrategy();
+                    b.UseTptMappingStrategy();
                 });
 
             modelBuilder.Entity("UPFCON.Models.Admin", b =>
                 {
                     b.HasBaseType("UPFCON.Models.User");
 
-                    b.ToTable(t =>
+                    b.Property<bool>("PasswordChanged")
+                        .HasColumnType("bit");
+
+                    b.ToTable("Admins", null, t =>
                         {
                             t.HasCheckConstraint("CK_AllowedValuesAccountStatus", "AccountStatus IN ('Verified','PendingVerification','Rejected','Deleted')");
                         });
-
-                    b.HasDiscriminator().HasValue("Admin");
                 });
 
             modelBuilder.Entity("UPFCON.Models.BoardDirector", b =>
                 {
                     b.HasBaseType("UPFCON.Models.User");
 
+                    b.Property<bool>("PasswordChanged")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.ToTable(t =>
+                    b.ToTable("BoardDirectors", null, t =>
                         {
                             t.HasCheckConstraint("CK_AllowedValuesAccountStatus", "AccountStatus IN ('Verified','PendingVerification','Rejected','Deleted')");
 
-                            t.HasCheckConstraint("CK_AllowedBoardDirectorRole", "[Role] IN ('President,VicePresident,Dean')");
+                            t.HasCheckConstraint("CK_AllowedBoardDirectorRole", "Role IN ('President','VicePresident','Dean')");
                         });
-
-                    b.HasDiscriminator().HasValue("BoardDirector");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -967,6 +966,24 @@ namespace UPFCON.Migrations
                     b.Navigation("Event");
 
                     b.Navigation("Paper");
+                });
+
+            modelBuilder.Entity("UPFCON.Models.Admin", b =>
+                {
+                    b.HasOne("UPFCON.Models.User", null)
+                        .WithOne()
+                        .HasForeignKey("UPFCON.Models.Admin", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("UPFCON.Models.BoardDirector", b =>
+                {
+                    b.HasOne("UPFCON.Models.User", null)
+                        .WithOne()
+                        .HasForeignKey("UPFCON.Models.BoardDirector", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("UPFCON.Models.Attendee", b =>

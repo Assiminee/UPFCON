@@ -413,6 +413,88 @@
       ]
     },
     {
+      "Route": "uploads/diplomas/0fb5950e-4eee-43da-934c-a21ca25d585d.7trgj40743.jpg",
+      "AssetFile": "uploads/diplomas/0fb5950e-4eee-43da-934c-a21ca25d585d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 21:26:18 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7trgj40743"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/0fb5950e-4eee-43da-934c-a21ca25d585d.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/0fb5950e-4eee-43da-934c-a21ca25d585d.jpg",
+      "AssetFile": "uploads/diplomas/0fb5950e-4eee-43da-934c-a21ca25d585d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 21:26:18 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        }
+      ]
+    },
+    {
       "Route": "uploads/diplomas/1096dc40-2810-4df5-a5a9-76e99c6b9c23.png",
       "AssetFile": "uploads/diplomas/1096dc40-2810-4df5-a5a9-76e99c6b9c23.png",
       "Selectors": [],
@@ -901,6 +983,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-v+Qb44y2OKJlzdNCaCXCNyFYZzcn3KcWNoUzTno5Ba8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/2be004f4-c774-463d-8c9a-e7d021074a17.7trgj40743.jpg",
+      "AssetFile": "uploads/diplomas/2be004f4-c774-463d-8c9a-e7d021074a17.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 00:10:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7trgj40743"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/2be004f4-c774-463d-8c9a-e7d021074a17.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/2be004f4-c774-463d-8c9a-e7d021074a17.jpg",
+      "AssetFile": "uploads/diplomas/2be004f4-c774-463d-8c9a-e7d021074a17.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 00:10:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
         }
       ]
     },
@@ -2463,6 +2627,88 @@
       ]
     },
     {
+      "Route": "uploads/diplomas/9ed01ced-9439-45bb-9bdf-ce5ea15d29c7.7trgj40743.jpg",
+      "AssetFile": "uploads/diplomas/9ed01ced-9439-45bb-9bdf-ce5ea15d29c7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 00:25:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7trgj40743"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/9ed01ced-9439-45bb-9bdf-ce5ea15d29c7.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/9ed01ced-9439-45bb-9bdf-ce5ea15d29c7.jpg",
+      "AssetFile": "uploads/diplomas/9ed01ced-9439-45bb-9bdf-ce5ea15d29c7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 00:25:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        }
+      ]
+    },
+    {
       "Route": "uploads/diplomas/a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
       "AssetFile": "uploads/diplomas/a54eb0f0-9dc7-49b6-8476-ce946ac431a6.png",
       "Selectors": [],
@@ -3365,6 +3611,88 @@
       ]
     },
     {
+      "Route": "uploads/diplomas/d42eae3e-1e15-4a5e-9f54-908f49f7c230.7trgj40743.jpg",
+      "AssetFile": "uploads/diplomas/d42eae3e-1e15-4a5e-9f54-908f49f7c230.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 00:06:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7trgj40743"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/d42eae3e-1e15-4a5e-9f54-908f49f7c230.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/d42eae3e-1e15-4a5e-9f54-908f49f7c230.jpg",
+      "AssetFile": "uploads/diplomas/d42eae3e-1e15-4a5e-9f54-908f49f7c230.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 00:06:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        }
+      ]
+    },
+    {
       "Route": "uploads/diplomas/dd6facf4-6e15-411e-bcce-de137fee977e.3nsrb4mpci.jpeg",
       "AssetFile": "uploads/diplomas/dd6facf4-6e15-411e-bcce-de137fee977e.jpeg",
       "Selectors": [],
@@ -3853,6 +4181,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-v+Qb44y2OKJlzdNCaCXCNyFYZzcn3KcWNoUzTno5Ba8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/fa467f60-d8b7-4702-bb93-30762399d10e.7trgj40743.jpg",
+      "AssetFile": "uploads/diplomas/fa467f60-d8b7-4702-bb93-30762399d10e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 15:47:59 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7trgj40743"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/fa467f60-d8b7-4702-bb93-30762399d10e.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/fa467f60-d8b7-4702-bb93-30762399d10e.jpg",
+      "AssetFile": "uploads/diplomas/fa467f60-d8b7-4702-bb93-30762399d10e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2295402"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 15:47:59 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NcxOO/rBdqGWA3FejxufZ6ehdsju+k7t2uBC0OG38QY="
         }
       ]
     },
