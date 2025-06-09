@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UPFCON.Models.Context;
 
@@ -11,9 +12,11 @@ using UPFCON.Models.Context;
 namespace UPFCON.Migrations
 {
     [DbContext(typeof(UpfconContext))]
-    partial class UpfconContextModelSnapshot : ModelSnapshot
+    [Migration("20250609221039_AddAdminTable")]
+    partial class AddAdminTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
