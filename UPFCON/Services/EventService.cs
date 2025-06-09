@@ -1,5 +1,5 @@
 ﻿namespace UPFCON.Services;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore; // ✅ correct for EF Core
 using UPFCON.Interfaces;
 using UPFCON.Models;
 using UPFCON.Requests;
@@ -17,7 +17,7 @@ public class EventService : IEvent
 
     public async Task<IEnumerable<Event>> GetAllEventsAsync()
     {
-        return await _context.Events.ToListAsync();
+        return _context.Events.ToList(); 
     }
 
     public async Task<Event?> GetEventByIdAsync(Guid id)

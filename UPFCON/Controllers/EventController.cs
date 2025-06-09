@@ -1,10 +1,13 @@
-﻿namespace UPFCON.Controllers;
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace UPFCON.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using UPFCON.Interfaces;
 using UPFCON.Requests;
 
 [ApiController]
-[Route("api/v1/events")]
+[Route("api/v1/auth/events")]
+[Authorize]
 public class EventController : ControllerBase
 {
     private readonly IEvent _service;
@@ -30,6 +33,28 @@ public class EventController : ControllerBase
         Console.WriteLine("im here");
         var created = await _service.CreateEventAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+    }
+
+    [HttpPost("upload-logo")]
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> UploadLogo([FromForm] IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+            return BadRequest("File is empty");
+
+        var folderPath = Path.Combine("wwwroot", "uploads", "logos");
+        Directory.CreateDirectory(folderPath);
+
+        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+        var filePath = Path.Combine(folderPath, fileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        var publicPath = $"/uploads/logos/{fileName}";
+        return Ok(new { path = publicPath });
     }
 
     [HttpPut("{id}")]
