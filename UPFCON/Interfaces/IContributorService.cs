@@ -5,6 +5,6 @@ namespace UPFCON.Interfaces;
 
 public interface IContributorService
 {
-    public Task<List<Contribution>> CreateContributorsAsync(HttpContext httpContext, Paper paper,
+    public Task CreateContributorsAsync(HttpContext httpContext, Paper paper,
         IList<ContributorDto> contributorDtos);
 }

@@ -20,7 +20,7 @@ public class ContributorService(UpfconContext context, IUserService userService,
     
     
 
-    public async Task<List<Contribution>> CreateContributorsAsync(HttpContext httpContext, Paper paper, 
+    public async Task CreateContributorsAsync(HttpContext httpContext, Paper paper, 
         IList<ContributorDto> contributorDtos)
     {
         var email = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
@@ -71,7 +71,5 @@ public class ContributorService(UpfconContext context, IUserService userService,
         }
         await Context.AddRangeAsync(contributions);
         await Context.SaveChangesAsync();
-
-        return contributions;
     }
 }
