@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rWKm0r/miNxjfKTn099MPUw4LRXDWnAiQDzJLX6YGBQ=",
+  "Hash": "Xj+rUkkqMPI8J+ETXZFN/HGH/BpkKvcIpIZDbFagoGc=",
   "Source": "UPFCON",
   "BasePath": "_content/UPFCON",
   "Mode": "Default",
@@ -729,6 +729,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png"
+    },
+    {
+      "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\9cc7c22e-5d62-4d88-b4b9-493953816690.jpeg",
+      "SourceId": "UPFCON",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\",
+      "BasePath": "_content/UPFCON",
+      "RelativePath": "uploads/diplomas/9cc7c22e-5d62-4d88-b4b9-493953816690#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c8ev4g95ge",
+      "Integrity": "NBISLom6qSyQ0KuXFvY5l1GGAj1pXDx6rfWv6bWPBWs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\diplomas\\9cc7c22e-5d62-4d88-b4b9-493953816690.jpeg"
     },
     {
       "Identity": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\9ed01ced-9439-45bb-9bdf-ce5ea15d29c7.jpg",
@@ -4021,6 +4042,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Gxl8vw1Co/DiJJ3haTl5dc34CXbIXATRRS6v4N07YHk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/9cc7c22e-5d62-4d88-b4b9-493953816690.c8ev4g95ge.jpeg",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\9cc7c22e-5d62-4d88-b4b9-493953816690.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73399"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NBISLom6qSyQ0KuXFvY5l1GGAj1pXDx6rfWv6bWPBWs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 20:16:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c8ev4g95ge"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/diplomas/9cc7c22e-5d62-4d88-b4b9-493953816690.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NBISLom6qSyQ0KuXFvY5l1GGAj1pXDx6rfWv6bWPBWs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/diplomas/9cc7c22e-5d62-4d88-b4b9-493953816690.jpeg",
+      "AssetFile": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\wwwroot\\uploads\\diplomas\\9cc7c22e-5d62-4d88-b4b9-493953816690.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73399"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NBISLom6qSyQ0KuXFvY5l1GGAj1pXDx6rfWv6bWPBWs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 20:16:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NBISLom6qSyQ0KuXFvY5l1GGAj1pXDx6rfWv6bWPBWs="
         }
       ]
     },

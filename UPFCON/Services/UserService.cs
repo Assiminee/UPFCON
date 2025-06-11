@@ -1,8 +1,7 @@
-﻿using System.Globalization;
-using System.Net;
+﻿using System.Net;
 using System.Security.Claims;
-using System.Security.Policy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using UPFCON.Authorization;
 using UPFCON.Exceptions;
@@ -20,7 +19,9 @@ public class UserService(
     IUtils utils, IEmailSender emailSender, IAuth authService,
     IOptions<ActivateAccountSettings> activationAccountSettings,
     IOptions<RegistrationEmailSettings> registrationEmailSettings,
-    UpfconContext context)
+    UpfconContext context,
+    IGenericService genericService
+    )
     : IUserService
 {
     private UserManager<User> UserManager { get; } = userManager;
@@ -31,6 +32,7 @@ public class UserService(
     private IOptions<ActivateAccountSettings> ActivateAccountSettings { get; } = activationAccountSettings;
     private IOptions<RegistrationEmailSettings> RegistrationEmailSettings { get; } = registrationEmailSettings;
     private UpfconContext Context { get; } = context;
+    public IGenericService GenericService { get; } = genericService;
 
     public async Task<(User user, IEnumerable<string> roles)> CreateUserAsync(
         RegistrationDto registrationDto)
@@ -314,5 +316,30 @@ public class UserService(
 
         if (registrationDto.Roles.Contains(chairmanRole))
             user.Chairman = new Chairman(registrationDto.IsInternal ?? true);
+    }
+
+    public async Task<(IList<UserDto>, int)> GetUsersAsync(int page, int pageSize)
+    {
+        var roleId = await Context.Roles
+            .Where(r => r.Name == "Admin")
+            .Select(r => r.Id)
+            .FirstOrDefaultAsync();
+        
+        var userDtos = new List<UserDto>();
+        
+        var result = await GenericService.GetPagedResultAsync(
+            Context.Users.AsQueryable(), page, pageSize,
+            u => u.FirstName,
+            u => !Context.UserRoles
+                .Any(r => r.UserId == u.Id && r.RoleId == roleId)
+            );
+
+        if (result.Count == 0)
+            return ( [], 0 );
+        
+        foreach (var user in result.Items)
+            userDtos.Add(UserDto.FromUser(user));
+
+        return (userDtos, result.Count);
     }
 }

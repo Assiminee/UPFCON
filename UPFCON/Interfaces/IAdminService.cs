@@ -5,10 +5,10 @@ namespace UPFCON.Interfaces;
 
 public interface IAdminService
 {
-    Task<Admin> CreateAdmin(AdminDto adminDto);
+    Task<Admin> CreateAdmin(UserDto userDto);
     Task<Admin> GetAdminById(Guid id);
-    IList<AdminDto> GetAdmins(int page, int pageSize);
+    Task<(IList<UserDto>, int)> GetAdmins(int page, int pageSize);
     int GetCount();
-    Task UpdateAdmin(Guid id, AdminDto adminDto);
+    Task UpdateAdmin(Guid id, UserDto userDto);
     Task DeleteAdmin(Guid id);
 }

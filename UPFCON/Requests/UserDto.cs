@@ -3,7 +3,7 @@ using UPFCON.Models;
 
 namespace UPFCON.Requests;
 
-public class AdminDto
+public class UserDto
 {
 
     [Required] public string Id { get; set; } = string.Empty;
@@ -25,9 +25,9 @@ public class AdminDto
     [Required] public string Address { get; set; } = string.Empty;
     [Required] public string AccountStatus { get; set; } = string.Empty;
 
-    public static AdminDto FromAdmin(Admin user)
+    public static UserDto FromUser(User user)
     {
-        return new AdminDto
+        return new UserDto
         {
             Id = user.Id.ToString(),
             FirstName = user.FirstName,
@@ -40,15 +40,15 @@ public class AdminDto
         };
     }
 
-    public static Admin SetAdminFromDto(Admin admin, AdminDto dto)
+    public static User SetAdminFromDto(User user, UserDto dto)
     {
-        admin.FirstName = dto.FirstName;
-        admin.LastName = dto.LastName;
-        admin.PhoneNumber = dto.PhoneNumber;
-        admin.Birthdate = dto.Birthdate;
-        admin.Address = dto.Address;
-        admin.AccountStatus = dto.AccountStatus;
+        user.FirstName = dto.FirstName;
+        user.LastName = dto.LastName;
+        user.PhoneNumber = dto.PhoneNumber;
+        user.Birthdate = dto.Birthdate;
+        user.Address = dto.Address;
+        user.AccountStatus = dto.AccountStatus;
         
-        return admin;
+        return user;
     }
 }

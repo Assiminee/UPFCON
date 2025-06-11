@@ -1,8 +1,5 @@
-﻿using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using UPFCON.Exceptions;
 using UPFCON.Interfaces;
 using UPFCON.Requests;
 
@@ -42,6 +39,19 @@ public class UserController(IUtils utils, IUserService userService) : Controller
         await UserService.EditUserPasswordAsync(user, passwords);
         
         return Ok();
+    }
+
+    [HttpGet]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetUsersAsync([FromQuery] int page, [FromQuery] int pageSize)
+    {
+        var result = await UserService.GetUsersAsync(page, pageSize);
+        
+        return Ok(new
+        {
+            users = result.Item1,
+            count = result.Item2
+        });
     }
 
     // [HttpDelete]

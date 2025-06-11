@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UPFCON.Interfaces;
-using UPFCON.Models;
 using UPFCON.Requests;
 
 namespace UPFCON.Controllers;
@@ -16,9 +15,9 @@ public class AdminController(IAdminService adminService, IUserService userServic
 
     [HttpPost]
     [Consumes("application/json")]
-    public async Task<IActionResult> CreatAdmin([FromBody] AdminDto adminDto)
+    public async Task<IActionResult> CreatAdmin([FromBody] UserDto userDto)
     {
-        var admin = await AdminService.CreateAdmin(adminDto);
+        var admin = await AdminService.CreateAdmin(userDto);
         var confirmationLink = await UserService.GenerateEmailConfirmationLinkAsync(
             admin, "http://localhost", 4200, "activate-account"
         );
@@ -32,15 +31,13 @@ public class AdminController(IAdminService adminService, IUserService userServic
     }
 
     [HttpGet]
-    public IActionResult Get([FromQuery] int page, [FromQuery] int pageSize)
+    public async Task<IActionResult> Get([FromQuery] int page, [FromQuery] int pageSize)
     {
-        var user = HttpContext.User.IsInRole("Admin");
-        Utils.LogInformation($"Is user logged in {HttpContext.User.Identity?.IsAuthenticated}");
-        Utils.LogInformation($"Is user an admin? {user}");
-        Utils.LogInformation($"User email {HttpContext.User.Identity?.AuthenticationType}");
+        var admins = await AdminService.GetAdmins(page, pageSize);
+        
         return Ok(new {
-            admins = AdminService.GetAdmins(page, pageSize),
-            count = AdminService.GetCount()
+            users = admins.Item1,
+            count = admins.Item2,
         });
     }
 
@@ -49,17 +46,17 @@ public class AdminController(IAdminService adminService, IUserService userServic
     public async Task<IActionResult> GetAdmin([FromRoute] Guid id)
     {
         var admin = await AdminService.GetAdminById(id);
-        var adminDto = AdminDto.FromAdmin(admin);
+        var userDto = UserDto.FromUser(admin);
         
-        return Ok(adminDto);
+        return Ok(userDto);
     }
 
     [HttpPut]
     [Route("{id:guid}")]
     [Consumes("application/json")]
-    public async Task<IActionResult> UpdateAdmin([FromRoute] Guid id, [FromBody] AdminDto adminDto)
+    public async Task<IActionResult> UpdateAdmin([FromRoute] Guid id, [FromBody] UserDto userDto)
     {
-        await AdminService.UpdateAdmin(id, adminDto);
+        await AdminService.UpdateAdmin(id, userDto);
         
         return Ok();
     }

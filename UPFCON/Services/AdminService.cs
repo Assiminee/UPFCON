@@ -7,24 +7,25 @@ using UPFCON.Requests;
 
 namespace UPFCON.Services;
 
-public class AdminService(UserManager<User> userManager, IUtils utils, UpfconContext context) : IAdminService
+public class AdminService(UserManager<User> userManager, IUtils utils, UpfconContext context, IGenericService genericService) : IAdminService
 {
     private UserManager<User> UserManager { get; } = userManager;
     private IUtils Utils { get; } = utils;
     private UpfconContext Context { get; } = context;
+    public IGenericService GenericService { get; } = genericService;
 
-    public async Task<Admin> CreateAdmin(AdminDto adminDto)
+    public async Task<Admin> CreateAdmin(UserDto userDto)
     {
         var admin = new Admin
         {
-            FirstName = adminDto.FirstName,
-            LastName = adminDto.LastName,
-            Email = adminDto.Email,
-            PhoneNumber = adminDto.PhoneNumber,
-            Birthdate = adminDto.Birthdate,
-            Address = adminDto.Address,
-            UserName = adminDto.Email,
-            AccountStatus = adminDto.AccountStatus,
+            FirstName = userDto.FirstName,
+            LastName = userDto.LastName,
+            Email = userDto.Email,
+            PhoneNumber = userDto.PhoneNumber,
+            Birthdate = userDto.Birthdate,
+            Address = userDto.Address,
+            UserName = userDto.Email,
+            AccountStatus = userDto.AccountStatus,
         };
         var password = Utils.GenerateRandomPassword();
 
@@ -39,7 +40,7 @@ public class AdminService(UserManager<User> userManager, IUtils utils, UpfconCon
             );
 
             if (exception)
-                throw new DuplicateEmailException($"The email {adminDto.Email} already exists.");
+                throw new DuplicateEmailException($"The email {userDto.Email} already exists.");
         }
 
         var roleRes = await UserManager.AddToRoleAsync(admin, Enum.GetName(Roles.Admin) ?? "");
@@ -67,29 +68,31 @@ public class AdminService(UserManager<User> userManager, IUtils utils, UpfconCon
         return Context.Admins.Count();
     }
 
-    public IList<AdminDto> GetAdmins(int page, int pageSize)
+    public async Task<(IList<UserDto>, int)> GetAdmins(int page, int pageSize)
     {
-        var admins = Context.Admins
-            .OrderBy(a => a.FirstName)
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .ToList();
+        var userDtos = new List<UserDto>();
         
-        if (admins.Count == 0)
-            return [];
+        var result = await GenericService.GetPagedResultAsync(
+            Context.Admins.AsQueryable(), page, pageSize,
+            a => a.FirstName);
 
-        var adminDtos = new List<AdminDto>();
+        if (result.Count == 0)
+            return ( [], 0 );
         
-        foreach (var admin in admins)
-            adminDtos.Add(AdminDto.FromAdmin(admin));
+        foreach (var admin in result.Items)
+            userDtos.Add(UserDto.FromUser(admin));
 
-        return adminDtos;
+        return (userDtos, result.Count);
     }
 
-    public async Task UpdateAdmin(Guid id, AdminDto adminDto)
+    public async Task UpdateAdmin(Guid id, UserDto userDto)
     {
-        var admin = await GetAdminById(id);
-        admin = AdminDto.SetAdminFromDto(admin, adminDto);
+        var admin = await UserManager.FindByIdAsync(id.ToString());
+        
+        if (admin == null)
+            throw new NotFoundException("Admin not found");
+        
+        admin = UserDto.SetAdminFromDto(admin, userDto);
         
         var res = await UserManager.UpdateAsync(admin);
         

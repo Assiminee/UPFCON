@@ -22,4 +22,5 @@ public interface IUserService
     Task EditUserPasswordAsync(User user, ChangePasswordDto passwords);
     Task<bool> HasRole(User user, string role);
     Task SetPasswordAsync(User user, string password);
+    Task<(IList<UserDto>, int)> GetUsersAsync(int page, int pageSize);
 }
