@@ -92,7 +92,7 @@ public class AdminService(UserManager<User> userManager, IUtils utils, UpfconCon
         if (admin == null)
             throw new NotFoundException("Admin not found");
         
-        admin = UserDto.SetAdminFromDto(admin, userDto);
+        admin = UserDto.SetUserFromDto(admin, userDto);
         
         var res = await UserManager.UpdateAsync(admin);
         
