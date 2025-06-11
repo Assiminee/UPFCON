@@ -125,6 +125,7 @@ builder.Services.AddScoped<IPaperService, PaperService>();
 builder.Services.AddScoped<IContributorService, ContributorService>();
 
 
+builder.Services.AddScoped<IGenericService, GenericService>();
 
 // Overrides ASP.NET's default validation (validation annotations of class properties)
 builder.Services.Configure<ApiBehaviorOptions>(options =>

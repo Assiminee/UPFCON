@@ -1,23 +1,19 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using UPFCON.Exceptions;
 using UPFCON.Interfaces;
-using UPFCON.Models;
 using UPFCON.Requests;
 
 namespace UPFCON.Controllers;
 
 [Authorize]
 [Route("/api/v1/users")]
-public class UserController(IUtils utils, IUserService userService, UserManager<User> userManager) : Controller
+public class UserController(IUtils utils, IUserService userService) : Controller
 {
     private IUtils Utils { get; } = utils;
     private IUserService UserService { get; } = userService;
-    
-    public UserManager<User> UserManager { get; } = userManager;
 
     [HttpGet]
     [Route("profile")]
@@ -47,14 +43,25 @@ public class UserController(IUtils utils, IUserService userService, UserManager<
         
         return Ok();
     }
-    
-    [HttpDelete]
-    [Route("profile")]
-    public async Task<IActionResult> DeleteProfileAsync()
+
+    [HttpGet]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetUsersAsync([FromQuery] int page, [FromQuery] int pageSize)
     {
-        var user = await UserService.GetFromJwtEmailClaim(HttpContext);
-        await UserManager.DeleteAsync(user);
+        var result = await UserService.GetUsersAsync(page, pageSize);
         
-        return NoContent();
+        return Ok(new
+        {
+            users = result.Item1,
+            count = result.Item2
+        });
     }
+
+    // [HttpDelete]
+    // [Route("profile")]
+    // public async Task<IActionResult> DeleteProfileAsync()
+    // {
+    //     var user = await UserService.GetFromJwtEmailClaim(HttpContext);
+    //     
+    // }
 }
