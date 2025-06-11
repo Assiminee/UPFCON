@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\uploads\\diplomas\\01787af6-95f2-4ed1-a5d2-8caa0df9cc10.png"
     },
     {
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\06ad13b0-813d-4eff-b63d-6a57d953348e.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\06ad13b0-813d-4eff-b63d-6a57d953348e.jpeg"
+    },
+    {
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0a3db1a5-051e-408f-a697-427cc3b98d3d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\0a3db1a5-051e-408f-a697-427cc3b98d3d.jpg"
+    },
+    {
       "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png",
       "PackagePath": "staticwebassets\\uploads\\diplomas\\0ae487df-6b8e-4233-a946-77dc0ffe86eb.png"
     },
@@ -89,6 +97,10 @@
       "PackagePath": "staticwebassets\\uploads\\diplomas\\56cc7d86-5ded-44e1-8eae-6c1652bd1286.jpeg"
     },
     {
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\60270278-ed60-4cd8-b6d9-bd7a0a2d5ccf.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\60270278-ed60-4cd8-b6d9-bd7a0a2d5ccf.jpeg"
+    },
+    {
       "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\61f01663-afd3-413e-a1e9-589a030d7634.png",
       "PackagePath": "staticwebassets\\uploads\\diplomas\\61f01663-afd3-413e-a1e9-589a030d7634.png"
     },
@@ -149,6 +161,10 @@
       "PackagePath": "staticwebassets\\uploads\\diplomas\\98baab7c-c291-4aab-a3a6-d1859f74756d.png"
     },
     {
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\9cc7c22e-5d62-4d88-b4b9-493953816690.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\9cc7c22e-5d62-4d88-b4b9-493953816690.jpeg"
+    },
+    {
       "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\9ed01ced-9439-45bb-9bdf-ce5ea15d29c7.jpg",
       "PackagePath": "staticwebassets\\uploads\\diplomas\\9ed01ced-9439-45bb-9bdf-ce5ea15d29c7.jpg"
     },
@@ -167,6 +183,10 @@
     {
       "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg",
       "PackagePath": "staticwebassets\\uploads\\diplomas\\b534b5ef-508d-492e-bec4-06d3e29fe1c6.jpg"
+    },
+    {
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bbd5665b-955b-4874-a6d5-5c4555725805.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\bbd5665b-955b-4874-a6d5-5c4555725805.jpeg"
     },
     {
       "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\bc0dbc05-7107-4e0a-8268-83d521118d38.png",
@@ -213,6 +233,10 @@
       "PackagePath": "staticwebassets\\uploads\\diplomas\\dd6facf4-6e15-411e-bcce-de137fee977e.jpeg"
     },
     {
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\e27aebbd-c64f-420e-a53f-616524f3f95b.png",
+      "PackagePath": "staticwebassets\\uploads\\diplomas\\e27aebbd-c64f-420e-a53f-616524f3f95b.png"
+    },
+    {
       "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\diplomas\\e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg",
       "PackagePath": "staticwebassets\\uploads\\diplomas\\e7c493fe-ab34-497b-932e-e2a0afe626a9.jpeg"
     },
@@ -245,92 +269,56 @@
       "PackagePath": "staticwebassets\\uploads\\diplomas\\fcabb375-fef7-4899-8c4d-bb83f910397a.jpeg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\03b63d04-14e6-4de2-b3ba-efe7047813f9.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\03b63d04-14e6-4de2-b3ba-efe7047813f9.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\1235be51-c8c9-45d3-9f58-968b08e78d91.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\1235be51-c8c9-45d3-9f58-968b08e78d91.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\081da07e-dc76-4fb3-922a-0a75f9124a6c.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\081da07e-dc76-4fb3-922a-0a75f9124a6c.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\1595e255-b5aa-416a-b173-c84c6c04cb7f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\1595e255-b5aa-416a-b173-c84c6c04cb7f.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\084f4d4a-50f7-4cde-8140-4db4150a53ea.pdf",
-      "PackagePath": "staticwebassets\\uploads\\papers\\084f4d4a-50f7-4cde-8140-4db4150a53ea.pdf"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\24476d96-dd8c-4f57-9e90-a80b127c9947.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\24476d96-dd8c-4f57-9e90-a80b127c9947.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\097e23c4-bacc-442c-baa9-87e328af717f.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\097e23c4-bacc-442c-baa9-87e328af717f.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\55030a71-9eca-4b30-8942-e0ed10020bd7.png",
+      "PackagePath": "staticwebassets\\uploads\\papers\\55030a71-9eca-4b30-8942-e0ed10020bd7.png"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\0e8c3990-9ae8-4949-8566-b32d8a4e884a.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\0e8c3990-9ae8-4949-8566-b32d8a4e884a.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\5a5511d6-f040-468a-842f-bc846d71f1de.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\5a5511d6-f040-468a-842f-bc846d71f1de.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\2a98d645-967e-4279-a49b-036ef474cc91.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\2a98d645-967e-4279-a49b-036ef474cc91.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\61fb61c9-b57f-4be8-a947-0571a4159c4c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\61fb61c9-b57f-4be8-a947-0571a4159c4c.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\33a6dacd-3894-4a68-b6b6-26de3480aaa0.pdf",
-      "PackagePath": "staticwebassets\\uploads\\papers\\33a6dacd-3894-4a68-b6b6-26de3480aaa0.pdf"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\6ccc1642-0847-4461-8f1a-74e49b8c9d5d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\6ccc1642-0847-4461-8f1a-74e49b8c9d5d.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\33fc7882-3a15-4650-9d05-f733e2bf35f5.pdf",
-      "PackagePath": "staticwebassets\\uploads\\papers\\33fc7882-3a15-4650-9d05-f733e2bf35f5.pdf"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\a42730c1-a8ad-431d-a82f-a56e8c1798e6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\a42730c1-a8ad-431d-a82f-a56e8c1798e6.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\3997ae88-d6c6-49b0-9fef-c3f98406859d.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\3997ae88-d6c6-49b0-9fef-c3f98406859d.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\bd3676da-125e-4db7-8fa7-9fb9c08cce4d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\bd3676da-125e-4db7-8fa7-9fb9c08cce4d.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\4dff1fb1-19f6-4fc9-aef9-c4610d78c043.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\4dff1fb1-19f6-4fc9-aef9-c4610d78c043.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\d30cbe0f-cc90-403a-aa4d-f6bc7af06d3c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\d30cbe0f-cc90-403a-aa4d-f6bc7af06d3c.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\50e87834-6dcd-499e-b511-b974a1295600.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\50e87834-6dcd-499e-b511-b974a1295600.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\e9f193d1-8ce0-47d7-bd80-c620f5dbaf34.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\e9f193d1-8ce0-47d7-bd80-c620f5dbaf34.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\6e7d97f5-5733-4d40-8bfc-b5e79567d7ca.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\6e7d97f5-5733-4d40-8bfc-b5e79567d7ca.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\f47a6fb5-461c-42ea-8d84-cb764a71872a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\f47a6fb5-461c-42ea-8d84-cb764a71872a.jpg"
     },
     {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\6e957315-21e5-4d0a-a865-95c5f2fcb977.pdf",
-      "PackagePath": "staticwebassets\\uploads\\papers\\6e957315-21e5-4d0a-a865-95c5f2fcb977.pdf"
-    },
-    {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\88efd250-0718-4cc0-92ac-604d7299bdbc.pdf",
-      "PackagePath": "staticwebassets\\uploads\\papers\\88efd250-0718-4cc0-92ac-604d7299bdbc.pdf"
-    },
-    {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\89682f08-3234-4cf4-b540-bc217b41b0fc.pdf",
-      "PackagePath": "staticwebassets\\uploads\\papers\\89682f08-3234-4cf4-b540-bc217b41b0fc.pdf"
-    },
-    {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\bfb3b6a9-73aa-4b8d-a227-6e853c35371f.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\bfb3b6a9-73aa-4b8d-a227-6e853c35371f.jpg"
-    },
-    {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\c70dfe42-8dfc-4f2d-b381-7214e8eb8eeb.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\c70dfe42-8dfc-4f2d-b381-7214e8eb8eeb.jpg"
-    },
-    {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\c9ca1b19-29df-4b06-8e05-46f4900ef8b9.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\c9ca1b19-29df-4b06-8e05-46f4900ef8b9.jpg"
-    },
-    {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\d8995691-5f6e-4004-a749-794e31622926.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\d8995691-5f6e-4004-a749-794e31622926.jpg"
-    },
-    {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\e59eeb76-0d96-414f-a550-adefbc9a6702.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\e59eeb76-0d96-414f-a550-adefbc9a6702.jpg"
-    },
-    {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\e65ee616-048b-46fa-955a-fce19b78b29d.pdf",
-      "PackagePath": "staticwebassets\\uploads\\papers\\e65ee616-048b-46fa-955a-fce19b78b29d.pdf"
-    },
-    {
-      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\ea59bbca-b93f-4e9a-80da-33a7abae52fd.jpg",
-      "PackagePath": "staticwebassets\\uploads\\papers\\ea59bbca-b93f-4e9a-80da-33a7abae52fd.jpg"
+      "Id": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\wwwroot\\uploads\\papers\\ff76de10-29ee-4bb5-92fa-fde328b75b14.jpg",
+      "PackagePath": "staticwebassets\\uploads\\papers\\ff76de10-29ee-4bb5-92fa-fde328b75b14.jpg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.UPFCON.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

@@ -106,7 +106,7 @@ public class AuthorService(UserManager<User> userManager,IUserService userServic
 
         foreach (var user in usersInAuthorRole)
         {
-            // Explicitly load the Author navigation property
+            
             await Context.Entry(user).Reference(u => u.Author).LoadAsync();
 
             // Only add users who have an Author profile

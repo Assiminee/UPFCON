@@ -9,16 +9,15 @@ namespace UPFCON.Controllers;
 
 
 [ApiController]
-[Route("/api/v1/events")]
 [Authorize]
-public class EventController(IPaperService paperService, 
+public class PaperController(IPaperService paperService, 
     IContributorService contributorService) : Controller
 {
     private IPaperService PaperService { get; } = paperService;
 
     private IContributorService ContributorService { get; } = contributorService;
 
-    [HttpPost("{eventId:guid}/papers")]
+    [HttpPost("/api/v1/events/{eventId:guid}/papers")]
     [Consumes("multipart/form-data")]
     public async Task<IActionResult> CreatePaper([FromForm] PaperDto paper, [FromRoute] Guid eventId)
     {
@@ -30,7 +29,7 @@ public class EventController(IPaperService paperService,
         return Created();
     }
     
-    [HttpGet("{eventId:guid}/papers/{paperId:guid}")]
+    [HttpGet("/api/v1/events/{eventId:guid}/papers/{paperId:guid}")]
     public async Task<IActionResult> GetPaperById( [FromRoute] Guid paperId, [FromRoute] Guid eventId)
     {
         var paper = await PaperService.GetPaperByIdAsync(eventId, paperId);
@@ -38,7 +37,7 @@ public class EventController(IPaperService paperService,
         return Ok(paper);
     }
 
-    [HttpGet("{eventId:guid}/papers")]
+    [HttpGet("/api/v1/events/{eventId:guid}/papers")]
     public async Task<IActionResult> GetPapersByEventId( [FromRoute] Guid eventId)
     {
         var papers = await PaperService.GetPapersByEventIdAsync(eventId);
@@ -46,7 +45,7 @@ public class EventController(IPaperService paperService,
         return Ok(papers);
     }
 
-    [HttpDelete("{eventId:guid}/papers/{paperId:guid}")]
+    [HttpDelete("/api/v1/events/{eventId:guid}/papers/{paperId:guid}")]
     public async Task<IActionResult> DeletePaper( [FromRoute] Guid paperId, [FromRoute] Guid eventId)
     {
         Console.WriteLine("1st :"+eventId);

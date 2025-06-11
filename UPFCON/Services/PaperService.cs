@@ -48,10 +48,17 @@ public class PaperService(UserManager<User> userManager, UpfconContext upfconCon
         
         var filePath = await SavePaperFileAsync(paperDto.PaperFile);
         
-        var @event = await Context.Events.FirstOrDefaultAsync(e => e.Id == eventId);
-        if (@event == null)
-            throw new NotFoundException("Event not found");
+        var @event = await Context.Events
+                         .Include(@event => @event.BoardDecisions)
+                         .FirstOrDefaultAsync(e => e.Id == eventId) 
+            ?? throw new NotFoundException("Event not found");
 
+        foreach (var decision in @event.BoardDecisions)
+        {
+            if(!decision.ApprovalStatus.Equals(Enum.GetName(ApprovalStatusEnum.Approved)))
+                throw new ForbiddenException("Event is not Approved");
+        }
+        
         var paper = new Paper()
         {
             Title = paperDto.Title,
@@ -185,8 +192,7 @@ public class PaperService(UserManager<User> userManager, UpfconContext upfconCon
 
     private async Task<string> SavePaperFileAsync(IFormFile file)
     {
-        var allowedExtensions = new [] {".jpg", ".jpeg", ".png", ".pdf"};
-        
+        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".pdf" };
         var fileExtension = Path.GetExtension(file.FileName).ToLower();
 
         if (!allowedExtensions.Contains(fileExtension))
@@ -194,16 +200,17 @@ public class PaperService(UserManager<User> userManager, UpfconContext upfconCon
 
         if (file.Length > MaxFileSize)
             throw new InvalidFileException($"Invalid file size: {file.Length}");
-        
+
         var fileName = Guid.NewGuid() + fileExtension;
-        
         var uploadsFolder = CreateUploadsDirectoryIfNotExist();
-        
-        var filePath = Path.Combine(uploadsFolder, fileName);
-        using (var fileStream = new FileStream(filePath, FileMode.Create))
-            await file.CopyToAsync(fileStream);
-        
-        return filePath;
+
+        var fullPath = Path.Combine(uploadsFolder, fileName);
+        using (var stream = new FileStream(fullPath, FileMode.Create))
+            await file.CopyToAsync(stream);
+
+        // Return relative path instead of full path
+        var relativePath = Path.Combine("uploads", "papers", fileName).Replace("\\", "/");
+        return "/" + relativePath;
     }
 
     private string CreateUploadsDirectoryIfNotExist()

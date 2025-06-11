@@ -36,7 +36,7 @@ public class ContributorService(UpfconContext context, IUserService userService,
             throw new ForbiddenException("Forbidden : only an Author can create a paper ");
 
         var loggedAuthor = await Context.Authors.FirstOrDefaultAsync(u => u.User.Email == email)
-                           ?? throw new NotFoundException("Author not found");
+                           ?? throw new NotFoundException("HeadAuthor not found");
         
         var contributions = new List<Contribution>();
 

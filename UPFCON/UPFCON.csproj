@@ -30,6 +30,17 @@
 
     <ItemGroup>
       <Folder Include="wwwroot\uploads\diplomas\" />
+      <Folder Include="wwwroot\uploads\papers\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="wwwroot\uploads\papers\6e7d97f5-5733-4d40-8bfc-b5e79567d7ca.jpg" />
+      <Content Remove="wwwroot\uploads\papers\097e23c4-bacc-442c-baa9-87e328af717f.jpg" />
+      <Content Remove="wwwroot\uploads\papers\bfb3b6a9-73aa-4b8d-a227-6e853c35371f.jpg" />
+      <Content Remove="wwwroot\uploads\papers\50e87834-6dcd-499e-b511-b974a1295600.jpg" />
+      <Content Remove="wwwroot\uploads\papers\c9ca1b19-29df-4b06-8e05-46f4900ef8b9.jpg" />
+      <Content Remove="wwwroot\uploads\papers\3997ae88-d6c6-49b0-9fef-c3f98406859d.jpg" />
+      <Content Remove="wwwroot\uploads\papers\c70dfe42-8dfc-4f2d-b381-7214e8eb8eeb.jpg" />
     </ItemGroup>
 
 </Project>
