@@ -40,7 +40,7 @@ public class UserDto
         };
     }
 
-    public static User SetAdminFromDto(User user, UserDto dto)
+    public static User SetUserFromDto(User user, UserDto dto)
     {
         user.FirstName = dto.FirstName;
         user.LastName = dto.LastName;

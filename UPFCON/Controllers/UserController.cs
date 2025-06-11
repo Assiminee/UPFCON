@@ -53,6 +53,18 @@ public class UserController(IUtils utils, IUserService userService) : Controller
             count = result.Item2
         });
     }
+    
+    [HttpGet]
+    [Route("{id}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetUserAsync([FromRoute] string id)
+    {
+        Utils.LogInformation($"User id: {id}");
+        var result = await UserService.FindUserById(id);
+        var userDto = UserDto.FromUser(result);
+        
+        return Ok(userDto);
+    }
 
     // [HttpDelete]
     // [Route("profile")]
