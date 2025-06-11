@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace UPFCON.Models;
 
 public class SubmissionRules
-{
+{   [JsonIgnore]              
+
     [Key] public Guid EventId { get; set; }
     [ForeignKey(nameof(EventId)), Required] public Event Event { get; set; } = null!;
     

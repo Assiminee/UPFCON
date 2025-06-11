@@ -120,6 +120,9 @@ builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IEmailSender, EmailSenderService>();
 builder.Services.AddScoped<IUtils, Utils>();
 builder.Services.AddScoped<IAuth, AuthService>();
+builder.Services.AddScoped<IEvent, EventService>();
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IPaperService, PaperService>();
 builder.Services.AddScoped<IContributorService, ContributorService>();
@@ -163,7 +166,6 @@ app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-app.UseStaticFiles();
 
 using var scope = app.Services.CreateScope();
 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();

@@ -4,6 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UPFCON.Models;
+public enum EventValidationStatus  // Enum recommandée = moins d’erreurs de frappe
+{
+    Pending,        // 0 – aucune décision
+    InReview,       // 1 – Dean ou VP a donné un avis
+    Validated,      // 2 – Les trois ont « Approved »
+    Rejected        // 3 – Au moins un « Rejected » / « ToBeRevised »
+}
 
 public class Event
 {
@@ -38,6 +45,9 @@ public class Event
     public SubmissionRules? SubmissionRules { get; set; }
     
     public IList<BoardDirectorDecision> BoardDecisions { get; set; } = new List<BoardDirectorDecision>();
+    
+    public EventValidationStatus ValidationStatus { get; set; } = EventValidationStatus.Pending;
+    
     
     public IList<TimeSlot> TimeSlots { get; set; } = new List<TimeSlot>();
 }
