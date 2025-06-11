@@ -8,14 +8,11 @@ using UPFCON.Requests;
 [ApiController]
 [Route("api/v1/auth/events")]
 [Authorize]
-public class EventController : ControllerBase
+public class EventController(IUtils utils, IEvent eventService,IUserService userService) : ControllerBase
 {
-    private readonly IEvent _service;
-
-    public EventController(IEvent service)
-    {
-        _service = service;
-    }
+    public IUtils Utils { get; } = utils;
+    private readonly IEvent _service = eventService;
+    private readonly IUserService _users = userService;
 
     [HttpGet]
     public async Task<IActionResult> GetAll() => Ok(await _service.GetAllEventsAsync());
@@ -30,8 +27,12 @@ public class EventController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] EventDto dto)
     {
+        var currentUser = await _users.GetFromJwtEmailClaim(HttpContext);
+
+        var created = await _service.CreateEventAsync(dto, currentUser.Id);      
+
         Console.WriteLine("im here");
-        var created = await _service.CreateEventAsync(dto);
+        Console.WriteLine("im here user "+currentUser);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
 

@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +10,8 @@ using UPFCON.Models;
 using UPFCON.Models.Context;
 using UPFCON.Services;
 using UPFCON.Settings;
+using Microsoft.Extensions.FileProviders;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -108,9 +111,15 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
-builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
-builder.Services.AddControllers();
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(o =>
+    {
+        o.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+        o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
+
 builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SMTP"));
 builder.Services.Configure<RegistrationEmailSettings>(builder.Configuration.GetSection("Emails:Registration"));
 builder.Services.Configure<ActivateAccountSettings>(builder.Configuration.GetSection("Emails:AccountActivation"));
@@ -121,6 +130,8 @@ builder.Services.AddScoped<IEmailSender, EmailSenderService>();
 builder.Services.AddScoped<IUtils, Utils>();
 builder.Services.AddScoped<IAuth, AuthService>();
 builder.Services.AddScoped<IEvent, EventService>();
+builder.Services.AddHttpContextAccessor();
+
 
 // Overrides ASP.NET's default validation (validation annotations of class properties)
 builder.Services.Configure<ApiBehaviorOptions>(options =>
@@ -156,7 +167,12 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
 app.UseAuthentication();
-app.UseAuthorization();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(app.Environment.ContentRootPath, "wwwroot")),   // ➜ …\bin\Debug\net8.0\wwwroot
+    RequestPath = ""                                                 // /uploads/… ↦ wwwroot\uploads\…
+});app.UseAuthorization();
 app.MapControllers();
 
 using var scope = app.Services.CreateScope();

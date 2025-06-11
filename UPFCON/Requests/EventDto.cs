@@ -13,4 +13,9 @@ public class EventDto
     public string SubTopics { get; set; } = string.Empty;
     public string Logo { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
+    
+    public SubmissionRulesDto SubmissionRules { get; set; } = null!;
+    public IList<CommitteeMemberDto> CommitteeMembers { get; set; } = new List<CommitteeMemberDto>();
+
+
 }
