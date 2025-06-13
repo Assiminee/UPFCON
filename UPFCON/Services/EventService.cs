@@ -72,7 +72,6 @@ public class EventService : IEvent
     {
         var newEvent = new Event
         {
-            Id        = Guid.NewGuid(),
             Title     = dto.Title,
             Acronym   = dto.Acronym,
             EventType = dto.EventType,
@@ -87,7 +86,6 @@ public class EventService : IEvent
             OrganizingCommittee = new List<CommitteeMember>(),
             SubmissionRules = new SubmissionRules
             {
-                EventId           = Guid.Empty,
                 Font              = dto.SubmissionRules.Font,
                 MinPages          = dto.SubmissionRules.MinPages,
                 MaxPages          = dto.SubmissionRules.MaxPages,
@@ -97,7 +95,6 @@ public class EventService : IEvent
                 AdditionalRules   = dto.SubmissionRules.AdditionalRules,
                 FileNameFormat    = dto.SubmissionRules.FileNameFormat,
                 SubmissionDeadline= dto.SubmissionRules.SubmissionDeadline
-                
             }
         };
         newEvent.OrganizingCommittee.Add(new CommitteeMember
@@ -108,8 +105,9 @@ public class EventService : IEvent
             InvitationStatus = InvitationStatusEnum.Accepted.ToString()
         });
 
+        
         foreach (var cm in dto.CommitteeMembers
-                     .Where(cm => creatorId == null || cm.ChairmanId != creatorId))
+                     .Where(cm => cm.ChairmanId != creatorId))
         {
             newEvent.OrganizingCommittee.Add(new CommitteeMember
             {

@@ -342,4 +342,68 @@ public class UserService(
 
         return (userDtos, result.Count);
     }
+
+    public async Task DeleteUserAsync(string id)
+    {
+        var user = await UserManager.FindByIdAsync(id);
+        if (user == null)
+            throw new NotFoundException("User not found");
+        
+        await Context.Entry(user).Reference(u => u.Author).LoadAsync();
+        await Context.Entry(user).Reference(u => u.Chairman).LoadAsync();
+        await Context.Entry(user).Reference(u => u.Attendee).LoadAsync();
+        var canBeDeleted = true;
+        
+        if (user.Author != null) {
+            await Context.Entry(user.Author)
+                .Collection(a => a.Contributions)
+                .LoadAsync();
+
+            canBeDeleted = user.Author.Contributions.Count == 0;
+        }
+        
+        if (user.Chairman != null) {
+            await Context.Entry(user.Chairman)
+                .Collection(c => c.Memberships)
+                .LoadAsync();
+            
+            canBeDeleted = user.Chairman.Memberships.Count == 0;
+        }
+
+        if (user.Attendee != null) {
+            await Context.Entry(user.Attendee)
+                .Collection(a => a.EventsAttended)
+                .LoadAsync();
+            
+            canBeDeleted = user.Attendee.EventsAttended.Count == 0;
+        }
+        
+        Utils.LogInformation($"Can this user be deleted: {canBeDeleted}");
+
+        if (canBeDeleted)
+        {
+            var deleteRes = await UserManager.DeleteAsync(user);
+
+            Utils.LogErrors(deleteRes, "Failed to delete user");
+
+            if (!deleteRes.Succeeded)
+                throw new Exception("Failed to delete user");
+            
+            return;
+        }
+
+        var count = await Context.Users
+                .AsQueryable()
+                .Where(u => u.AccountStatus == "Deleted")
+                .CountAsync();
+
+        user.Email = $"deleted_user_{count + 1}@email.com";
+        user.AccountStatus = "Deleted";
+        var res = await UserManager.UpdateAsync(user);
+        
+        Utils.LogErrors(res, "Failed to update user AccountStatus to deleted");
+        
+        if (!res.Succeeded)
+            throw new Exception("Failed to set user AccountStatus to deleted");
+    }
 }

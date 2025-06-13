@@ -69,11 +69,12 @@ public class UserController(IUtils utils, IUserService userService) : Controller
         return Ok(userDto);
     }
 
-    // [HttpDelete]
-    // [Route("profile")]
-    // public async Task<IActionResult> DeleteProfileAsync()
-    // {
-    //     var user = await UserService.GetFromJwtEmailClaim(HttpContext);
-    //     
-    // }
+    [HttpDelete]
+    [Route("{id}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> DeleteProfileAsync([FromRoute] string id)
+    {
+        await UserService.DeleteUserAsync(id);
+        return NoContent();
+    }
 }

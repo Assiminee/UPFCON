@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\UPFCON.csproj": {}
+    "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\UPFCON.csproj": {}
   },
   "projects": {
-    "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\UPFCON.csproj": {
+    "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\UPFCON.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\UPFCON.csproj",
+        "projectUniqueName": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\UPFCON.csproj",
         "projectName": "UPFCON",
-        "projectPath": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\UPFCON.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\upf4\\S8\\.Net\\Projects\\TP15-ExamFinal\\UPFConf-Backend3\\UPFCON\\obj\\",
+        "projectPath": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\UPFCON.csproj",
+        "packagesPath": "C:\\Users\\znatn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\znatn\\OneDrive\\Documents\\GitHub\\UPFCON\\UPFCON\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\znatn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -122,7 +127,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\HP\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

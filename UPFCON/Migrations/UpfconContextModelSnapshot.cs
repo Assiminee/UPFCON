@@ -264,11 +264,12 @@ namespace UPFCON.Migrations
                     b.Property<DateTime?>("RespondedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Role")
+                    b.Property<string>("Role")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
-                        .HasColumnType("int")
-                        .HasDefaultValue(1);
+                        .HasColumnType("nvarchar(50)")
+                        .HasDefaultValue("Evaluator");
 
                     b.HasKey("ChairmanId", "EventId");
 
@@ -454,6 +455,12 @@ namespace UPFCON.Migrations
                         .IsRequired()
                         .HasMaxLength(2048)
                         .HasColumnType("nvarchar(2048)");
+
+                    b.Property<string>("ValidationStatus")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Pending");
 
                     b.HasKey("Id");
 

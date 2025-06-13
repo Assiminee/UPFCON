@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UPFCON.Migrations
 {
     /// <inheritdoc />
-    public partial class newMig : Migration
+    public partial class firstEverMigrationISwear : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,7 +26,8 @@ namespace UPFCON.Migrations
                     Topics = table.Column<string>(type: "nvarchar(2048)", maxLength: 2048, nullable: false),
                     SubTopics = table.Column<string>(type: "nvarchar(2048)", maxLength: 2048, nullable: false),
                     Logo = table.Column<string>(type: "nvarchar(2048)", maxLength: 2048, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    ValidationStatus = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "Pending")
                 },
                 constraints: table =>
                 {
@@ -468,7 +469,7 @@ namespace UPFCON.Migrations
                 {
                     ChairmanId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     EventId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Role = table.Column<int>(type: "int", maxLength: 50, nullable: false, defaultValue: 1),
+                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "Evaluator"),
                     InvitedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     RespondedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     InvitationStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, defaultValue: "PendingResponse")
