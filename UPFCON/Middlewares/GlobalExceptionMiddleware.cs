@@ -26,6 +26,7 @@ public class GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExcep
                 ArgumentNullException => StatusCodes.Status400BadRequest,
                 DuplicateEmailException => StatusCodes.Status409Conflict,
                 NotFoundException => StatusCodes.Status404NotFound,
+                ForbiddenException => StatusCodes.Status403Forbidden,
                 _ => StatusCodes.Status500InternalServerError,
             };
             
@@ -33,6 +34,8 @@ public class GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExcep
             {
                 context.Response.ContentType = "application/json";
                 context.Response.StatusCode = statusCode;
+                
+                Console.WriteLine("Status : " +statusCode + " || Error : " + ex.Message);
 
                 var res = new
                 {

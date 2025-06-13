@@ -12,8 +12,8 @@ using UPFCON.Models.Context;
 namespace UPFCON.Migrations
 {
     [DbContext(typeof(UpfconContext))]
-    [Migration("20250607214411_passwordChangedFlag")]
-    partial class passwordChangedFlag
+    [Migration("20250611234028_firstEverMigrationISwear")]
+    partial class firstEverMigrationISwear
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -267,11 +267,12 @@ namespace UPFCON.Migrations
                     b.Property<DateTime?>("RespondedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Role")
+                    b.Property<string>("Role")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
-                        .HasColumnType("int")
-                        .HasDefaultValue(1);
+                        .HasColumnType("nvarchar(50)")
+                        .HasDefaultValue("Evaluator");
 
                     b.HasKey("ChairmanId", "EventId");
 
@@ -458,6 +459,12 @@ namespace UPFCON.Migrations
                         .HasMaxLength(2048)
                         .HasColumnType("nvarchar(2048)");
 
+                    b.Property<string>("ValidationStatus")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Pending");
+
                     b.HasKey("Id");
 
                     b.ToTable("Events");
@@ -493,10 +500,7 @@ namespace UPFCON.Migrations
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasDefaultValue("PendingEvaluation");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("SubmittedAt")
                         .HasColumnType("datetime2");
@@ -510,10 +514,7 @@ namespace UPFCON.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("Papers", t =>
-                        {
-                            t.HasCheckConstraint("CK_AllowedPaperStatuses", "Status IN ('RequiresEdits','Reject','Accepted','PendingEvaluation')");
-                        });
+                    b.ToTable("Papers");
                 });
 
             modelBuilder.Entity("UPFCON.Models.SubmissionRules", b =>

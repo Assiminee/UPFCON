@@ -216,6 +216,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             cm.HasKey(c => new { c.ChairmanId, c.EventId });
 
             cm.Property(c => c.Role)
+                .HasConversion<string>()                    
                 .HasMaxLength(50)
                 .IsRequired()
                 .HasDefaultValue(CommitteeMemberRole.Evaluator);
@@ -228,7 +229,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             cm.Property(c => c.InvitationStatus)
                 .HasMaxLength(50)
                 .IsRequired()
-                .HasDefaultValue(InvitationStatusEnum.PendingResponse);
+                .HasDefaultValue(InvitationStatusEnum.PendingResponse.ToString()); // <-- string
 
             cm.ToTable(c => c.HasCheckConstraint(
                 "CK_AllowedInvitationStatuses",
@@ -241,6 +242,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
                 .OnDelete(DeleteBehavior.ClientCascade);
         });
     }
+
 
     private static void EvaluationSetup(ModelBuilder modelBuilder)
     {
@@ -262,7 +264,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             p.Property(pr => pr.Id)
                 .HasDefaultValueSql("NEWID()");
 
-            p.Property(pr => pr.Status)
+          /*  p.Property(pr => pr.Status)
                 .HasMaxLength(50)
                 .IsRequired()
                 .HasDefaultValue(PaperStatus.PendingEvaluation);
@@ -270,7 +272,7 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
             p.ToTable(pr => pr.HasCheckConstraint(
                 "CK_AllowedPaperStatuses",
                 "Status IN ('RequiresEdits','Reject','Accepted','PendingEvaluation')"
-            ));
+            ));*/
 
             p.HasMany(pr => pr.Evaluations)
                 .WithOne(e => e.Paper)
@@ -327,6 +329,10 @@ public class UpfconContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 
             e.Property(ev => ev.Id)
                 .HasDefaultValueSql("NEWID()");
+            
+             e.Property(ev => ev.ValidationStatus)
+              .HasConversion<string>()
+              .HasDefaultValue(EventValidationStatus.Pending);
 
             e.HasMany(ev => ev.Attendees)
                 .WithOne(att => att.Event)

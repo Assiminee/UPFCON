@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using UPFCON.Exceptions;
 using UPFCON.Interfaces;
 using UPFCON.Requests;
 
@@ -66,11 +69,12 @@ public class UserController(IUtils utils, IUserService userService) : Controller
         return Ok(userDto);
     }
 
-    // [HttpDelete]
-    // [Route("profile")]
-    // public async Task<IActionResult> DeleteProfileAsync()
-    // {
-    //     var user = await UserService.GetFromJwtEmailClaim(HttpContext);
-    //     
-    // }
+    [HttpDelete]
+    [Route("{id}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> DeleteProfileAsync([FromRoute] string id)
+    {
+        await UserService.DeleteUserAsync(id);
+        return NoContent();
+    }
 }

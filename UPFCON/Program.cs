@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -110,7 +111,12 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(o =>
+    {
+        o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SMTP"));
 builder.Services.Configure<RegistrationEmailSettings>(builder.Configuration.GetSection("Emails:Registration"));
 builder.Services.Configure<ActivateAccountSettings>(builder.Configuration.GetSection("Emails:AccountActivation"));
@@ -120,6 +126,14 @@ builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IEmailSender, EmailSenderService>();
 builder.Services.AddScoped<IUtils, Utils>();
 builder.Services.AddScoped<IAuth, AuthService>();
+builder.Services.AddScoped<IEvent, EventService>();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<IAuthorService, AuthorService>();
+builder.Services.AddScoped<IPaperService, PaperService>();
+builder.Services.AddScoped<IContributorService, ContributorService>();
+
+
 builder.Services.AddScoped<IGenericService, GenericService>();
 
 // Overrides ASP.NET's default validation (validation annotations of class properties)
@@ -153,15 +167,16 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<GlobalExceptionMiddleware>();
 app.UseHttpsRedirection();
-
 app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.UseStaticFiles();
 
 using var scope = app.Services.CreateScope();
-var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
+var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
 
 var roles = Enum.GetNames<Roles>();
 
@@ -186,4 +201,27 @@ foreach (var roleName in roles)
     }
 }
 
+var email = "znatni.yasmine@gmail.com";
+var user = await userManager.FindByEmailAsync(email);
+
+if (user == null)
+{
+    var admin = new Admin
+    {
+        FirstName = "Admin",
+        LastName = "Lady",
+        Email = email,
+        UserName = email,
+        Birthdate = new DateTime(1997, 10, 18),
+        AccountStatus = "Verified",
+        PasswordChanged = true
+    };
+    
+    await userManager.CreateAsync(admin, "Password@1");
+    await userManager.AddToRoleAsync(admin, "Admin");
+    
+    var token = await userManager.GenerateEmailConfirmationTokenAsync(admin);
+    
+    await userManager.ConfirmEmailAsync(admin, token);
+}
 app.Run();
